@@ -1,0 +1,526 @@
+start	end	text
+0	3440	Mit Manfred Kläuber und das sind die Themen heute.
+3520	6600	Timing-Attacke, das Anonymisierungsnetzwerk Tor,
+6680	7880	ist angreifbar.
+7960	12160	Angekommen, künstliche Intelligenz hat auch bei den Nobelpreisen gewonnen.
+12240	15360	Datenschutz zitronen, fünf Überwachungstechnologien
+15440	19840	erhalten den Big Brother Award und das digitale Logbuch IT-Zombies.
+31000	33840	Wenn man Anonymisierung will im Internet,
+33920	37360	ist der Tor-Browser immer noch die erste Möglichkeit.
+37440	41560	Es gibt hier praktisch nicht so viele Alternativen, die sinnvoll sind.
+41640	44920	Das sagt Matthias Fassel vom CISPA Helmholtz Zentrum
+45000	47600	für Informationssicherheit in Saarbrücken.
+47680	52040	So ganz selbstverständlich ist seine Einschätzung im Moment nicht.
+52120	55360	Denn vor Kurzem sind gravierende Zweifel aufgekommen,
+55440	58800	dass die Analyse der Analyse nicht in der Analyse ist.
+59480	61880	Es gibt auch noch einen Zweifel,
+61960	67000	ob das Anonymisierungsnetzwerk Tor, das Akronym steht für TheOnion-Router,
+67080	70360	überhaupt noch sicher und vertrauenswürdig ist.
+70440	73840	Denn am 18. September meldeten Kollegen des NDR
+73920	76720	Anonymisierungsdienst Tor angreifbar.
+76800	80520	Sie berichteten über erfolgreiche Timing-Attacken
+80600	83960	von Strafverfolgungsbehörden auf das Tor-Netzwerk.
+84040	86640	Bei mir ist mein Kollege Michael Gessert.
+87120	89800	Über was die Kollegen hier berichtet haben,
+89880	93480	das waren nachträglich bekanntgewordene Ermittlungsdetails
+93560	95760	zu einem Fall aus dem Jahr 2021.
+95840	98680	Damals hatten deutsche Strafverfolgungsbehörden
+98760	102040	den Betreiber der pädokriminellen Plattform Boys Town
+102120	105880	im sogenannten Darknet identifizieren können, oder?
+105960	111160	Genau, wir sprechen wohlgemerkt über einen etwas länger zurückliegenden Fall,
+111240	115200	bei dem die Ermittlungsmaßnahmen und ihre technische Vorbereitung
+115240	119320	deutlich länger zurückliegen, bei dem aber diese technischen Details,
+119400	122040	die zu dem Ermittlungserfolg geführt haben,
+122120	124440	eben erst jetzt bekannt geworden sind.
+124520	127600	Durch ein Posting auf der Internetplattform Reddit
+127680	130160	Anfang des Jahres mit Ermittlungsdetails
+130240	134040	lagen den Kollegen vom NDR und den für eine Einschätzung
+134120	137560	hinzugezogenen Experten vom Chaos-Computer-Club CCC
+137640	140400	aber auch noch weitere Informationen vor.
+140480	144080	Und an dieser Stelle kam es dann zu gewissen Irritationen
+144400	148800	oder auch zu einer Verunsicherung bei allen an Tor Interessierten.
+148880	152880	Gab oder gibt es eben irgendeine grundsätzlich unbekannte Schwäche
+152960	156240	im technischen Design des Anonymisierungsnetzwerkes?
+156320	160200	Michael, an dieser Stelle sollten wir sofort auch mal auf das große,
+160280	163440	ja, ziemlich grundsätzliche Dilemma zu sprechen kommen.
+163520	168000	Im Sinne des Tor-Netzwerkes ist es ja im Internet vertraulich
+168080	172200	und anonyme Infos abrufen oder kommunizieren zu können.
+172280	175600	Zum Beispiel als Dissident in einem totalitären Regime
+175680	180840	oder als Whistleblowerin in einem korrupten und böswilligen Unternehmen.
+180920	183960	Das ist ja eigentlich die Idee von Tor, nicht?
+184040	187680	Das ist eigentlich die Idee und deswegen setzen sich seit Jahrzehnten
+187760	191000	Freiwillige aus der Open Source und aus der Privacy Community
+191080	193440	intensiv für Tor ein.
+193520	197840	Aber völlig klar von anonymer, nicht nachvollziehbarer Kommunikation im Netz.
+197920	199920	Da profitieren auch Kriminelle.
+199960	203680	Die verschleierten sogenannten Hidden Services im Tor-Netzwerk
+203760	207880	sind eben das, was landläufig als Darknet bezeichnet wird.
+207960	212320	Wobei wohlgemerkt, Hidden Services und damit auch das sogenannte Darknet,
+212400	215120	das ist noch keinesfalls per se kriminell.
+215200	217840	Aber dort tummeln sich eben auch viele Kriminelle.
+217920	220960	Vielleicht müssen wir hier noch mal ganz kurz erklären,
+221040	225800	wie Tor grundsätzlich funktioniert oder wie da die grundsätzliche Idee ist,
+225840	230360	wenn ich über Tor mit dem Tor-Browser eine Webseite ansurfen will,
+230440	233680	dann betrete ich das Tor-Netzwerk über einen Eintrittsserver,
+233760	237480	den Entry-Node oder den Eintrittsknoten.
+237560	241600	Von dort aus werden meine Kommunikations- und Surfdaten verschlüsselt,
+241680	245240	weitergeleitet an einen mittleren Middle-Node
+245320	248480	und von dort wiederum verschlüsselt an einen Exit-Node,
+248560	251840	also an einen Ausgangsknoten, der dann die Webseite aufruft.
+251920	254680	Der Witz, die angesteuerte Webseite weiß nicht,
+254760	257000	von wem eigentlich die Anfrage kommt.
+257080	260560	Und mein Provider und auch der Eingangsknoten
+260640	264360	und auch irgendwelche Behörden wiederum, die mich eventuell überwachen,
+264440	266480	die wissen gar nicht, was ich aufrufe.
+266560	267640	Das ist das Konzept.
+267720	270240	Jetzt hatte ja der Ex-US-Geheimdienstmitarbeiter
+270320	273600	und Whistleblower Edward Snowden schon 2013
+273680	277120	auf den Super-GAU für dieses Konzept hingewiesen.
+277200	281240	Wenn ein Akteur, ein Geheimdienst, die technischen Ressourcen hat,
+281280	284880	sowohl Eingänge als auch Ausgänge aus dem Tor-Netzwerk
+284960	287440	quasi umfassend überwachen zu können,
+287520	289080	dann kann er einfach feststellen,
+289160	292440	jetzt gerade beginnt z.B. an einem Eingangsknoten in Deutschland
+292520	295720	ein Download und gleichzeitig an einem Ausgangsknoten
+295800	297560	in den USA ein Upload.
+297640	299920	Das ist also sozusagen die Mutter
+300000	303720	der sogenannten Korrelationsangriffe auf das Tor-Netzwerk.
+303800	307400	Wenn ich eben an sich verschlüsselte und verschleierte Aktivitäten
+307480	309920	zeitlich zueinander zuordnen kann,
+310000	312840	dann lässt sich dadurch die Anonymität aushebeln.
+312920	315640	Eine solche Korrelations- oder Timing-Attacke,
+315720	317960	die funktioniert aber nicht nur bei Kommunikation
+318040	320440	durch das Tor-Netzwerk hindurch,
+320520	324000	sondern auch bei Verbindungen von außen in Tor hinein
+324080	328480	zu den sogenannten Hidden Services, also zum Darknet.
+328560	331720	Der Betreiber der pädokriminellen Plattform Boys Town
+331800	334800	kommunizierte offenbar mit einem vermeintlich sicheren
+334880	338040	torinternen Messenger namens Ricochet.
+338080	341800	Dieser Messenger läuft im Tor-Netzwerk als Hidden Service,
+341880	343560	als verdeckter Dienst.
+343640	345440	Um mit diesem zu kommunizieren,
+345520	348400	wird eine Art Treffpunkt im Tor-Netz ausgemacht.
+348480	351240	Matthias Fassel vom CISPA Helmholtz-Zentrum
+351320	353280	für Informationssicherheit in Saarbrücken.
+353360	356080	Und dann sage ich diesem versteckten Dienst,
+356160	360120	bitte verbinde dich auch dahin, damit wir kommunizieren können.
+360200	363680	Das heißt, eine Behörde kann im Prinzip so oft
+363760	365840	diesem versteckten Dienst sagen,
+365920	368000	hey, baue doch eine neue Verbindung auf
+368080	370880	und dann schauen, ob der versteckte Dienst
+370960	375920	jetzt einen Knoten verwendet hat, der der Behörde untersteht,
+376000	378000	also den sie betreibt oder überwachen kann.
+378080	381280	So lief das offenbar auch im Boys Town-Fall ab.
+381360	383640	Die Ermittlungsbehörden konnten mit dem Verdächtigen
+383720	386120	über einen von ihnen kontrollierten Server
+386200	388440	in Echtzeit kommunizieren.
+388520	392840	Stellten sie eine Frage, dann konnten sie direkt in Echtzeit abgleichen,
+392880	397800	über welchen Eingangsknoten zum Tornetz die Messenger-Antwort reinkommt.
+397880	401360	Gegen solche Timing- und Echtzeitkorrelationsanalysen
+401440	405640	gäbe es prinzipiell ein Gegenmittel, sagt Matthias Fassel.
+405720	408680	Das Tornetzwerk könnte eine Art Datenrauschen
+408760	412960	oder eine zufällige Verzögerung der übertragenen Daten einführen.
+413040	415120	Aber wenn man das abändern würde
+415200	418120	und zusätzliche Zeitverzögerungen einführt,
+418200	420280	würde eben auch die Popularität abnehmen,
+420360	422200	weil es dann weniger hilfreich wird.
+422280	425560	Also noch mühsamer, das Tornetzwerk zu verwenden.
+425640	428280	Und das würde auch mein Anonymity-Set dann einschränken,
+428360	431240	weil es weniger Leute im Tornetzwerk gibt.
+431320	434440	Und ein Tornetzwerk, das nur von drei Leuten verwendet wird,
+434520	436680	ist halt auch nicht mehr besonders anonym.
+436760	440400	Genau dieses Dilemma sieht auch Joachim Selzer vom CCC,
+440480	442480	vom Chaos Computer Club.
+442560	445000	Nach seiner Einschätzung werden Ermittlungsbehörden
+445080	448160	und Geheimdienste auch weiterhin permanent versuchen,
+448200	452800	kompromittierte Server, also Knoten, in das Tornetzwerk einzuschleusen.
+452880	456320	Das heißt, wenn ich jetzt ein staatlicher Angreifer wäre,
+456400	459360	würde ich kompromittierte Server ins Netz stellen,
+459440	462480	würde sie vielleicht nicht zu attraktiv sein lassen,
+462560	464880	damit sie dann eben auch keinen Verdacht erregen.
+464960	466600	Und dann würde ich einfach abwarten,
+466680	469080	dann würde ich so ein halbes Jahr oder Jahr warten.
+469160	472400	Und das lohnt sich dann eben auch, weil ich dann nach einem Jahr sagen kann,
+472480	475880	okay, jetzt habe ich ausreichend Server in dieses Netzwerk eingespeist.
+475880	478080	Und dann würde ich anfangen, Leute aufzudecken.
+478160	481080	Das Tor-Projekt hat auf die Neuigkeiten im Fall Boys Town
+481160	483640	sofort in einem Blogpost reagiert.
+483720	486160	Tor sei weiterhin technisch sicher.
+486240	490440	Der Ermittlungserfolg und die Deanonymisierung des Plattformbetreibers
+490520	494120	sei vermutlich auf die Verwendung des veralteten Messengers,
+494200	498760	Ricochet oder anderer veralteter Software zurückzuführen.
+498840	503200	Inzwischen hat Tor einen neuen Schutz namens Vanguard eingeführt,
+503280	508440	der genau gegen die im Ermittlungsverfahren verwendeten Timing-Analysen helfen soll.
+508520	512400	Pavel Tsonev vom Tor-Projekt gibt deshalb Entwarnung,
+512480	515320	räumt aber zugleich ein, dass den Tor-Verantwortlichen
+515400	518400	noch nicht völlig klar sei, ob es noch weitere,
+518480	521640	bislang unbekannte Design-Schwächen geben könnte.
+521720	524120	Was nach wie vor für uns spannend ist,
+524200	526520	ein bisschen mehr Hintergründe zu erfahren,
+526600	529800	hoffentlich im Rahmen unserer eigenen Recherchen und Analysen,
+529800	534080	die wir da anstellen, wie genau dieser Eingangsknoten entdeckt wurde.
+534160	537400	Da sind die Tor-Aktivisten sich noch immer nicht sicher,
+537480	540320	ob die Sache vollkommen geklärt ist, oder, Michael?
+540400	544840	Ja, das stimmt. Ich will das auch nicht vollkommen klären können.
+544920	548960	Ich habe keinen Zugang zu Non-Disclosure-Informationen bekommen
+549040	551400	und auch gar nicht versucht, die zu bekommen.
+551480	555200	Ich habe aus meinen Gesprächen mit Matthias Fassel vom CISPA,
+555280	557880	mit Joachim Selzer vom Chaos-Computer-Club
+557960	560960	und auch mit der Kölner Cyber-Staatsanwaltschaft
+561040	563400	zack insgesamt den Eindruck gewonnen,
+563480	567240	es gibt vermutlich keine neue unbekannte Schwäche im Tor-Design,
+567320	571040	die sozusagen einen General-Schlüssel für Ermittler darstellen würde.
+571120	573360	Was die wissenschaftliche Community angeht,
+573440	577480	die versucht ja permanent, neue Korrelationsanalysen zu entwickeln,
+577560	579760	aber um Tor sicherer zu machen.
+579840	582440	Was den CCC angeht, der ist natürlich grundsätzlich
+582520	584000	auf der Seite von Privacy.
+584080	587520	Da würde ich mal trotz irgendwelcher Verschwiegenheitsvereinbarungen
+587600	591200	vermuten, wenn es ein dramatisches, ungestopftes Sicherheitsproblem
+591280	595560	bei Tor geben sollte, dann würden sie das vermutlich irgendwie signalisieren.
+595640	597480	Was die Ermittlungsbehörden angeht,
+597560	600360	wenn es diese fundamentale Lücke geben sollte,
+600440	602640	dann würden die kriminellen Darknet-Plattformen
+602720	605760	nicht nur sporadisch, sondern am laufenden Band auffliegen.
+605840	610200	Das ist ein gutes Stichwort, denn am Dienstag hat ja die Polizei Duisburg
+610240	613720	das Innen- und Justizministerium und eben auch die Zentrale
+613800	617200	und Ansprechstelle Cybercrime in Nordrhein-Westfalen
+617280	620440	wieder einen Ermittlungserfolg in einer großen Pressekonferenz
+620520	623640	bekannt gegeben. Da ist wiederum eine Plattform im Darknet,
+623720	627840	also damit auch im Tornetz enttarnt und geschlossen worden.
+627920	631080	Betreiber und eine Reihe von Nutzern wurden identifiziert.
+631160	634800	NRW-Justizminister Benjamin Limbach wird da mit der Botschaft
+634880	637040	an potenzielle Täter zitiert,
+637120	640120	Ihr könnt euch nicht verstecken, nicht hinter vier Wänden,
+640200	643680	nicht hinter einem Pseudonym und auch nicht im Darknet.
+643760	646760	War das etwa ein weiterer Hinweis auf technische Möglichkeiten
+646840	650480	der Ermittler oder etwaige Schwächen bei Tor?
+650560	653160	Also ich glaube nicht. Ich habe den Fall gestern
+653240	656760	nochmal mit der Staatsanwaltschaft Köln bzw. dem ZAK besprochen.
+656840	660480	Und hier sieht es wirklich nach klassischer Polizeiarbeit aus.
+660560	664600	Da war bei Ermittlungen in Bayern eine Person mit Wohnsitz Duisburg
+664640	668280	als möglicher Nutzer einer Darknet-Missbrauchsplattform aufgefallen.
+668360	671560	Dann hat die Polizei in NRW dort eine Durchsuchung durchgeführt.
+671640	675560	Und der Verdächtige war offenbar auch räuhig und kooperativ
+675640	679000	und hat eine Menge Zugangspasswörter zu entsprechenden Accounts
+679080	682280	rausgerückt. Und darüber hat man wieder weitere Personen
+682360	684080	und Strukturen ermitteln können.
+684160	686600	Das ist, glaube ich, auch nochmal eine ganz wichtige Erkenntnis.
+686680	689280	Ermittlungserfolge sind eben trotz Tor
+689360	692280	und übrigens auch trotz Messenger End-zu-End-Verschlüsselung
+692360	694080	weiterhin möglich.
+694160	696440	Wie verletzlich ist das Tor-Netzwerk?
+696520	699000	Darüber sprach ich mit Michael Gessert. Danke.
+709400	710920	Das ist schon ziemlich auffällig.
+711000	714120	Wann immer zurzeit Neuheiten oder technologische Entwicklungen
+714200	717880	angepriesen werden, dann ist auch immer KI mit im Spiel.
+718320	722400	Künstliche Intelligenz ist nicht nur eine ziemlich alte Disziplin
+722440	725000	der Informatik, die gerade mal vor zwei Jahren
+725080	727960	so richtig aus dem Dornröschenschlaf erwacht ist,
+728040	730920	sondern auch ein Trendthema und ein Buzzword,
+731000	735240	das offenbar nahezu automatisch Türen in viele Richtungen öffnet.
+735320	737520	Kein Wunder also, dass KI im Überfluss
+737600	739640	für alles Mögliche bemüht wird.
+739720	744440	Aber dass nun ausgerechnet auch im alt ehrwürdigen Nobelpreis KI
+744520	747720	mit drin ist, frankrothelischen, musste das wirklich sein?
+747800	750680	Ja, offenbar schon, denn das Nobelpreiskomitee in Stockholm
+750760	754000	hat am Mittwoch gleich noch einen weiteren Nobelpreis
+754080	757040	und nicht nur den Physiknobelpreis für ein KI-Thema springen lassen.
+757120	758840	Auch den Nobelpreis für Chemie.
+758920	760280	Da geht es um einen Algorithmus,
+760360	763720	der die Form von Proteinen präziser ausrechnen kann.
+763800	766120	Wichtig etwa für die Suche nach neuen Medikamenten.
+766200	768080	Ja, und zwei der drei Chemielauriaten
+768160	771960	kommen von Google, DeepMind, also der KI-Schmiede von Google.
+772040	776160	Ja, und dass das Nobelpreiskomitee so munter mitmacht bei diesem KI-Hype,
+776240	777920	das mag vielleicht damit zu tun haben,
+778000	780000	dass man ihm schon öfter vorgeworfen hat,
+780040	782440	eben allzu alt ehrwürdig unterwegs zu sein
+782520	786640	und Errungenschaften auszuzeichnen, die schon Jahrzehnte her sind
+786720	789440	und mit unserem Alltag vielleicht gar nicht so viel zu tun haben.
+789520	792120	Ja, und vielleicht wollte das Komitee nun ganz deutlich zeigen,
+792200	795200	hey, wir sind auf der Höhe der Zeit und zeichnen was aus,
+795280	797080	was unsere Gesellschaft wirklich prägt.
+797160	800040	Da könnte man aber einwenden, dass die Arbeiten ja,
+800120	802600	zumindest der beiden Physikpreisträger,
+802680	806240	auch schon etwas länger her sind, aus den 80er Jahren.
+806320	808240	Aber reden wir drüber, was haben die gemacht
+808280	811840	und warum ist es für die heutigen KI-Systeme so wichtig?
+811920	814080	Ja, also der ältere der beiden, John Hopfield,
+814160	818120	hat sich in den frühen 80er Jahren mit neuronalen Netzwerken befasst.
+818200	821000	Das sind Programme, die die Funktion des menschlichen Gehirns
+821080	824120	quasi imitieren, also da gibt es sogenannte Knoten,
+824200	825960	das sind künstliche Neuronen,
+826040	828040	die sind miteinander verbunden wie im Hirn
+828120	830000	und können sich gegenseitig beeinflussen
+830080	832440	und diese Verbindungen, die können sich verändern,
+832520	834200	können also z.B. stärker werden,
+834280	836760	wenn zwei Knoten oft miteinander agieren.
+836840	838960	Ja, und das macht den Computer lernfähig.
+839040	841600	Man spricht also auch von Machine Learning.
+841680	845440	Und John Hopfield hat diese neuronalen Netzwerke erfunden?
+845520	850080	Ja, das nicht, aber er hat 1982 eine Art assoziatives Gedächtnis
+850160	852840	basierend auf einem neuronalen Netz entwickelt
+852920	855840	und das kann nicht nur bekannte Bilder erkennen,
+855920	859000	wie vorher die Systeme, sondern wenn ihm ein unvollständiges
+859080	861400	oder irgendwie verzerrtes Bild gegeben wird,
+861480	864040	dann kann die Methode ein abgespeichertes Bild finden,
+864120	865280	das ihm ähnlich ist.
+865280	867640	Ja, und das Verfahren ließ sich dann verwenden,
+867720	870400	um beschädigte Daten oder Bilder wiederherzustellen.
+870480	874920	Was hat denn der zweite Preisträger Joffrey Hinton vollbracht?
+875000	877480	Ja, der hat die neuronalen Netzwerke weiterentwickelt
+877560	879920	zu dem, was man heute Deep Learning nennt.
+880000	883720	Da tastet sich das neuronale Netz Schicht für Schicht immer tiefer vor
+883800	886920	und kann dadurch Bilder erkennen, die es nie zuvor gesehen hat.
+887000	889040	Also Beispiel, man will dem Computer beibringen,
+889120	891560	Katzenbilder von Hundebildern zu unterscheiden.
+891640	895080	Dazu trainiert man ihn mit vielen Katzen- und Hundefotos
+895160	899040	und zuerst lernt die KI einfache Dinge wie Linien oder Kanten.
+899120	900840	Und bei weiteren Durchgängen lernt sie dann,
+900920	902960	wie die Kombinationen dieser Linien aussehen,
+903040	904680	zum Beispiel Ohren oder Augen.
+904760	907160	Ja, und am Ende kann die KI dann von selbst entscheiden,
+907240	910080	ob ein Bild eine Katze zeigt oder ein Hund.
+910760	912160	Ich hatte ja eingangs schon gesagt,
+912240	915840	dass KI eigentlich eine ziemlich alte Disziplin der Informatik ist.
+915920	919920	Aber warum hat es seit diesen Arbeiten aus den 80er Jahren
+920000	923840	so lange gedauert, bis KI wirklich den Durchbruch dann schaffte?
+923920	925480	Ja, also damals in den 80er Jahren,
+925560	927360	da waren die Rechner noch viel zu langsam
+927440	929680	und die Datenspeicher auch waren viel zu klein.
+929760	932920	Also John Hopfield zum Beispiel verwendete damals ein Netzwerk
+933000	937200	mit 30 künstlichen Neuronen und knapp 500 Parametern.
+937280	939880	Mehr ging mit den damaligen Rechnern einfach nicht.
+939960	942480	Heute arbeiten Sprachmodelle wie ChetGPT
+942560	945200	mit mehr als einer Billion Parametern.
+945280	948240	Und das funktioniert eben nur mit modernen, schnellen Rechnern
+948320	949880	und auch mit großen Festplatten,
+949960	952320	die also Unmengen an Daten speichern können.
+952320	955400	Denn viele Daten, das ist eine weitere Voraussetzung,
+955480	957840	um eine KI vernünftig zu trainieren.
+957920	960320	Reden wir noch über eine bemerkenswerte Tatsache,
+960400	962840	nämlich, dass sich Joffrey hinten gar nicht mehr
+962920	967520	so uneingeschränkt über KI freut, sondern er hat auch Befürchtungen.
+967600	969400	Was konkret befürchtet er?
+969480	973520	Also er glaubt, dass die KI Millionen an Arbeitsplätzen vernichten wird,
+973600	978240	dass die Algorithmen Wahlen beeinflussen durch gefälschte Videos zum Beispiel,
+978320	980720	dass sich mit KI Cyberangriffe anzetteln
+980720	984760	und tödliche Viren zur biologischen Kriegsführung entwickeln lassen.
+984840	988400	Und er meint sogar, dass KI-Systeme letztlich intelligenter sein werden,
+988480	992160	als wir uns schon heute in vielen Bereichen Hausrüberlegen sind.
+992240	995280	Um KI ging es auch bei den diesjährigen Nobelpreisen
+995360	996720	für Physik und Chemie.
+996800	1000520	Darüber sprach ich mit Frank Grotelüschen. Dankeschön.
+1000600	1003920	Zum 24. Male wurden gestern Abend in Bielefeld
+1004000	1008200	fünf Negativpreise an sogenannte Datenkraken verliehen.
+1008320	1011320	So bezeichnet der Bielefelder Datenschutzverein
+1011400	1015800	Digitalcourage Unternehmen, Institutionen oder Behörden,
+1015880	1019560	die den notwendigen Datenschutz für ihre Kunden oder für Bürger
+1019640	1023000	nicht so genau nehmen oder bewusst sogar missachten.
+1023080	1025640	Der Negativpreis, eine Big Brother-Figur,
+1025720	1029920	soll nach Vorstellung des Vereins die Preisträger nicht lächerlich machen,
+1030000	1032280	sondern zum Nachdenken anregen.
+1032360	1036600	Und tatsächlich stellten sich bereits einige Preisträger der Diskussion
+1036680	1039720	mit ihrem bislang stets wohlgesinnten Publikum.
+1039800	1043360	In diesem Jahr war jedoch keiner der fünf neuen Preisträger
+1043440	1045040	im voll besetzten Land zu sehen.
+1045120	1046560	Wolfgang Neukir berichtet.
+1046640	1049880	Zu den prominenten Preisträgern zielt Bundesgesundheitsminister
+1049960	1054600	Karl Lauterbach wegen der geplanten nach Auffassung von Digitalcourage
+1054680	1057040	unzureichend geschützten Weitergabe
+1057120	1061120	von Patientendaten an europäische Interessenten.
+1061200	1064320	Dies sei, so der ehemalige Datenschutzbeauftragte
+1064320	1067360	des Landesschleswig-Holstein Thilo Weichert,
+1067440	1070600	das Ende der ärztlichen Schweigepflicht.
+1070680	1074800	Zugang zu den pseudonymen Daten bekommt jeder.
+1074880	1079600	Jedermann kann die anfordern, ohne auch nur eine Qualifikation
+1079680	1082840	oder eine Fachkenntnis nachweisen zu müssen.
+1082920	1085280	Die größte Unverschämtheit aber ist,
+1085360	1088560	dass den Betroffenen bei der Sekundärnutzung
+1088640	1092120	von pseudonymen Daten kein Auskunst- und kein Widersprucherecht
+1092200	1093280	zugestanden wird.
+1093320	1098040	Peris ist das Kürzel-für-Personen-Identifikationssystem,
+1098120	1102080	dessen mobile Kameras anhand biometrischer Merkwale
+1102160	1105160	Tatverdächtige in Echtzeit erkennen.
+1105240	1110000	Letzteres, die Echtzeiterkennung ist aber der Polizei streng verboten.
+1110080	1115160	Nach einem ersten Test in Sachsen wurde das System dort abgeschaltet,
+1115240	1118240	vermutlich aber an die Hamburger Polizei verliehen,
+1118320	1123200	die das Echtzeitverbot trickreich interpretiert haben soll.
+1123280	1127120	Laudator Frank Rosengardt vom Chaos Computer Club.
+1127200	1129960	Die Software Peris wird so eingestellt,
+1130040	1132600	dass die Erkennung nicht in Echtzeit passiert,
+1132680	1134720	sondern ein bisschen später.
+1134800	1138200	Was später bedeutet, ist allerdings nur irgendwo festgeschrieben.
+1138280	1140920	Wahrscheinlich reichen einige Sekunden Verzögerung,
+1141000	1143840	um nicht in Echtzeit zu arbeiten.
+1143920	1146520	Hier wird die gesetzlich erlaubte technische,
+1146600	1149840	kurzfristige Speicherung von Bildern praktisch missbraucht,
+1149920	1151880	um sie für eine Gesichtserkennung zu nutzen.
+1151960	1157080	Das war der Jury einen Big Brother für Sachsens Innenminister Armin Schuster wert.
+1157160	1163120	Und der Arbeitsrechtler Peter Wedde fand auch die verwirrenden Geschäftsbedingungen
+1163200	1168200	der beiden chinesischen Handelsplattformen Teemu und Shein
+1168280	1170960	seien eine Datenschutz-Zitrone wert,
+1171040	1176600	nämlich für die Kunst alle rechtlichen Risiken auf Kunden abzuwälzen.
+1176680	1179560	Wer als Importeur in China Textilien für 300 Euro bestellt
+1179560	1182360	und sie in Teillieferung zu 100 Euro bekommt,
+1182440	1188080	dem kann es passieren, dass der Zoll dafür rund 100 Euro an Gebühren nachfordert.
+1188160	1191480	Entdeckt der Zoll ein Plagiat oder eine Produktfälschung,
+1191560	1195040	darf er die Hersteller der Originale über den Importeur informieren.
+1195120	1199280	Aus ganz billig kann so ganz schnell ziemlich teuer werden.
+1199360	1203800	Auch die Deutsche Bahn verdiene nach Meinung der Jury einen Big Brother,
+1203880	1206720	denn deren sogenannter Digitalzwang,
+1206840	1208400	zum Beispiel bei der Bahncard,
+1208480	1214880	erschwere zunehmend anonymes Reisen für Menschen ohne Handy und E-Mail-Konto
+1214960	1217080	als lästigen Trend.
+1217160	1219440	So heißt eine neue Big Brother Kategorie,
+1219520	1222920	empfindet Digitalcourage-Mitgründerin Rena Tangens
+1223000	1225920	den sogenannten Technik-Paternalismus,
+1226000	1232200	jene Hörigkeit auf allgegenwärtig bevormundende, piepsende digitale Geräte,
+1232280	1235040	übergriffige Navis und Suchmaschinen.
+1235160	1237240	Je weniger Überblick wir selber haben,
+1237320	1240560	desto anfälliger werden wir für Manipulation.
+1240640	1245120	Schau hier hin, geh dorthin, kauf das.
+1245200	1247320	Hintergrundtext, wir kennen dich so gut,
+1247400	1249480	dass wir das alles für dich entscheiden können.
+1249560	1252240	Technik-Paternalismus sei darauf angelegt,
+1252320	1255240	so Tangens, Menschen zu entmündigen
+1255320	1257600	oder gar nicht erst mündig werden zu lassen.
+1257680	1260160	Wir haben es in der Hand, andere Technik zu fordern,
+1260240	1264400	Monopole aufzubrechen und die Rahmenbedingungen anders zu gestalten.
+1264480	1268560	Lobby-Control und Rebalance Now, zwei deutsche Organisationen,
+1268640	1271640	haben gemeinsam mit anderen Organisationen
+1271720	1276160	ein White Paper erarbeitet, das beschreibt, wie das gelingen kann.
+1276240	1279360	Beyond Big Tech ist ein langfristiges Projekt,
+1279440	1282120	das Mut und Hartnäckigkeit erfordert.
+1282200	1284440	Wolfgang Nölke über die Preisverleihung
+1284520	1287520	des Big Brother Awards gestern Abend in Bielefeld.
+1288320	1292840	Digitales Logbuch, Computer und Kommunikation.
+1293800	1297800	Eintrag 17.0.23.
+1300960	1303800	Im Oktober, als die Blätter gefallen waren,
+1303880	1307240	schien es ruhig auf den Friedhöfen der Welt zu sein.
+1307320	1311560	Ahorn, Efeu, Buchenblätter in Braun lagen auf den Gräbern.
+1311640	1314960	Wie konnte da jemand auf die Idee von Zombies kommen,
+1315040	1318840	dumpfen Kreaturen, die stolperten und Menschen totbissen?
+1318920	1321160	Totaler Quatsch.
+1321240	1323400	Während wir das Denken und fast schon
+1323480	1326120	in einen netten Nachmittagsschlaf versinken,
+1326200	1329840	tut sich ein Spalt auf, schiebt die Blätter zur Seite,
+1329920	1333480	heraussteigt tatsächlich etwas Zombieartiges,
+1333560	1335080	nennt sich Windows,
+1335160	1338200	schleppt mit lautem Geklappere etwas hinter sich her,
+1338280	1340960	das heißt, MS-DOS.
+1341040	1345200	Ah nee, gehen wir lieber in die Kapelle, bevor was passiert.
+1345280	1349240	Nützt natürlich nichts, denn Zombies überwinden alle Hindernisse,
+1349280	1351840	jedenfalls im Horrorfilm.
+1351920	1353920	Während wir es trotzdem versuchen,
+1354000	1356800	sehen wir ein weiteres Grab, das sich aufspaltet,
+1356880	1360040	da kriecht ein Zombie namens Apple heraus,
+1360120	1365800	im Schlepptau fiese Kleinere mit dem Namen iPod und iPhone.
+1365880	1368040	Ah nee reißt das Portal zur Kapelle auf,
+1368120	1371120	will stürzen hinein und verrammeln die Tür von innen.
+1371200	1375440	Draußen klopfen jetzt laut Windows und Apple dagegen.
+1375520	1379000	Hast du Angst? Du zitterst ja richtig, fragt Ah nee.
+1379080	1380800	Ja, ich hab Angst.
+1380880	1384280	Vor streinalten Computern und Betriebssystemen?
+1384360	1387200	Ah nee, das sind IT-Zombies.
+1387280	1389240	Der Lärm lässt nach.
+1389320	1392280	Die Idee, bald die Tür zu öffnen und nach Hause gehen zu können,
+1392360	1394080	müssen wir leider knicken.
+1394160	1398280	Denn mit einem großen Krach bricht das Kapellenfenster auf
+1398360	1400560	und hinter den Scherben hereingeflogen
+1400640	1404440	kommt ein fürchterlich gefährlich aussehendes Zombie.
+1404480	1409360	Ich bin Google, grunzt das Zombie, während es auf uns niederkommt.
+1409440	1414000	Ich war die erste große Datenkrake und nannte mich Suchmaschine.
+1414080	1416040	Ich suche auch heute noch alles.
+1416120	1418960	Gut, dass ich euch zwei gefunden habe.
+1419040	1420840	Kommt näher, ihr Süßen.
+1420920	1424200	Darf ich euch? Ich darf euch doch.
+1424280	1426440	Widerrede ist zwecklos.
+1426520	1430200	Zu allem Überfluss springt jetzt auch noch die Kapellentüre auf.
+1430280	1434680	Kichernd kommen die Apple und Windows-Zombies mit ihrer Nachhut herein.
+1434760	1439200	Schreckliches Ende dieses netten Herbst-Spaziergangs.
+1439200	1441560	Das digitales Logbuch.
+1441640	1445680	Name Schönherr Maximilian Vollklaus.
+1457440	1460200	Die Ampelkoalition einigt sich auf den Einsatz
+1460280	1461880	digitaler Gesichtserkennung.
+1461960	1464400	Mit dieser Meldung startet unser Info-Update
+1464480	1466280	von und mit Michael Strang.
+1466320	1471160	Die Fraktionen von SPD, Grünen und FDP wollen in der kommenden Woche
+1471240	1475520	die gesetzlichen Änderungen für das sogenannte Sicherheitspaket beschließen.
+1475600	1479240	Die Koalition hatte sich im August auf das Sicherheitspaket geeinigt.
+1479320	1483040	Demnach soll die Polizei künftig Fotos von Verdächtigen
+1483120	1487280	mit allgemein öffentlich zugänglichen Internetdaten abgleichen dürfen,
+1487360	1489840	um die Identifizierung von Tatverdächtigen
+1489920	1492440	oder gesuchten Personen zu erleichtern.
+1492440	1496360	Vernetzte Geräte sollen besser gegen Cyberangriffe geschützt werden.
+1496440	1499680	Um smarte Kaffeemaschinen, Computeruhren
+1499760	1502680	und intelligente Babyphones sicherer zu machen,
+1502760	1506920	hat der Rat der EU-Innenministerinnen und Minister in Luxemburg
+1507000	1509400	den Cyber Resilience Act beschlossen.
+1509480	1514240	Die neuen Regelungen legen erstmals verbindliche Cyber-Sicherheitsanforderungen
+1514320	1516360	für alle vernetzten Geräte fest.
+1516440	1520720	Die Regelung verpflichtet Hersteller, Importeure und den Handel.
+1520920	1525280	Sie müssen künftig sicherstellen, dass ihre Produkte den Anforderungen genügen
+1525360	1528840	und mit einem entsprechenden Kennzeichen versehen sind.
+1533920	1536920	Nach einem jahrelangen Rechtsstreit hat sich Meta
+1537000	1539960	gegenüber dem Bundeskartellamt zu Nachbesserungen
+1540040	1543320	und strengeren Regeln beim Datenschutz verpflichtet.
+1543400	1546880	Der US-Konzern darf persönliche Informationen der Nutzenden
+1546880	1551360	aus Diensten des Plattformbetreibers wie Facebook, WhatsApp und Instagram
+1551440	1555320	nicht ohne deren Einwilligung zusammenführen und verarbeiten.
+1555400	1560560	Die deutschen Kartellwächter hatten dies dem Unternehmen schon 2019 aufgetragen,
+1560640	1562640	doch Meta klagte dagegen.
+1568720	1573800	Das Funksystem der Lichtsignalanlagen KAR in den Niederlanden erlaubt es
+1573800	1579280	unter anderem, Rettungskräften aus der Ferne die Ampeln auf ihrem Weg auf grün zu stellen.
+1579360	1581760	Der Hacker Alwin Peppels hat nun entdeckt,
+1581840	1585480	dass sich das System über ein selbstgebautes System steuern lässt
+1585560	1589840	und diese Sicherheitslücke der niederländischen Cyber-Sicherheitsbehörde mitgeteilt,
+1589920	1591840	berichtet RTL News.
+1591920	1594720	Daher müssen nun landesweit die Steuerungsanlagen
+1594800	1598120	von zehntausenden Ampeln ausgetauscht werden.
+1604760	1610800	Bis zum Jahr 2027 sollen unter dem Dach von Connecting Europe Facility Digital
+1610880	1614000	vor allem Verbindungsinfrastrukturen besser werden,
+1614080	1616600	teilte die EU-Kommission diese Woche mit.
+1616680	1621400	Konkret sollen damit 5G-Verbindungen in Europa auf- und ausgebaut,
+1621480	1626600	Back-Bauennetze modernisiert und der Energieverbrauch reduziert werden.
+1626600	1630320	Jede zweite Lehrkraft hat KI beruflich genutzt.
+1656600	1659240	Die, die bereits im Unterricht verwendet haben,
+1659320	1662040	nutzten 81% KI zur Wissensvermittlung.
+1665000	1667520	Sternzeit, 12. Oktober.
+1668480	1671560	Die Radarsonde für die Vulkane auf der Venus.
+1673640	1677080	Morgen vor 30 Jahren verglühte die NASA-Sonde Magellan
+1677160	1679360	in der Venus-Atmosphäre.
+1679440	1682760	Magellan hatte vier Jahre lang unsere Nachbarplaneten umkreist
+1682840	1686200	und wurde dann gezielt zum Absturz gebracht.
+1686280	1689440	Mit einem Radarinstrument hat die Sonde durch die dicke Wolkenhülle
+1689520	1693920	der Venus geblickt und nahezu die gesamte Oberfläche erfasst.
+1694000	1696440	Die Venus hat fast die Ausmaße der Erde.
+1696520	1698960	Die kleinsten Details, die Magellan erkennen konnte,
+1699040	1701240	sind etwa 200 Meter groß.
+1701320	1703280	Damit war Magellan deutlich scharfsichtiger
+1703360	1708040	als zwei sowjetische Venera-Sonden zehn Jahre zuvor.
+1708120	1711160	Wie sich zeigte, sind fast 90% der Venus-Oberfläche
+1711240	1713120	vulkanisch geprägt.
+1713200	1715800	In der Venus-Landschaft wimmelt es von Vulkankegeln,
+1715880	1720360	Lavaströmen, Einschlags-Kratern und Dünenfeldern.
+1720440	1723440	Auf unserem Nachbarplaneten herrscht 100-mal höherer Luftdruck
+1723520	1727760	als auf der Erde und die Temperatur liegt bei fast 500 Grad Celsius.
+1727840	1729600	Allerdings gibt es keinerlei Wasser.
+1729680	1733160	Erosion spielt offenbar kaum eine Rolle.
+1733240	1735960	Die Sonde mag seit drei Jahrzehnten Geschichte sein,
+1736040	1738480	doch ihre Daten werden bis heute genutzt.
+1738560	1740920	Erst vor wenigen Monaten bemerkten Fachleute
+1740960	1744240	anhand der Magellan-Radarbilder, dass Anfang der 90er-Jahre
+1744320	1747920	einige Vulkane auf der Venus aktiv waren.
+1748000	1750360	Magellan hat die Ausbrüche nicht live erfasst,
+1750440	1752680	aber Aufnahmen mit einigem zeitlichen Abstand
+1752760	1754800	zeigen an einigem Kratern und Berghängen
+1754880	1756520	deutliche Veränderungen.
+1756600	1760520	Das lässt sich wohl nur mit hervorgequollener Lava erklären.
+1760600	1763240	Die Venus zeigt sich derzeit kurz nach so einem Untergang
+1763320	1764640	tief im Südwesten.
+1764720	1768160	Dort strahlt ein Planet mit aktiven Vulkanen.
+1769160	1772840	Das war Computer und Kommunikation für diese Woche.
+1772920	1776000	Am Mikrofon begleitete sie Manfred Kleuber.
+1798160	1801160	Copyright WDR 2021

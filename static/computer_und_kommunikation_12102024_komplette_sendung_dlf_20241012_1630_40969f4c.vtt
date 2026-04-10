@@ -1,0 +1,1577 @@
+WEBVTT
+
+00:00.000 --> 00:03.440
+Mit Manfred Kläuber und das sind die Themen heute.
+
+00:03.520 --> 00:06.600
+Timing-Attacke, das Anonymisierungsnetzwerk Tor,
+
+00:06.680 --> 00:07.880
+ist angreifbar.
+
+00:07.960 --> 00:12.160
+Angekommen, künstliche Intelligenz hat auch bei den Nobelpreisen gewonnen.
+
+00:12.240 --> 00:15.360
+Datenschutz zitronen, fünf Überwachungstechnologien
+
+00:15.440 --> 00:19.840
+erhalten den Big Brother Award und das digitale Logbuch IT-Zombies.
+
+00:31.000 --> 00:33.840
+Wenn man Anonymisierung will im Internet,
+
+00:33.920 --> 00:37.360
+ist der Tor-Browser immer noch die erste Möglichkeit.
+
+00:37.440 --> 00:41.560
+Es gibt hier praktisch nicht so viele Alternativen, die sinnvoll sind.
+
+00:41.640 --> 00:44.920
+Das sagt Matthias Fassel vom CISPA Helmholtz Zentrum
+
+00:45.000 --> 00:47.600
+für Informationssicherheit in Saarbrücken.
+
+00:47.680 --> 00:52.040
+So ganz selbstverständlich ist seine Einschätzung im Moment nicht.
+
+00:52.120 --> 00:55.360
+Denn vor Kurzem sind gravierende Zweifel aufgekommen,
+
+00:55.440 --> 00:58.800
+dass die Analyse der Analyse nicht in der Analyse ist.
+
+00:59.480 --> 01:01.880
+Es gibt auch noch einen Zweifel,
+
+01:01.960 --> 01:07.000
+ob das Anonymisierungsnetzwerk Tor, das Akronym steht für TheOnion-Router,
+
+01:07.080 --> 01:10.360
+überhaupt noch sicher und vertrauenswürdig ist.
+
+01:10.440 --> 01:13.840
+Denn am 18. September meldeten Kollegen des NDR
+
+01:13.920 --> 01:16.720
+Anonymisierungsdienst Tor angreifbar.
+
+01:16.800 --> 01:20.520
+Sie berichteten über erfolgreiche Timing-Attacken
+
+01:20.600 --> 01:23.960
+von Strafverfolgungsbehörden auf das Tor-Netzwerk.
+
+01:24.040 --> 01:26.640
+Bei mir ist mein Kollege Michael Gessert.
+
+01:27.120 --> 01:29.800
+Über was die Kollegen hier berichtet haben,
+
+01:29.880 --> 01:33.480
+das waren nachträglich bekanntgewordene Ermittlungsdetails
+
+01:33.560 --> 01:35.760
+zu einem Fall aus dem Jahr 2021.
+
+01:35.840 --> 01:38.680
+Damals hatten deutsche Strafverfolgungsbehörden
+
+01:38.760 --> 01:42.040
+den Betreiber der pädokriminellen Plattform Boys Town
+
+01:42.120 --> 01:45.880
+im sogenannten Darknet identifizieren können, oder?
+
+01:45.960 --> 01:51.160
+Genau, wir sprechen wohlgemerkt über einen etwas länger zurückliegenden Fall,
+
+01:51.240 --> 01:55.200
+bei dem die Ermittlungsmaßnahmen und ihre technische Vorbereitung
+
+01:55.240 --> 01:59.320
+deutlich länger zurückliegen, bei dem aber diese technischen Details,
+
+01:59.400 --> 02:02.040
+die zu dem Ermittlungserfolg geführt haben,
+
+02:02.120 --> 02:04.440
+eben erst jetzt bekannt geworden sind.
+
+02:04.520 --> 02:07.600
+Durch ein Posting auf der Internetplattform Reddit
+
+02:07.680 --> 02:10.160
+Anfang des Jahres mit Ermittlungsdetails
+
+02:10.240 --> 02:14.040
+lagen den Kollegen vom NDR und den für eine Einschätzung
+
+02:14.120 --> 02:17.560
+hinzugezogenen Experten vom Chaos-Computer-Club CCC
+
+02:17.640 --> 02:20.400
+aber auch noch weitere Informationen vor.
+
+02:20.480 --> 02:24.080
+Und an dieser Stelle kam es dann zu gewissen Irritationen
+
+02:24.400 --> 02:28.800
+oder auch zu einer Verunsicherung bei allen an Tor Interessierten.
+
+02:28.880 --> 02:32.880
+Gab oder gibt es eben irgendeine grundsätzlich unbekannte Schwäche
+
+02:32.960 --> 02:36.240
+im technischen Design des Anonymisierungsnetzwerkes?
+
+02:36.320 --> 02:40.200
+Michael, an dieser Stelle sollten wir sofort auch mal auf das große,
+
+02:40.280 --> 02:43.440
+ja, ziemlich grundsätzliche Dilemma zu sprechen kommen.
+
+02:43.520 --> 02:48.000
+Im Sinne des Tor-Netzwerkes ist es ja im Internet vertraulich
+
+02:48.080 --> 02:52.200
+und anonyme Infos abrufen oder kommunizieren zu können.
+
+02:52.280 --> 02:55.600
+Zum Beispiel als Dissident in einem totalitären Regime
+
+02:55.680 --> 03:00.840
+oder als Whistleblowerin in einem korrupten und böswilligen Unternehmen.
+
+03:00.920 --> 03:03.960
+Das ist ja eigentlich die Idee von Tor, nicht?
+
+03:04.040 --> 03:07.680
+Das ist eigentlich die Idee und deswegen setzen sich seit Jahrzehnten
+
+03:07.760 --> 03:11.000
+Freiwillige aus der Open Source und aus der Privacy Community
+
+03:11.080 --> 03:13.440
+intensiv für Tor ein.
+
+03:13.520 --> 03:17.840
+Aber völlig klar von anonymer, nicht nachvollziehbarer Kommunikation im Netz.
+
+03:17.920 --> 03:19.920
+Da profitieren auch Kriminelle.
+
+03:19.960 --> 03:23.680
+Die verschleierten sogenannten Hidden Services im Tor-Netzwerk
+
+03:23.760 --> 03:27.880
+sind eben das, was landläufig als Darknet bezeichnet wird.
+
+03:27.960 --> 03:32.320
+Wobei wohlgemerkt, Hidden Services und damit auch das sogenannte Darknet,
+
+03:32.400 --> 03:35.120
+das ist noch keinesfalls per se kriminell.
+
+03:35.200 --> 03:37.840
+Aber dort tummeln sich eben auch viele Kriminelle.
+
+03:37.920 --> 03:40.960
+Vielleicht müssen wir hier noch mal ganz kurz erklären,
+
+03:41.040 --> 03:45.800
+wie Tor grundsätzlich funktioniert oder wie da die grundsätzliche Idee ist,
+
+03:45.840 --> 03:50.360
+wenn ich über Tor mit dem Tor-Browser eine Webseite ansurfen will,
+
+03:50.440 --> 03:53.680
+dann betrete ich das Tor-Netzwerk über einen Eintrittsserver,
+
+03:53.760 --> 03:57.480
+den Entry-Node oder den Eintrittsknoten.
+
+03:57.560 --> 04:01.600
+Von dort aus werden meine Kommunikations- und Surfdaten verschlüsselt,
+
+04:01.680 --> 04:05.240
+weitergeleitet an einen mittleren Middle-Node
+
+04:05.320 --> 04:08.480
+und von dort wiederum verschlüsselt an einen Exit-Node,
+
+04:08.560 --> 04:11.840
+also an einen Ausgangsknoten, der dann die Webseite aufruft.
+
+04:11.920 --> 04:14.680
+Der Witz, die angesteuerte Webseite weiß nicht,
+
+04:14.760 --> 04:17.000
+von wem eigentlich die Anfrage kommt.
+
+04:17.080 --> 04:20.560
+Und mein Provider und auch der Eingangsknoten
+
+04:20.640 --> 04:24.360
+und auch irgendwelche Behörden wiederum, die mich eventuell überwachen,
+
+04:24.440 --> 04:26.480
+die wissen gar nicht, was ich aufrufe.
+
+04:26.560 --> 04:27.640
+Das ist das Konzept.
+
+04:27.720 --> 04:30.240
+Jetzt hatte ja der Ex-US-Geheimdienstmitarbeiter
+
+04:30.320 --> 04:33.600
+und Whistleblower Edward Snowden schon 2013
+
+04:33.680 --> 04:37.120
+auf den Super-GAU für dieses Konzept hingewiesen.
+
+04:37.200 --> 04:41.240
+Wenn ein Akteur, ein Geheimdienst, die technischen Ressourcen hat,
+
+04:41.280 --> 04:44.880
+sowohl Eingänge als auch Ausgänge aus dem Tor-Netzwerk
+
+04:44.960 --> 04:47.440
+quasi umfassend überwachen zu können,
+
+04:47.520 --> 04:49.080
+dann kann er einfach feststellen,
+
+04:49.160 --> 04:52.440
+jetzt gerade beginnt z.B. an einem Eingangsknoten in Deutschland
+
+04:52.520 --> 04:55.720
+ein Download und gleichzeitig an einem Ausgangsknoten
+
+04:55.800 --> 04:57.560
+in den USA ein Upload.
+
+04:57.640 --> 04:59.920
+Das ist also sozusagen die Mutter
+
+05:00.000 --> 05:03.720
+der sogenannten Korrelationsangriffe auf das Tor-Netzwerk.
+
+05:03.800 --> 05:07.400
+Wenn ich eben an sich verschlüsselte und verschleierte Aktivitäten
+
+05:07.480 --> 05:09.920
+zeitlich zueinander zuordnen kann,
+
+05:10.000 --> 05:12.840
+dann lässt sich dadurch die Anonymität aushebeln.
+
+05:12.920 --> 05:15.640
+Eine solche Korrelations- oder Timing-Attacke,
+
+05:15.720 --> 05:17.960
+die funktioniert aber nicht nur bei Kommunikation
+
+05:18.040 --> 05:20.440
+durch das Tor-Netzwerk hindurch,
+
+05:20.520 --> 05:24.000
+sondern auch bei Verbindungen von außen in Tor hinein
+
+05:24.080 --> 05:28.480
+zu den sogenannten Hidden Services, also zum Darknet.
+
+05:28.560 --> 05:31.720
+Der Betreiber der pädokriminellen Plattform Boys Town
+
+05:31.800 --> 05:34.800
+kommunizierte offenbar mit einem vermeintlich sicheren
+
+05:34.880 --> 05:38.040
+torinternen Messenger namens Ricochet.
+
+05:38.080 --> 05:41.800
+Dieser Messenger läuft im Tor-Netzwerk als Hidden Service,
+
+05:41.880 --> 05:43.560
+als verdeckter Dienst.
+
+05:43.640 --> 05:45.440
+Um mit diesem zu kommunizieren,
+
+05:45.520 --> 05:48.400
+wird eine Art Treffpunkt im Tor-Netz ausgemacht.
+
+05:48.480 --> 05:51.240
+Matthias Fassel vom CISPA Helmholtz-Zentrum
+
+05:51.320 --> 05:53.280
+für Informationssicherheit in Saarbrücken.
+
+05:53.360 --> 05:56.080
+Und dann sage ich diesem versteckten Dienst,
+
+05:56.160 --> 06:00.120
+bitte verbinde dich auch dahin, damit wir kommunizieren können.
+
+06:00.200 --> 06:03.680
+Das heißt, eine Behörde kann im Prinzip so oft
+
+06:03.760 --> 06:05.840
+diesem versteckten Dienst sagen,
+
+06:05.920 --> 06:08.000
+hey, baue doch eine neue Verbindung auf
+
+06:08.080 --> 06:10.880
+und dann schauen, ob der versteckte Dienst
+
+06:10.960 --> 06:15.920
+jetzt einen Knoten verwendet hat, der der Behörde untersteht,
+
+06:16.000 --> 06:18.000
+also den sie betreibt oder überwachen kann.
+
+06:18.080 --> 06:21.280
+So lief das offenbar auch im Boys Town-Fall ab.
+
+06:21.360 --> 06:23.640
+Die Ermittlungsbehörden konnten mit dem Verdächtigen
+
+06:23.720 --> 06:26.120
+über einen von ihnen kontrollierten Server
+
+06:26.200 --> 06:28.440
+in Echtzeit kommunizieren.
+
+06:28.520 --> 06:32.840
+Stellten sie eine Frage, dann konnten sie direkt in Echtzeit abgleichen,
+
+06:32.880 --> 06:37.800
+über welchen Eingangsknoten zum Tornetz die Messenger-Antwort reinkommt.
+
+06:37.880 --> 06:41.360
+Gegen solche Timing- und Echtzeitkorrelationsanalysen
+
+06:41.440 --> 06:45.640
+gäbe es prinzipiell ein Gegenmittel, sagt Matthias Fassel.
+
+06:45.720 --> 06:48.680
+Das Tornetzwerk könnte eine Art Datenrauschen
+
+06:48.760 --> 06:52.960
+oder eine zufällige Verzögerung der übertragenen Daten einführen.
+
+06:53.040 --> 06:55.120
+Aber wenn man das abändern würde
+
+06:55.200 --> 06:58.120
+und zusätzliche Zeitverzögerungen einführt,
+
+06:58.200 --> 07:00.280
+würde eben auch die Popularität abnehmen,
+
+07:00.360 --> 07:02.200
+weil es dann weniger hilfreich wird.
+
+07:02.280 --> 07:05.560
+Also noch mühsamer, das Tornetzwerk zu verwenden.
+
+07:05.640 --> 07:08.280
+Und das würde auch mein Anonymity-Set dann einschränken,
+
+07:08.360 --> 07:11.240
+weil es weniger Leute im Tornetzwerk gibt.
+
+07:11.320 --> 07:14.440
+Und ein Tornetzwerk, das nur von drei Leuten verwendet wird,
+
+07:14.520 --> 07:16.680
+ist halt auch nicht mehr besonders anonym.
+
+07:16.760 --> 07:20.400
+Genau dieses Dilemma sieht auch Joachim Selzer vom CCC,
+
+07:20.480 --> 07:22.480
+vom Chaos Computer Club.
+
+07:22.560 --> 07:25.000
+Nach seiner Einschätzung werden Ermittlungsbehörden
+
+07:25.080 --> 07:28.160
+und Geheimdienste auch weiterhin permanent versuchen,
+
+07:28.200 --> 07:32.800
+kompromittierte Server, also Knoten, in das Tornetzwerk einzuschleusen.
+
+07:32.880 --> 07:36.320
+Das heißt, wenn ich jetzt ein staatlicher Angreifer wäre,
+
+07:36.400 --> 07:39.360
+würde ich kompromittierte Server ins Netz stellen,
+
+07:39.440 --> 07:42.480
+würde sie vielleicht nicht zu attraktiv sein lassen,
+
+07:42.560 --> 07:44.880
+damit sie dann eben auch keinen Verdacht erregen.
+
+07:44.960 --> 07:46.600
+Und dann würde ich einfach abwarten,
+
+07:46.680 --> 07:49.080
+dann würde ich so ein halbes Jahr oder Jahr warten.
+
+07:49.160 --> 07:52.400
+Und das lohnt sich dann eben auch, weil ich dann nach einem Jahr sagen kann,
+
+07:52.480 --> 07:55.880
+okay, jetzt habe ich ausreichend Server in dieses Netzwerk eingespeist.
+
+07:55.880 --> 07:58.080
+Und dann würde ich anfangen, Leute aufzudecken.
+
+07:58.160 --> 08:01.080
+Das Tor-Projekt hat auf die Neuigkeiten im Fall Boys Town
+
+08:01.160 --> 08:03.640
+sofort in einem Blogpost reagiert.
+
+08:03.720 --> 08:06.160
+Tor sei weiterhin technisch sicher.
+
+08:06.240 --> 08:10.440
+Der Ermittlungserfolg und die Deanonymisierung des Plattformbetreibers
+
+08:10.520 --> 08:14.120
+sei vermutlich auf die Verwendung des veralteten Messengers,
+
+08:14.200 --> 08:18.760
+Ricochet oder anderer veralteter Software zurückzuführen.
+
+08:18.840 --> 08:23.200
+Inzwischen hat Tor einen neuen Schutz namens Vanguard eingeführt,
+
+08:23.280 --> 08:28.440
+der genau gegen die im Ermittlungsverfahren verwendeten Timing-Analysen helfen soll.
+
+08:28.520 --> 08:32.400
+Pavel Tsonev vom Tor-Projekt gibt deshalb Entwarnung,
+
+08:32.480 --> 08:35.320
+räumt aber zugleich ein, dass den Tor-Verantwortlichen
+
+08:35.400 --> 08:38.400
+noch nicht völlig klar sei, ob es noch weitere,
+
+08:38.480 --> 08:41.640
+bislang unbekannte Design-Schwächen geben könnte.
+
+08:41.720 --> 08:44.120
+Was nach wie vor für uns spannend ist,
+
+08:44.200 --> 08:46.520
+ein bisschen mehr Hintergründe zu erfahren,
+
+08:46.600 --> 08:49.800
+hoffentlich im Rahmen unserer eigenen Recherchen und Analysen,
+
+08:49.800 --> 08:54.080
+die wir da anstellen, wie genau dieser Eingangsknoten entdeckt wurde.
+
+08:54.160 --> 08:57.400
+Da sind die Tor-Aktivisten sich noch immer nicht sicher,
+
+08:57.480 --> 09:00.320
+ob die Sache vollkommen geklärt ist, oder, Michael?
+
+09:00.400 --> 09:04.840
+Ja, das stimmt. Ich will das auch nicht vollkommen klären können.
+
+09:04.920 --> 09:08.960
+Ich habe keinen Zugang zu Non-Disclosure-Informationen bekommen
+
+09:09.040 --> 09:11.400
+und auch gar nicht versucht, die zu bekommen.
+
+09:11.480 --> 09:15.200
+Ich habe aus meinen Gesprächen mit Matthias Fassel vom CISPA,
+
+09:15.280 --> 09:17.880
+mit Joachim Selzer vom Chaos-Computer-Club
+
+09:17.960 --> 09:20.960
+und auch mit der Kölner Cyber-Staatsanwaltschaft
+
+09:21.040 --> 09:23.400
+zack insgesamt den Eindruck gewonnen,
+
+09:23.480 --> 09:27.240
+es gibt vermutlich keine neue unbekannte Schwäche im Tor-Design,
+
+09:27.320 --> 09:31.040
+die sozusagen einen General-Schlüssel für Ermittler darstellen würde.
+
+09:31.120 --> 09:33.360
+Was die wissenschaftliche Community angeht,
+
+09:33.440 --> 09:37.480
+die versucht ja permanent, neue Korrelationsanalysen zu entwickeln,
+
+09:37.560 --> 09:39.760
+aber um Tor sicherer zu machen.
+
+09:39.840 --> 09:42.440
+Was den CCC angeht, der ist natürlich grundsätzlich
+
+09:42.520 --> 09:44.000
+auf der Seite von Privacy.
+
+09:44.080 --> 09:47.520
+Da würde ich mal trotz irgendwelcher Verschwiegenheitsvereinbarungen
+
+09:47.600 --> 09:51.200
+vermuten, wenn es ein dramatisches, ungestopftes Sicherheitsproblem
+
+09:51.280 --> 09:55.560
+bei Tor geben sollte, dann würden sie das vermutlich irgendwie signalisieren.
+
+09:55.640 --> 09:57.480
+Was die Ermittlungsbehörden angeht,
+
+09:57.560 --> 10:00.360
+wenn es diese fundamentale Lücke geben sollte,
+
+10:00.440 --> 10:02.640
+dann würden die kriminellen Darknet-Plattformen
+
+10:02.720 --> 10:05.760
+nicht nur sporadisch, sondern am laufenden Band auffliegen.
+
+10:05.840 --> 10:10.200
+Das ist ein gutes Stichwort, denn am Dienstag hat ja die Polizei Duisburg
+
+10:10.240 --> 10:13.720
+das Innen- und Justizministerium und eben auch die Zentrale
+
+10:13.800 --> 10:17.200
+und Ansprechstelle Cybercrime in Nordrhein-Westfalen
+
+10:17.280 --> 10:20.440
+wieder einen Ermittlungserfolg in einer großen Pressekonferenz
+
+10:20.520 --> 10:23.640
+bekannt gegeben. Da ist wiederum eine Plattform im Darknet,
+
+10:23.720 --> 10:27.840
+also damit auch im Tornetz enttarnt und geschlossen worden.
+
+10:27.920 --> 10:31.080
+Betreiber und eine Reihe von Nutzern wurden identifiziert.
+
+10:31.160 --> 10:34.800
+NRW-Justizminister Benjamin Limbach wird da mit der Botschaft
+
+10:34.880 --> 10:37.040
+an potenzielle Täter zitiert,
+
+10:37.120 --> 10:40.120
+Ihr könnt euch nicht verstecken, nicht hinter vier Wänden,
+
+10:40.200 --> 10:43.680
+nicht hinter einem Pseudonym und auch nicht im Darknet.
+
+10:43.760 --> 10:46.760
+War das etwa ein weiterer Hinweis auf technische Möglichkeiten
+
+10:46.840 --> 10:50.480
+der Ermittler oder etwaige Schwächen bei Tor?
+
+10:50.560 --> 10:53.160
+Also ich glaube nicht. Ich habe den Fall gestern
+
+10:53.240 --> 10:56.760
+nochmal mit der Staatsanwaltschaft Köln bzw. dem ZAK besprochen.
+
+10:56.840 --> 11:00.480
+Und hier sieht es wirklich nach klassischer Polizeiarbeit aus.
+
+11:00.560 --> 11:04.600
+Da war bei Ermittlungen in Bayern eine Person mit Wohnsitz Duisburg
+
+11:04.640 --> 11:08.280
+als möglicher Nutzer einer Darknet-Missbrauchsplattform aufgefallen.
+
+11:08.360 --> 11:11.560
+Dann hat die Polizei in NRW dort eine Durchsuchung durchgeführt.
+
+11:11.640 --> 11:15.560
+Und der Verdächtige war offenbar auch räuhig und kooperativ
+
+11:15.640 --> 11:19.000
+und hat eine Menge Zugangspasswörter zu entsprechenden Accounts
+
+11:19.080 --> 11:22.280
+rausgerückt. Und darüber hat man wieder weitere Personen
+
+11:22.360 --> 11:24.080
+und Strukturen ermitteln können.
+
+11:24.160 --> 11:26.600
+Das ist, glaube ich, auch nochmal eine ganz wichtige Erkenntnis.
+
+11:26.680 --> 11:29.280
+Ermittlungserfolge sind eben trotz Tor
+
+11:29.360 --> 11:32.280
+und übrigens auch trotz Messenger End-zu-End-Verschlüsselung
+
+11:32.360 --> 11:34.080
+weiterhin möglich.
+
+11:34.160 --> 11:36.440
+Wie verletzlich ist das Tor-Netzwerk?
+
+11:36.520 --> 11:39.000
+Darüber sprach ich mit Michael Gessert. Danke.
+
+11:49.400 --> 11:50.920
+Das ist schon ziemlich auffällig.
+
+11:51.000 --> 11:54.120
+Wann immer zurzeit Neuheiten oder technologische Entwicklungen
+
+11:54.200 --> 11:57.880
+angepriesen werden, dann ist auch immer KI mit im Spiel.
+
+11:58.320 --> 12:02.400
+Künstliche Intelligenz ist nicht nur eine ziemlich alte Disziplin
+
+12:02.440 --> 12:05.000
+der Informatik, die gerade mal vor zwei Jahren
+
+12:05.080 --> 12:07.960
+so richtig aus dem Dornröschenschlaf erwacht ist,
+
+12:08.040 --> 12:10.920
+sondern auch ein Trendthema und ein Buzzword,
+
+12:11.000 --> 12:15.240
+das offenbar nahezu automatisch Türen in viele Richtungen öffnet.
+
+12:15.320 --> 12:17.520
+Kein Wunder also, dass KI im Überfluss
+
+12:17.600 --> 12:19.640
+für alles Mögliche bemüht wird.
+
+12:19.720 --> 12:24.440
+Aber dass nun ausgerechnet auch im alt ehrwürdigen Nobelpreis KI
+
+12:24.520 --> 12:27.720
+mit drin ist, frankrothelischen, musste das wirklich sein?
+
+12:27.800 --> 12:30.680
+Ja, offenbar schon, denn das Nobelpreiskomitee in Stockholm
+
+12:30.760 --> 12:34.000
+hat am Mittwoch gleich noch einen weiteren Nobelpreis
+
+12:34.080 --> 12:37.040
+und nicht nur den Physiknobelpreis für ein KI-Thema springen lassen.
+
+12:37.120 --> 12:38.840
+Auch den Nobelpreis für Chemie.
+
+12:38.920 --> 12:40.280
+Da geht es um einen Algorithmus,
+
+12:40.360 --> 12:43.720
+der die Form von Proteinen präziser ausrechnen kann.
+
+12:43.800 --> 12:46.120
+Wichtig etwa für die Suche nach neuen Medikamenten.
+
+12:46.200 --> 12:48.080
+Ja, und zwei der drei Chemielauriaten
+
+12:48.160 --> 12:51.960
+kommen von Google, DeepMind, also der KI-Schmiede von Google.
+
+12:52.040 --> 12:56.160
+Ja, und dass das Nobelpreiskomitee so munter mitmacht bei diesem KI-Hype,
+
+12:56.240 --> 12:57.920
+das mag vielleicht damit zu tun haben,
+
+12:58.000 --> 13:00.000
+dass man ihm schon öfter vorgeworfen hat,
+
+13:00.040 --> 13:02.440
+eben allzu alt ehrwürdig unterwegs zu sein
+
+13:02.520 --> 13:06.640
+und Errungenschaften auszuzeichnen, die schon Jahrzehnte her sind
+
+13:06.720 --> 13:09.440
+und mit unserem Alltag vielleicht gar nicht so viel zu tun haben.
+
+13:09.520 --> 13:12.120
+Ja, und vielleicht wollte das Komitee nun ganz deutlich zeigen,
+
+13:12.200 --> 13:15.200
+hey, wir sind auf der Höhe der Zeit und zeichnen was aus,
+
+13:15.280 --> 13:17.080
+was unsere Gesellschaft wirklich prägt.
+
+13:17.160 --> 13:20.040
+Da könnte man aber einwenden, dass die Arbeiten ja,
+
+13:20.120 --> 13:22.600
+zumindest der beiden Physikpreisträger,
+
+13:22.680 --> 13:26.240
+auch schon etwas länger her sind, aus den 80er Jahren.
+
+13:26.320 --> 13:28.240
+Aber reden wir drüber, was haben die gemacht
+
+13:28.280 --> 13:31.840
+und warum ist es für die heutigen KI-Systeme so wichtig?
+
+13:31.920 --> 13:34.080
+Ja, also der ältere der beiden, John Hopfield,
+
+13:34.160 --> 13:38.120
+hat sich in den frühen 80er Jahren mit neuronalen Netzwerken befasst.
+
+13:38.200 --> 13:41.000
+Das sind Programme, die die Funktion des menschlichen Gehirns
+
+13:41.080 --> 13:44.120
+quasi imitieren, also da gibt es sogenannte Knoten,
+
+13:44.200 --> 13:45.960
+das sind künstliche Neuronen,
+
+13:46.040 --> 13:48.040
+die sind miteinander verbunden wie im Hirn
+
+13:48.120 --> 13:50.000
+und können sich gegenseitig beeinflussen
+
+13:50.080 --> 13:52.440
+und diese Verbindungen, die können sich verändern,
+
+13:52.520 --> 13:54.200
+können also z.B. stärker werden,
+
+13:54.280 --> 13:56.760
+wenn zwei Knoten oft miteinander agieren.
+
+13:56.840 --> 13:58.960
+Ja, und das macht den Computer lernfähig.
+
+13:59.040 --> 14:01.600
+Man spricht also auch von Machine Learning.
+
+14:01.680 --> 14:05.440
+Und John Hopfield hat diese neuronalen Netzwerke erfunden?
+
+14:05.520 --> 14:10.080
+Ja, das nicht, aber er hat 1982 eine Art assoziatives Gedächtnis
+
+14:10.160 --> 14:12.840
+basierend auf einem neuronalen Netz entwickelt
+
+14:12.920 --> 14:15.840
+und das kann nicht nur bekannte Bilder erkennen,
+
+14:15.920 --> 14:19.000
+wie vorher die Systeme, sondern wenn ihm ein unvollständiges
+
+14:19.080 --> 14:21.400
+oder irgendwie verzerrtes Bild gegeben wird,
+
+14:21.480 --> 14:24.040
+dann kann die Methode ein abgespeichertes Bild finden,
+
+14:24.120 --> 14:25.280
+das ihm ähnlich ist.
+
+14:25.280 --> 14:27.640
+Ja, und das Verfahren ließ sich dann verwenden,
+
+14:27.720 --> 14:30.400
+um beschädigte Daten oder Bilder wiederherzustellen.
+
+14:30.480 --> 14:34.920
+Was hat denn der zweite Preisträger Joffrey Hinton vollbracht?
+
+14:35.000 --> 14:37.480
+Ja, der hat die neuronalen Netzwerke weiterentwickelt
+
+14:37.560 --> 14:39.920
+zu dem, was man heute Deep Learning nennt.
+
+14:40.000 --> 14:43.720
+Da tastet sich das neuronale Netz Schicht für Schicht immer tiefer vor
+
+14:43.800 --> 14:46.920
+und kann dadurch Bilder erkennen, die es nie zuvor gesehen hat.
+
+14:47.000 --> 14:49.040
+Also Beispiel, man will dem Computer beibringen,
+
+14:49.120 --> 14:51.560
+Katzenbilder von Hundebildern zu unterscheiden.
+
+14:51.640 --> 14:55.080
+Dazu trainiert man ihn mit vielen Katzen- und Hundefotos
+
+14:55.160 --> 14:59.040
+und zuerst lernt die KI einfache Dinge wie Linien oder Kanten.
+
+14:59.120 --> 15:00.840
+Und bei weiteren Durchgängen lernt sie dann,
+
+15:00.920 --> 15:02.960
+wie die Kombinationen dieser Linien aussehen,
+
+15:03.040 --> 15:04.680
+zum Beispiel Ohren oder Augen.
+
+15:04.760 --> 15:07.160
+Ja, und am Ende kann die KI dann von selbst entscheiden,
+
+15:07.240 --> 15:10.080
+ob ein Bild eine Katze zeigt oder ein Hund.
+
+15:10.760 --> 15:12.160
+Ich hatte ja eingangs schon gesagt,
+
+15:12.240 --> 15:15.840
+dass KI eigentlich eine ziemlich alte Disziplin der Informatik ist.
+
+15:15.920 --> 15:19.920
+Aber warum hat es seit diesen Arbeiten aus den 80er Jahren
+
+15:20.000 --> 15:23.840
+so lange gedauert, bis KI wirklich den Durchbruch dann schaffte?
+
+15:23.920 --> 15:25.480
+Ja, also damals in den 80er Jahren,
+
+15:25.560 --> 15:27.360
+da waren die Rechner noch viel zu langsam
+
+15:27.440 --> 15:29.680
+und die Datenspeicher auch waren viel zu klein.
+
+15:29.760 --> 15:32.920
+Also John Hopfield zum Beispiel verwendete damals ein Netzwerk
+
+15:33.000 --> 15:37.200
+mit 30 künstlichen Neuronen und knapp 500 Parametern.
+
+15:37.280 --> 15:39.880
+Mehr ging mit den damaligen Rechnern einfach nicht.
+
+15:39.960 --> 15:42.480
+Heute arbeiten Sprachmodelle wie ChetGPT
+
+15:42.560 --> 15:45.200
+mit mehr als einer Billion Parametern.
+
+15:45.280 --> 15:48.240
+Und das funktioniert eben nur mit modernen, schnellen Rechnern
+
+15:48.320 --> 15:49.880
+und auch mit großen Festplatten,
+
+15:49.960 --> 15:52.320
+die also Unmengen an Daten speichern können.
+
+15:52.320 --> 15:55.400
+Denn viele Daten, das ist eine weitere Voraussetzung,
+
+15:55.480 --> 15:57.840
+um eine KI vernünftig zu trainieren.
+
+15:57.920 --> 16:00.320
+Reden wir noch über eine bemerkenswerte Tatsache,
+
+16:00.400 --> 16:02.840
+nämlich, dass sich Joffrey hinten gar nicht mehr
+
+16:02.920 --> 16:07.520
+so uneingeschränkt über KI freut, sondern er hat auch Befürchtungen.
+
+16:07.600 --> 16:09.400
+Was konkret befürchtet er?
+
+16:09.480 --> 16:13.520
+Also er glaubt, dass die KI Millionen an Arbeitsplätzen vernichten wird,
+
+16:13.600 --> 16:18.240
+dass die Algorithmen Wahlen beeinflussen durch gefälschte Videos zum Beispiel,
+
+16:18.320 --> 16:20.720
+dass sich mit KI Cyberangriffe anzetteln
+
+16:20.720 --> 16:24.760
+und tödliche Viren zur biologischen Kriegsführung entwickeln lassen.
+
+16:24.840 --> 16:28.400
+Und er meint sogar, dass KI-Systeme letztlich intelligenter sein werden,
+
+16:28.480 --> 16:32.160
+als wir uns schon heute in vielen Bereichen Hausrüberlegen sind.
+
+16:32.240 --> 16:35.280
+Um KI ging es auch bei den diesjährigen Nobelpreisen
+
+16:35.360 --> 16:36.720
+für Physik und Chemie.
+
+16:36.800 --> 16:40.520
+Darüber sprach ich mit Frank Grotelüschen. Dankeschön.
+
+16:40.600 --> 16:43.920
+Zum 24. Male wurden gestern Abend in Bielefeld
+
+16:44.000 --> 16:48.200
+fünf Negativpreise an sogenannte Datenkraken verliehen.
+
+16:48.320 --> 16:51.320
+So bezeichnet der Bielefelder Datenschutzverein
+
+16:51.400 --> 16:55.800
+Digitalcourage Unternehmen, Institutionen oder Behörden,
+
+16:55.880 --> 16:59.560
+die den notwendigen Datenschutz für ihre Kunden oder für Bürger
+
+16:59.640 --> 17:03.000
+nicht so genau nehmen oder bewusst sogar missachten.
+
+17:03.080 --> 17:05.640
+Der Negativpreis, eine Big Brother-Figur,
+
+17:05.720 --> 17:09.920
+soll nach Vorstellung des Vereins die Preisträger nicht lächerlich machen,
+
+17:10.000 --> 17:12.280
+sondern zum Nachdenken anregen.
+
+17:12.360 --> 17:16.600
+Und tatsächlich stellten sich bereits einige Preisträger der Diskussion
+
+17:16.680 --> 17:19.720
+mit ihrem bislang stets wohlgesinnten Publikum.
+
+17:19.800 --> 17:23.360
+In diesem Jahr war jedoch keiner der fünf neuen Preisträger
+
+17:23.440 --> 17:25.040
+im voll besetzten Land zu sehen.
+
+17:25.120 --> 17:26.560
+Wolfgang Neukir berichtet.
+
+17:26.640 --> 17:29.880
+Zu den prominenten Preisträgern zielt Bundesgesundheitsminister
+
+17:29.960 --> 17:34.600
+Karl Lauterbach wegen der geplanten nach Auffassung von Digitalcourage
+
+17:34.680 --> 17:37.040
+unzureichend geschützten Weitergabe
+
+17:37.120 --> 17:41.120
+von Patientendaten an europäische Interessenten.
+
+17:41.200 --> 17:44.320
+Dies sei, so der ehemalige Datenschutzbeauftragte
+
+17:44.320 --> 17:47.360
+des Landesschleswig-Holstein Thilo Weichert,
+
+17:47.440 --> 17:50.600
+das Ende der ärztlichen Schweigepflicht.
+
+17:50.680 --> 17:54.800
+Zugang zu den pseudonymen Daten bekommt jeder.
+
+17:54.880 --> 17:59.600
+Jedermann kann die anfordern, ohne auch nur eine Qualifikation
+
+17:59.680 --> 18:02.840
+oder eine Fachkenntnis nachweisen zu müssen.
+
+18:02.920 --> 18:05.280
+Die größte Unverschämtheit aber ist,
+
+18:05.360 --> 18:08.560
+dass den Betroffenen bei der Sekundärnutzung
+
+18:08.640 --> 18:12.120
+von pseudonymen Daten kein Auskunst- und kein Widersprucherecht
+
+18:12.200 --> 18:13.280
+zugestanden wird.
+
+18:13.320 --> 18:18.040
+Peris ist das Kürzel-für-Personen-Identifikationssystem,
+
+18:18.120 --> 18:22.080
+dessen mobile Kameras anhand biometrischer Merkwale
+
+18:22.160 --> 18:25.160
+Tatverdächtige in Echtzeit erkennen.
+
+18:25.240 --> 18:30.000
+Letzteres, die Echtzeiterkennung ist aber der Polizei streng verboten.
+
+18:30.080 --> 18:35.160
+Nach einem ersten Test in Sachsen wurde das System dort abgeschaltet,
+
+18:35.240 --> 18:38.240
+vermutlich aber an die Hamburger Polizei verliehen,
+
+18:38.320 --> 18:43.200
+die das Echtzeitverbot trickreich interpretiert haben soll.
+
+18:43.280 --> 18:47.120
+Laudator Frank Rosengardt vom Chaos Computer Club.
+
+18:47.200 --> 18:49.960
+Die Software Peris wird so eingestellt,
+
+18:50.040 --> 18:52.600
+dass die Erkennung nicht in Echtzeit passiert,
+
+18:52.680 --> 18:54.720
+sondern ein bisschen später.
+
+18:54.800 --> 18:58.200
+Was später bedeutet, ist allerdings nur irgendwo festgeschrieben.
+
+18:58.280 --> 19:00.920
+Wahrscheinlich reichen einige Sekunden Verzögerung,
+
+19:01.000 --> 19:03.840
+um nicht in Echtzeit zu arbeiten.
+
+19:03.920 --> 19:06.520
+Hier wird die gesetzlich erlaubte technische,
+
+19:06.600 --> 19:09.840
+kurzfristige Speicherung von Bildern praktisch missbraucht,
+
+19:09.920 --> 19:11.880
+um sie für eine Gesichtserkennung zu nutzen.
+
+19:11.960 --> 19:17.080
+Das war der Jury einen Big Brother für Sachsens Innenminister Armin Schuster wert.
+
+19:17.160 --> 19:23.120
+Und der Arbeitsrechtler Peter Wedde fand auch die verwirrenden Geschäftsbedingungen
+
+19:23.200 --> 19:28.200
+der beiden chinesischen Handelsplattformen Teemu und Shein
+
+19:28.280 --> 19:30.960
+seien eine Datenschutz-Zitrone wert,
+
+19:31.040 --> 19:36.600
+nämlich für die Kunst alle rechtlichen Risiken auf Kunden abzuwälzen.
+
+19:36.680 --> 19:39.560
+Wer als Importeur in China Textilien für 300 Euro bestellt
+
+19:39.560 --> 19:42.360
+und sie in Teillieferung zu 100 Euro bekommt,
+
+19:42.440 --> 19:48.080
+dem kann es passieren, dass der Zoll dafür rund 100 Euro an Gebühren nachfordert.
+
+19:48.160 --> 19:51.480
+Entdeckt der Zoll ein Plagiat oder eine Produktfälschung,
+
+19:51.560 --> 19:55.040
+darf er die Hersteller der Originale über den Importeur informieren.
+
+19:55.120 --> 19:59.280
+Aus ganz billig kann so ganz schnell ziemlich teuer werden.
+
+19:59.360 --> 20:03.800
+Auch die Deutsche Bahn verdiene nach Meinung der Jury einen Big Brother,
+
+20:03.880 --> 20:06.720
+denn deren sogenannter Digitalzwang,
+
+20:06.840 --> 20:08.400
+zum Beispiel bei der Bahncard,
+
+20:08.480 --> 20:14.880
+erschwere zunehmend anonymes Reisen für Menschen ohne Handy und E-Mail-Konto
+
+20:14.960 --> 20:17.080
+als lästigen Trend.
+
+20:17.160 --> 20:19.440
+So heißt eine neue Big Brother Kategorie,
+
+20:19.520 --> 20:22.920
+empfindet Digitalcourage-Mitgründerin Rena Tangens
+
+20:23.000 --> 20:25.920
+den sogenannten Technik-Paternalismus,
+
+20:26.000 --> 20:32.200
+jene Hörigkeit auf allgegenwärtig bevormundende, piepsende digitale Geräte,
+
+20:32.280 --> 20:35.040
+übergriffige Navis und Suchmaschinen.
+
+20:35.160 --> 20:37.240
+Je weniger Überblick wir selber haben,
+
+20:37.320 --> 20:40.560
+desto anfälliger werden wir für Manipulation.
+
+20:40.640 --> 20:45.120
+Schau hier hin, geh dorthin, kauf das.
+
+20:45.200 --> 20:47.320
+Hintergrundtext, wir kennen dich so gut,
+
+20:47.400 --> 20:49.480
+dass wir das alles für dich entscheiden können.
+
+20:49.560 --> 20:52.240
+Technik-Paternalismus sei darauf angelegt,
+
+20:52.320 --> 20:55.240
+so Tangens, Menschen zu entmündigen
+
+20:55.320 --> 20:57.600
+oder gar nicht erst mündig werden zu lassen.
+
+20:57.680 --> 21:00.160
+Wir haben es in der Hand, andere Technik zu fordern,
+
+21:00.240 --> 21:04.400
+Monopole aufzubrechen und die Rahmenbedingungen anders zu gestalten.
+
+21:04.480 --> 21:08.560
+Lobby-Control und Rebalance Now, zwei deutsche Organisationen,
+
+21:08.640 --> 21:11.640
+haben gemeinsam mit anderen Organisationen
+
+21:11.720 --> 21:16.160
+ein White Paper erarbeitet, das beschreibt, wie das gelingen kann.
+
+21:16.240 --> 21:19.360
+Beyond Big Tech ist ein langfristiges Projekt,
+
+21:19.440 --> 21:22.120
+das Mut und Hartnäckigkeit erfordert.
+
+21:22.200 --> 21:24.440
+Wolfgang Nölke über die Preisverleihung
+
+21:24.520 --> 21:27.520
+des Big Brother Awards gestern Abend in Bielefeld.
+
+21:28.320 --> 21:32.840
+Digitales Logbuch, Computer und Kommunikation.
+
+21:33.800 --> 21:37.800
+Eintrag 17.0.23.
+
+21:40.960 --> 21:43.800
+Im Oktober, als die Blätter gefallen waren,
+
+21:43.880 --> 21:47.240
+schien es ruhig auf den Friedhöfen der Welt zu sein.
+
+21:47.320 --> 21:51.560
+Ahorn, Efeu, Buchenblätter in Braun lagen auf den Gräbern.
+
+21:51.640 --> 21:54.960
+Wie konnte da jemand auf die Idee von Zombies kommen,
+
+21:55.040 --> 21:58.840
+dumpfen Kreaturen, die stolperten und Menschen totbissen?
+
+21:58.920 --> 22:01.160
+Totaler Quatsch.
+
+22:01.240 --> 22:03.400
+Während wir das Denken und fast schon
+
+22:03.480 --> 22:06.120
+in einen netten Nachmittagsschlaf versinken,
+
+22:06.200 --> 22:09.840
+tut sich ein Spalt auf, schiebt die Blätter zur Seite,
+
+22:09.920 --> 22:13.480
+heraussteigt tatsächlich etwas Zombieartiges,
+
+22:13.560 --> 22:15.080
+nennt sich Windows,
+
+22:15.160 --> 22:18.200
+schleppt mit lautem Geklappere etwas hinter sich her,
+
+22:18.280 --> 22:20.960
+das heißt, MS-DOS.
+
+22:21.040 --> 22:25.200
+Ah nee, gehen wir lieber in die Kapelle, bevor was passiert.
+
+22:25.280 --> 22:29.240
+Nützt natürlich nichts, denn Zombies überwinden alle Hindernisse,
+
+22:29.280 --> 22:31.840
+jedenfalls im Horrorfilm.
+
+22:31.920 --> 22:33.920
+Während wir es trotzdem versuchen,
+
+22:34.000 --> 22:36.800
+sehen wir ein weiteres Grab, das sich aufspaltet,
+
+22:36.880 --> 22:40.040
+da kriecht ein Zombie namens Apple heraus,
+
+22:40.120 --> 22:45.800
+im Schlepptau fiese Kleinere mit dem Namen iPod und iPhone.
+
+22:45.880 --> 22:48.040
+Ah nee reißt das Portal zur Kapelle auf,
+
+22:48.120 --> 22:51.120
+will stürzen hinein und verrammeln die Tür von innen.
+
+22:51.200 --> 22:55.440
+Draußen klopfen jetzt laut Windows und Apple dagegen.
+
+22:55.520 --> 22:59.000
+Hast du Angst? Du zitterst ja richtig, fragt Ah nee.
+
+22:59.080 --> 23:00.800
+Ja, ich hab Angst.
+
+23:00.880 --> 23:04.280
+Vor streinalten Computern und Betriebssystemen?
+
+23:04.360 --> 23:07.200
+Ah nee, das sind IT-Zombies.
+
+23:07.280 --> 23:09.240
+Der Lärm lässt nach.
+
+23:09.320 --> 23:12.280
+Die Idee, bald die Tür zu öffnen und nach Hause gehen zu können,
+
+23:12.360 --> 23:14.080
+müssen wir leider knicken.
+
+23:14.160 --> 23:18.280
+Denn mit einem großen Krach bricht das Kapellenfenster auf
+
+23:18.360 --> 23:20.560
+und hinter den Scherben hereingeflogen
+
+23:20.640 --> 23:24.440
+kommt ein fürchterlich gefährlich aussehendes Zombie.
+
+23:24.480 --> 23:29.360
+Ich bin Google, grunzt das Zombie, während es auf uns niederkommt.
+
+23:29.440 --> 23:34.000
+Ich war die erste große Datenkrake und nannte mich Suchmaschine.
+
+23:34.080 --> 23:36.040
+Ich suche auch heute noch alles.
+
+23:36.120 --> 23:38.960
+Gut, dass ich euch zwei gefunden habe.
+
+23:39.040 --> 23:40.840
+Kommt näher, ihr Süßen.
+
+23:40.920 --> 23:44.200
+Darf ich euch? Ich darf euch doch.
+
+23:44.280 --> 23:46.440
+Widerrede ist zwecklos.
+
+23:46.520 --> 23:50.200
+Zu allem Überfluss springt jetzt auch noch die Kapellentüre auf.
+
+23:50.280 --> 23:54.680
+Kichernd kommen die Apple und Windows-Zombies mit ihrer Nachhut herein.
+
+23:54.760 --> 23:59.200
+Schreckliches Ende dieses netten Herbst-Spaziergangs.
+
+23:59.200 --> 24:01.560
+Das digitales Logbuch.
+
+24:01.640 --> 24:05.680
+Name Schönherr Maximilian Vollklaus.
+
+24:17.440 --> 24:20.200
+Die Ampelkoalition einigt sich auf den Einsatz
+
+24:20.280 --> 24:21.880
+digitaler Gesichtserkennung.
+
+24:21.960 --> 24:24.400
+Mit dieser Meldung startet unser Info-Update
+
+24:24.480 --> 24:26.280
+von und mit Michael Strang.
+
+24:26.320 --> 24:31.160
+Die Fraktionen von SPD, Grünen und FDP wollen in der kommenden Woche
+
+24:31.240 --> 24:35.520
+die gesetzlichen Änderungen für das sogenannte Sicherheitspaket beschließen.
+
+24:35.600 --> 24:39.240
+Die Koalition hatte sich im August auf das Sicherheitspaket geeinigt.
+
+24:39.320 --> 24:43.040
+Demnach soll die Polizei künftig Fotos von Verdächtigen
+
+24:43.120 --> 24:47.280
+mit allgemein öffentlich zugänglichen Internetdaten abgleichen dürfen,
+
+24:47.360 --> 24:49.840
+um die Identifizierung von Tatverdächtigen
+
+24:49.920 --> 24:52.440
+oder gesuchten Personen zu erleichtern.
+
+24:52.440 --> 24:56.360
+Vernetzte Geräte sollen besser gegen Cyberangriffe geschützt werden.
+
+24:56.440 --> 24:59.680
+Um smarte Kaffeemaschinen, Computeruhren
+
+24:59.760 --> 25:02.680
+und intelligente Babyphones sicherer zu machen,
+
+25:02.760 --> 25:06.920
+hat der Rat der EU-Innenministerinnen und Minister in Luxemburg
+
+25:07.000 --> 25:09.400
+den Cyber Resilience Act beschlossen.
+
+25:09.480 --> 25:14.240
+Die neuen Regelungen legen erstmals verbindliche Cyber-Sicherheitsanforderungen
+
+25:14.320 --> 25:16.360
+für alle vernetzten Geräte fest.
+
+25:16.440 --> 25:20.720
+Die Regelung verpflichtet Hersteller, Importeure und den Handel.
+
+25:20.920 --> 25:25.280
+Sie müssen künftig sicherstellen, dass ihre Produkte den Anforderungen genügen
+
+25:25.360 --> 25:28.840
+und mit einem entsprechenden Kennzeichen versehen sind.
+
+25:33.920 --> 25:36.920
+Nach einem jahrelangen Rechtsstreit hat sich Meta
+
+25:37.000 --> 25:39.960
+gegenüber dem Bundeskartellamt zu Nachbesserungen
+
+25:40.040 --> 25:43.320
+und strengeren Regeln beim Datenschutz verpflichtet.
+
+25:43.400 --> 25:46.880
+Der US-Konzern darf persönliche Informationen der Nutzenden
+
+25:46.880 --> 25:51.360
+aus Diensten des Plattformbetreibers wie Facebook, WhatsApp und Instagram
+
+25:51.440 --> 25:55.320
+nicht ohne deren Einwilligung zusammenführen und verarbeiten.
+
+25:55.400 --> 26:00.560
+Die deutschen Kartellwächter hatten dies dem Unternehmen schon 2019 aufgetragen,
+
+26:00.640 --> 26:02.640
+doch Meta klagte dagegen.
+
+26:08.720 --> 26:13.800
+Das Funksystem der Lichtsignalanlagen KAR in den Niederlanden erlaubt es
+
+26:13.800 --> 26:19.280
+unter anderem, Rettungskräften aus der Ferne die Ampeln auf ihrem Weg auf grün zu stellen.
+
+26:19.360 --> 26:21.760
+Der Hacker Alwin Peppels hat nun entdeckt,
+
+26:21.840 --> 26:25.480
+dass sich das System über ein selbstgebautes System steuern lässt
+
+26:25.560 --> 26:29.840
+und diese Sicherheitslücke der niederländischen Cyber-Sicherheitsbehörde mitgeteilt,
+
+26:29.920 --> 26:31.840
+berichtet RTL News.
+
+26:31.920 --> 26:34.720
+Daher müssen nun landesweit die Steuerungsanlagen
+
+26:34.800 --> 26:38.120
+von zehntausenden Ampeln ausgetauscht werden.
+
+26:44.760 --> 26:50.800
+Bis zum Jahr 2027 sollen unter dem Dach von Connecting Europe Facility Digital
+
+26:50.880 --> 26:54.000
+vor allem Verbindungsinfrastrukturen besser werden,
+
+26:54.080 --> 26:56.600
+teilte die EU-Kommission diese Woche mit.
+
+26:56.680 --> 27:01.400
+Konkret sollen damit 5G-Verbindungen in Europa auf- und ausgebaut,
+
+27:01.480 --> 27:06.600
+Back-Bauennetze modernisiert und der Energieverbrauch reduziert werden.
+
+27:06.600 --> 27:10.320
+Jede zweite Lehrkraft hat KI beruflich genutzt.
+
+27:36.600 --> 27:39.240
+Die, die bereits im Unterricht verwendet haben,
+
+27:39.320 --> 27:42.040
+nutzten 81% KI zur Wissensvermittlung.
+
+27:45.000 --> 27:47.520
+Sternzeit, 12. Oktober.
+
+27:48.480 --> 27:51.560
+Die Radarsonde für die Vulkane auf der Venus.
+
+27:53.640 --> 27:57.080
+Morgen vor 30 Jahren verglühte die NASA-Sonde Magellan
+
+27:57.160 --> 27:59.360
+in der Venus-Atmosphäre.
+
+27:59.440 --> 28:02.760
+Magellan hatte vier Jahre lang unsere Nachbarplaneten umkreist
+
+28:02.840 --> 28:06.200
+und wurde dann gezielt zum Absturz gebracht.
+
+28:06.280 --> 28:09.440
+Mit einem Radarinstrument hat die Sonde durch die dicke Wolkenhülle
+
+28:09.520 --> 28:13.920
+der Venus geblickt und nahezu die gesamte Oberfläche erfasst.
+
+28:14.000 --> 28:16.440
+Die Venus hat fast die Ausmaße der Erde.
+
+28:16.520 --> 28:18.960
+Die kleinsten Details, die Magellan erkennen konnte,
+
+28:19.040 --> 28:21.240
+sind etwa 200 Meter groß.
+
+28:21.320 --> 28:23.280
+Damit war Magellan deutlich scharfsichtiger
+
+28:23.360 --> 28:28.040
+als zwei sowjetische Venera-Sonden zehn Jahre zuvor.
+
+28:28.120 --> 28:31.160
+Wie sich zeigte, sind fast 90% der Venus-Oberfläche
+
+28:31.240 --> 28:33.120
+vulkanisch geprägt.
+
+28:33.200 --> 28:35.800
+In der Venus-Landschaft wimmelt es von Vulkankegeln,
+
+28:35.880 --> 28:40.360
+Lavaströmen, Einschlags-Kratern und Dünenfeldern.
+
+28:40.440 --> 28:43.440
+Auf unserem Nachbarplaneten herrscht 100-mal höherer Luftdruck
+
+28:43.520 --> 28:47.760
+als auf der Erde und die Temperatur liegt bei fast 500 Grad Celsius.
+
+28:47.840 --> 28:49.600
+Allerdings gibt es keinerlei Wasser.
+
+28:49.680 --> 28:53.160
+Erosion spielt offenbar kaum eine Rolle.
+
+28:53.240 --> 28:55.960
+Die Sonde mag seit drei Jahrzehnten Geschichte sein,
+
+28:56.040 --> 28:58.480
+doch ihre Daten werden bis heute genutzt.
+
+28:58.560 --> 29:00.920
+Erst vor wenigen Monaten bemerkten Fachleute
+
+29:00.960 --> 29:04.240
+anhand der Magellan-Radarbilder, dass Anfang der 90er-Jahre
+
+29:04.320 --> 29:07.920
+einige Vulkane auf der Venus aktiv waren.
+
+29:08.000 --> 29:10.360
+Magellan hat die Ausbrüche nicht live erfasst,
+
+29:10.440 --> 29:12.680
+aber Aufnahmen mit einigem zeitlichen Abstand
+
+29:12.760 --> 29:14.800
+zeigen an einigem Kratern und Berghängen
+
+29:14.880 --> 29:16.520
+deutliche Veränderungen.
+
+29:16.600 --> 29:20.520
+Das lässt sich wohl nur mit hervorgequollener Lava erklären.
+
+29:20.600 --> 29:23.240
+Die Venus zeigt sich derzeit kurz nach so einem Untergang
+
+29:23.320 --> 29:24.640
+tief im Südwesten.
+
+29:24.720 --> 29:28.160
+Dort strahlt ein Planet mit aktiven Vulkanen.
+
+29:29.160 --> 29:32.840
+Das war Computer und Kommunikation für diese Woche.
+
+29:32.920 --> 29:36.000
+Am Mikrofon begleitete sie Manfred Kleuber.
+
+29:58.160 --> 30:01.160
+Copyright WDR 2021
+

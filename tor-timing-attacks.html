@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Tor Still Secure? — Deutschlandfunk, Computer und Kommunikation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent:  #9e3269;
+      --text:    #1f1f23;
+      --muted:   #5c5c6a;
+      --border:  #e8e0e5;
+      --bg:      #ffffff;
+      --bg-alt:  #faf8f9;
+      --max:     680px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    header a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header a:hover { text-decoration: underline; }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .meta-dot { color: var(--border); }
+    .meta a { color: var(--muted); }
+    .meta a:hover { color: var(--accent); }
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 20px; }
+    blockquote {
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--bg-alt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 12.5px;
+      font-style: normal;
+      color: var(--muted);
+    }
+    .section-break {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      padding: 12px 16px;
+      background: var(--bg-alt);
+      border-radius: 6px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Matthias Fassl</a>
+</header>
+
+<main>
+  <div class="meta">
+    <span>Deutschlandfunk</span>
+    <span class="meta-dot">·</span>
+    <span>Computer und Kommunikation</span>
+    <span class="meta-dot">·</span>
+    <span>12 October 2024</span>
+    <span class="meta-dot">·</span>
+    <a href="https://www.deutschlandfunk.de/computer-und-kommunikation-12-10-2024-komplette-sendung-dlf-40969f4c-100.html" target="_blank" rel="noopener noreferrer">Original broadcast ↗</a>
+  </div>
+
+  <h1>Is Tor Still Secure? Timing Attacks on the Anonymization Network</h1>
+  <p class="subtitle">Hosted by Manfred Kläuber. With reporter Michael Gessert.</p>
+
+  <p class="note">English translation of the Tor segment from the 12 October 2024 edition of <em>Computer und Kommunikation</em>. Matthias Fassl appears as a technical expert. Translation lightly edited for readability.</p>
+
+  <blockquote>
+    "If you want anonymization on the internet, the Tor Browser is still the first option. There are practically not many sensible alternatives."
+    <cite>— Matthias Fassl, CISPA Helmholtz Center for Information Security, Saarbrücken</cite>
+  </blockquote>
+
+  <p>That assessment is not entirely uncontroversial at the moment. Serious doubts have recently arisen about whether the Tor anonymization network — the acronym stands for The Onion Router — is still secure and trustworthy. On 18 September, colleagues at NDR reported that the anonymization service Tor was vulnerable, describing successful timing attacks by law enforcement agencies on the Tor network.</p>
+
+  <p>Reporter Michael Gessert explains: what the NDR colleagues reported were investigation details that only became known after the fact — relating to a case from 2021. At the time, German law enforcement had managed to identify the operator of the child abuse platform Boys Town on the so-called darknet. The technical details that led to that breakthrough only came to light recently, through a Reddit post at the start of the year. The NDR colleagues and experts from the Chaos Computer Club (CCC) who were consulted had access to further information — and this is where a certain confusion arose among everyone interested in Tor. Was there — or is there — some fundamentally unknown weakness in the technical design of the anonymization network?</p>
+
+  <hr class="section-break">
+
+  <p>To understand the issue, it helps to briefly explain how Tor works. When I want to visit a website using the Tor Browser, I enter the Tor network via an entry server — the entry node. From there, my communications and browsing data are encrypted and forwarded to a middle node, and from there encrypted again to an exit node, which then retrieves the website. The trick: the requested website doesn't know who the request is coming from. And my ISP, the entry node, and any authorities who might be monitoring me don't know what I'm accessing. That is the concept.</p>
+
+  <p>Former US intelligence employee and whistleblower Edward Snowden had already pointed to the worst-case scenario for this concept back in 2013: if one actor — an intelligence agency — has the technical resources to comprehensively monitor both the entry and exit points of the Tor network, they can simply observe that a download is starting at an entry node in Germany at the same moment as an upload is beginning at an exit node in the US. This is, so to speak, the mother of all correlation attacks on the Tor network. If you can correlate encrypted and obfuscated activities with each other in time, you can thereby undermine anonymity.</p>
+
+  <p>Such correlation or timing attacks work not only on traffic passing through the Tor network, but also on connections from outside into Tor — to the so-called hidden services, i.e., the darknet.</p>
+
+  <p>The operator of the Boys Town platform apparently communicated using a supposedly secure Tor-internal messenger called Ricochet. This messenger runs within the Tor network as a hidden service. To communicate with it, a kind of rendezvous point is arranged within the Tor network.</p>
+
+  <blockquote>
+    "And then I tell this hidden service: please also connect there, so we can communicate. That means an authority can, in principle, tell this hidden service as often as it wants: 'hey, why don't you build a new connection' — and then check whether the hidden service used a node that the authority controls, i.e., one it operates or can monitor."
+    <cite>— Matthias Fassl, CISPA Helmholtz Center for Information Security</cite>
+  </blockquote>
+
+  <p>That is apparently how the Boys Town case unfolded. The investigating authorities were able to communicate in real time with the suspect via a server they controlled. When they sent a message, they could immediately cross-reference which entry node into the Tor network the messenger response came through.</p>
+
+  <p>Against such real-time timing and correlation analyses, there is in principle a countermeasure, as Fassl explains:</p>
+
+  <blockquote>
+    "The Tor network could introduce a kind of data noise, or a random delay in the transmitted data. But if you were to change that and introduce additional time delays, it would also reduce popularity, because it would become less useful — even more cumbersome to use the Tor network. And it would also shrink my anonymity set, because there would be fewer people in the Tor network. And a Tor network used by only three people is not particularly anonymous anymore."
+    <cite>— Matthias Fassl, CISPA Helmholtz Center for Information Security</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>Joachim Selzer of the CCC — the Chaos Computer Club — sees exactly this same dilemma. In his assessment, law enforcement agencies and intelligence services will continue to try to infiltrate compromised servers — i.e., nodes — into the Tor network:</p>
+
+  <blockquote>
+    "If I were a state attacker, I would put compromised servers into the network, maybe not make them too attractive so they don't arouse suspicion. And then I'd simply wait — maybe half a year or a year. And it would be worth it, because after a year I could say: okay, now I've fed enough servers into this network. And then I'd start unmasking people."
+    <cite>— Joachim Selzer, Chaos Computer Club</cite>
+  </blockquote>
+
+  <p>The Tor Project responded immediately to the Boys Town news with a blog post, stating that Tor remains technically secure. The investigation's success and the de-anonymization of the platform operator were likely attributable to the use of the outdated Ricochet messenger or other outdated software. Tor has since introduced a new protection called Vanguard, designed to guard against precisely the kind of timing analyses used in the investigation.</p>
+
+  <p>Pavel Tsonev of the Tor Project therefore gives the all-clear, but at the same time concedes that the Tor team is not yet entirely certain whether there might be further, previously unknown design weaknesses.</p>
+
+  <p>Michael Gessert sums up: based on his conversations with Matthias Fassl from CISPA, Joachim Selzer from the CCC, and the Cologne Cybercrime Prosecution Unit, his overall impression is that there is probably no new unknown weakness in the Tor design that would give investigators a kind of master key. The research community is constantly working to develop new correlation analyses — but to make Tor more secure, not to exploit it. As for the CCC, it is fundamentally on the side of privacy, and Gessert suspects that if there were a dramatic, unresolved security problem with Tor, they would likely signal it somehow. And as for law enforcement: if there were such a fundamental gap, criminal darknet platforms would be taken down not just sporadically, but continuously.</p>
+</main>
+
+</body>
+</html>

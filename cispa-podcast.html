@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication Ceremonies — CISPA TL;DR Podcast</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent:  #9e3269;
+      --text:    #1f1f23;
+      --muted:   #5c5c6a;
+      --border:  #e8e0e5;
+      --bg:      #ffffff;
+      --bg-alt:  #faf8f9;
+      --max:     680px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    header a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header a:hover { text-decoration: underline; }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .meta-dot { color: var(--border); }
+    .meta a { color: var(--muted); }
+    .meta a:hover { color: var(--accent); }
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 20px; }
+    blockquote {
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--bg-alt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 12.5px;
+      font-style: normal;
+      color: var(--muted);
+    }
+    .section-break {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      padding: 12px 16px;
+      background: var(--bg-alt);
+      border-radius: 6px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Matthias Fassl</a>
+</header>
+
+<main>
+  <div class="meta">
+    <span>CISPA TL;DR</span>
+    <span class="meta-dot">·</span>
+    <span>Pilot Episode</span>
+    <span class="meta-dot">·</span>
+    <span>October 2021</span>
+    <span class="meta-dot">·</span>
+    <a href="https://cispa.de/en/news-and-events/insights/podcast/podcast/2021/fassl" target="_blank" rel="noopener noreferrer">Original episode ↗</a>
+  </div>
+
+  <h1>Authentication Ceremonies in Instant Messengers</h1>
+  <p class="subtitle">Hosted by Sebastian Klöckner, CISPA communications. With Matthias Fassl, Usable Security Research Group.</p>
+
+  <p class="note">English translation of the pilot episode of the CISPA TL;DR podcast. TL;DR stands for "Too Long; Didn't Read" — the show distills CISPA research papers for a general audience. Translation lightly edited for readability.</p>
+
+  <p>Sebastian Klöckner opens by introducing the show's concept: academic papers are long and often hard to read, but the research inside them is frequently fascinating. The pilot episode focuses on end-to-end encryption in messaging apps like WhatsApp, and why communication over these apps isn't necessarily as secure as we all hope.</p>
+
+  <p>The guest is Matthias Fassl, then 31 years old and originally from Vienna, working in the Usable Security Research Group of Katharina Krombholz at CISPA. Klöckner asks how Fassl ended up in Saarbrücken.</p>
+
+  <blockquote>
+    "The short version is: I wrote my master's thesis with Katharina. She was happy with the work and offered me the chance to come here to Saarbrücken. I already knew the name, but I still needed a little time to think it over — I don't regret it."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Klöckner asks Fassl to explain what usable security research actually is.</p>
+
+  <blockquote>
+    "Usable security is largely about how people interact with security mechanisms — where they fail in everyday situations, where errors happen, what can be improved, and how to make the tools people use daily actually better. In my specific work, I focus a lot on instant messengers — WhatsApp, Signal, Telegram. Other big research topics in the field are browser security warnings (those alerts you get when a certificate doesn't match) and passwords, which I think everyone uses every day."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>How did Fassl find his way into this research area?</p>
+
+  <blockquote>
+    "It's actually kind of funny — I originally wanted to go into computer architecture. But when I started reading papers for my master's thesis, I realized it just didn't spark anything for me. So I asked myself what had been following me around for years, and the answer was security and privacy — and specifically the idea of reducing the barriers that prevent people from exercising their data protection rights. That leads you pretty quickly into usable privacy and security. I looked around at TU Wien for who was working on that, and I ended up with Katharina fairly quickly."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>Klöckner mentions that Fassl's first paper at a top-tier venue has just been accepted at CHI — and asks him to walk through what that process looks like.</p>
+
+  <blockquote>
+    "It's usually quite a process. Papers are very rarely accepted on the first try — typically they get rejected two or three times before being accepted. In this case it was a tricky topic and I also had to learn how to write papers, so this one was rejected four or five times in total. I collected rejects."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Klöckner asks how demotivating those rejections are.</p>
+
+  <blockquote>
+    "It depends on the content of the review. Sometimes a rejection can actually work really well — if it's well-reasoned and also motivating because it gives you a clear direction. And some rejections are just very demotivating, when you can't understand why it was rejected and you feel poorly treated by the reviewers. At some point we weren't sure what was still holding it back — by then it was fairly complete and the arguments in the reviews were harder to parse. So we asked people in the community who work on similar topics to give us feedback, and their tips made the difference."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>Klöckner then reads out the paper title: <em>"Exploring User-Centered Security Design for Usable Authentication Ceremonies."</em> He asks Fassl to explain what it's about.</p>
+
+  <blockquote>
+    "It's about authentication ceremonies in instant messengers. Most of us use messengers like WhatsApp, Telegram, and Signal, which use end-to-end encryption — meaning only the sender and the actual recipient can read the message. The message is encrypted on the sender's phone, transmitted through various servers, and only decrypted at the recipient's device. Everyone in between can't read it. That's a great idea, but it has one important prerequisite: you have to use the right key. Otherwise you don't know who's receiving it. This is where the man-in-the-middle attack comes in — an attacker in the middle pretends to be the recipient, gets you to encrypt to them, and then forwards it on. To prevent this, there are authentication ceremonies: the real sender and recipient meet and compare their key material to make sure it matches."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Klöckner walks through the WhatsApp example: you go to a contact's profile, scroll down to "Encryption," a QR code appears, your partner scans it, and only then is the end-to-end encryption actually verified. Fassl confirms and explains where the paper intervenes.</p>
+
+  <blockquote>
+    "The problem we've been observing for several years is that these authentication ceremonies — in Telegram, WhatsApp, and Signal — work very poorly. 'Poorly' means: people don't know they exist, they don't know what they're for, and when they do know, they make mistakes using them. Our approach was to redesign these ceremonies from the ground up — rather than fixing existing ceremonies, we asked: how can we build ceremonies that better match what users actually expect?"
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>One of the concepts that emerged from user research was visual verification: encoding key information through gestures in photos. Fassl explains the idea.</p>
+
+  <blockquote>
+    "One category of ceremonies that users could actually get behind was visual verification — checking whether you're talking to the right person. We thought we could use this to verify the key information through a visual exchange. The idea: the keys in use are encoded through different gestures. The app might say: 'Hold your palm to your forehead' — you take a photo of yourself doing that, and send it. The other person then checks whether the photo matches what they'd expect, given their key. If it matches, the key is probably the right one."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Klöckner asks whether this draws on the CAPTCHA idea — "click all images with a zebra crossing." Fassl says it's loosely comparable, but the real inspiration is a TV trope.</p>
+
+  <blockquote>
+    "The thought comes more from a classic TV trope — proof-of-life photos. In hostage situations, the person holds up a newspaper to prove the photo is recent and that it's really them. The idea here is similar: you make images, but to prove they haven't been faked, you always have to show something different. It's not the most secure approach — it could potentially be attacked using deepfakes — but it offers at least a basic level of protection. Better than nothing."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Klöckner notes that for all its novelty, the paper doesn't offer a final solution. Fassl agrees.</p>
+
+  <blockquote>
+    "I think what's interesting about our paper is the new design approach — showing that security mechanisms can be designed from scratch to better match users' mental models. That doesn't mean those mental models are automatically good. We found that all three variants we developed still need more work and have various limitations. They're probably not perfect solutions. But I think the paper offers strong directions. The next step is collaborating with other groups working on similar topics — our approach contributes most at the early design stage, while others are better at refining and finding alternatives."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>Klöckner asks who E2E encryption is really for — is it just helping criminals avoid surveillance, or does it serve legitimate needs?</p>
+
+  <blockquote>
+    "Interestingly, it matters for quite a range of people. At the EU policy level, one important point is that commercial internet use is deeply built on these encryption paradigms — if messages can no longer be end-to-end encrypted, it becomes hard to build trust in payment processes and similar things. But there are also groups for whom it's much more urgent. Political activists, for example — for them it's extremely important that they can't be monitored by state institutions or opposing groups, and that they can protect themselves in a verifiable way."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Beyond the authentication ceremonies paper, Fassl mentions two other directions he's interested in pursuing: the social negotiation of security (getting others to participate in security practices with you) and the problem of security theater — people using security tools without really knowing how much protection they actually provide.</p>
+
+  <blockquote>
+    "Sometimes it happens that people use security mechanisms believing they help a lot, when in reality they don't help much — or in the worst case, not at all. That can be dangerous. One concrete example I'm working on in parallel: why do people who use Tor — the Tor Browser — also add a VPN on top? That can make sense in some limited cases, but for the vast majority of people doing it, it probably provides no benefit."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>The episode was recorded during the COVID pandemic. CHI 2021 was held virtually, with the in-person conference in Yokohama cancelled. Klöckner asks whether Fassl minds.</p>
+
+  <blockquote>
+    "Of course I would have liked to go to Yokohama. But what hits harder is that the conference isn't happening in person at all. One of the most important parts of conferences is networking — meeting researchers you can talk to informally, exchange ideas with, maybe hatch new project ideas. That doesn't really work online. You can give talks fine online, but the informal side is difficult. And it's less about Japan specifically, even though Japan is great — it's just about that meeting."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Klöckner closes with a few personal questions. What does Fassl miss most about Vienna?</p>
+
+  <blockquote>
+    "It took me a long time to figure it out — but it's really crispy Viennese Kaiser rolls. <em>Resch</em> — that's roughly 'crusty.' You can get rolls here too, they're just not the same. A Wurstsemmel with gherkin for lunch is very much an everyday Vienna thing, and it just doesn't exist here."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>As for Saarbrücken itself, Fassl says there's something uniquely freeing about working at a research center where everyone is focused on security — you can walk up to any random person, describe your research, and they'll at least have a frame of reference for the topic. For visitors, he recommends the Völklinger Hütte, the German-French garden, the Saarbrücken city forest, and the St. Johannermarkt on a summer evening — which, he says, you simply can't find in Vienna.</p>
+</main>
+
+</body>
+</html>

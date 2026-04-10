@@ -1,0 +1,183 @@
+start	end	text
+0	4200	Deutschlandfunk, Computer und Kommunikation.
+4200	9200	Ja, die Diskussion um die Chatkontrolle geht also auf EU-Ebene weiter.
+9200	13600	Doch während sich die Europapolitikerinnen und Politiker darüber streiten,
+13600	16800	wie Kommunikationskanäle überwacht werden sollen,
+16800	20200	damit sie nicht für schwere Straftaten missbraucht werden,
+20200	23600	machen sich Sicherheitsforscherinnen und Forscher weiter Gedanken
+23600	28400	über die wirklich sichere und zuverlässige Nutzung zum Beispiel von Messengern.
+28600	33600	Zwar bieten die meisten dieser Apps von sich aus gute Sicherheitsfunktionen an,
+33600	38000	doch sie müssen auch von den Userinnen und Usern richtig genutzt werden.
+38000	42400	So ist zum Beispiel für eine zuverlässige Ende-zu-Ende-Kommunikation
+42400	47800	die eindeutige Authentifizierung der Kommunikationspartnerinnen und Partner
+47800	50400	eine ganz wichtige Schlüsselfunktion.
+50400	55600	Matthias Fassl vom CISPA Helmholtz Zentrum für Informationssicherheit in Saarbrücken
+55800	61200	hat sich solche Authentifizierungs-Sessions in einem Selbstversuch genauer angesehen.
+61200	66200	Also in Ende-zu-Ende-verschlüsselten Messengern werden Nachrichten so verschlüsselt,
+66200	70200	dass sie nur vom Empfangsgerät wieder gelesen werden kann.
+70200	72800	Wichtig dafür ist allerdings, dass man auch weiß,
+72800	76600	dass dieser Empfangsschlüssel wirklich zu der Person gehört,
+76600	78400	mit der man wirklich reden will.
+78400	81800	Wenn man das nicht sicherstellt, könnte man Opfer eines sogenannten
+82000	87000	in den Mittelangriffs werden, wo dann die Angreifer auch mitlesen können
+87000	89400	oder auch selbst eigene Nachrichten schreiben.
+89400	91200	Was heißt denn sicherstellen?
+91200	97000	Also bei diesen Authentifizierungs-Sessions hat man ja die Möglichkeit zu bestätigen,
+97000	101200	ja, der Empfänger, der vorgibt, der Empfänger zu sein, ist es auch wirklich.
+101200	102800	Wie sieht das konkret aus?
+102800	106200	Also das sieht je nach Messenger ein bisschen anders aus.
+106200	110000	Allerdings läuft das meistens darauf hinaus, dass man dann entweder
+110000	114600	also auf seinem eigenen Handy einen QR-Code bekommt, den man vergleichen kann.
+114600	119800	Das heißt, man scannt mit seinem eigenen Handy den QR-Code der anderen Person
+119800	123400	und kriegt dann eine Bestätigung so, ja, das sind die richtigen Schlüssel.
+123400	126800	Oder man kriegt auch eine Zahlenkombination angezeigt,
+126800	129200	die kann man sich einander vorlesen.
+129200	131600	Wenn die übereinstimmen, passt das auch.
+131600	135200	Und wenn sie nicht übereinstimmen, sollte man tunlichst aufhören,
+135200	137600	diesen Kommunikationsweg zu nutzen.
+137600	140800	Und da die Gefahr sehr groß ist, dass man gerade abgehört wird.
+140800	143400	Um das wirklich bombensicher zu machen,
+143400	147400	worauf muss man dann als Nutzerin oder Nutzer genau achten?
+147400	151200	Also wenn man es wirklich bombensicher machen will, wäre es gut,
+151200	154800	wirklich mit der Person, mit der man sicher kommunizieren will,
+154800	157600	nur über verifizierte Kanäle zu kommunizieren,
+157600	162000	um solange diese Authentifizierungszeremonie noch nicht passiert ist,
+162000	166400	warten, bis man sich wirklich trifft, also persönlich, nicht übers Telefon
+166400	171600	und wirklich persönlich vergleichen und erst dann diesen Kanal nutzen.
+171600	174800	Und es kann auch vorkommen, dass sich diese Schlüssel ändern,
+174800	177200	oft auch durch sehr naheliegende Gründe,
+177200	182000	wie ich habe ein neues Smartphone bekommen oder ich habe die App neu installiert.
+182000	184800	Das ist dann ganz normal, dass eine Warnmeldung kommt,
+184800	186800	dass sich dieser Schlüssel verändert hat.
+186800	190800	Und dann sollte man diese Authentifizierungszeremonie einfach nochmal durchführen.
+190800	195000	So wie Sie das erklären, ehrlich gesagt, ist es dann für mich auch verständlich,
+195000	198600	warum viele Leute das nicht machen, weil man muss jetzt zum Beispiel
+198600	202800	erstmal die Gelegenheit haben, wieder auf den Kommunikationspartner zu treffen.
+202800	207000	Wenn das zum Beispiel eine Freundin oder ein Freund in den USA ist, ist das schwierig.
+207000	210200	Ist das die naheliegendste Erklärung oder was haben Sie jetzt
+210200	212200	in Ihrem Selbstversuch herausgefunden,
+212200	217400	warum eben halt diese Authentifizierungs-Sessions eben halt so mangelhaft
+217400	221200	von den Nutzerinnen und Nutzern genutzt werden?
+221200	224600	Also in unserem Selbstversuch haben wir festgestellt,
+224600	229800	im Alltag gibt es einfach, wie Sie schon erwähnt haben, Organisationsschwierigkeiten.
+229800	232200	Das heißt, man muss warten, bis man sich trifft.
+232200	234800	Vielleicht will man nicht für ein Treffen ausmachen.
+234800	237800	Und falls dieses Treffen auch wirklich stattfindet,
+237800	239800	hat man meistens ja auch bessere Dinge zu tun,
+239800	243400	als jetzt am Handy irgendwelche Schlüssel zu vergleichen.
+243400	247200	Das heißt, was sehr oft passiert ist, dass man einfach darauf vergisst,
+247200	250000	weil man sich halt in einem sozialen Gespräch austauschen will.
+250000	252200	Und dann gibt es oft wichtigere Dinge.
+252200	256800	Ein anderer Aspekt ist, wenn die andere Person das Konzept noch nicht kennt,
+256800	258800	gibt es vielleicht Erklärungsbedarf.
+258800	262000	Das heißt, man muss erklären, was ist das, wofür ist das
+262000	265400	und auch herzeigen können, wie man das macht.
+265400	270200	Das hört sich ja mehr nach sozialen oder persönlichen Faktoren an
+270200	272600	und weniger nach zum Beispiel Schwierigkeiten,
+272600	275800	die einfach die Anwendung solcher Authentifizierungs-Sessions
+275800	279800	in der Praxis durch technische Gegebenheiten auslösen.
+279800	283000	Also in der Forschung war uns auch vorher schon klar,
+283000	286000	dass es mit diesen Authentifizierungszeremonien Probleme gibt.
+286000	289000	Vorherige Forschungsprojekte waren primär im Labor
+289000	291400	und da ging es sehr um diese technischen Maßnahmen.
+291400	294000	Und dann haben die Forscher festgestellt,
+294000	297800	die Probleme liegen daran, dass Leute dieses Konzept nicht kennen.
+297800	300600	Also sie wissen nicht, was eine Authentifizierungszeremonie ist.
+300600	303600	Sie wissen auch nicht, was so ein Vorteil das für sie bringt
+303800	306000	und wie sie schon korrekt sagen.
+306000	309000	Es liegt dann auch oft an User Interface,
+309000	311200	wie der Messenger gestaltet ist
+311200	314800	und Leute scheitern auch daran, sie dann korrekt durchzuführen.
+322800	327800	Also unsere Erkenntnisse waren primär soziale und organisatorische Natur.
+327800	329600	Das ist auch vollkommen legitim.
+329600	332400	Aber das sind Dinge, die wir technisch unterstützen können.
+332400	337200	Also wir könnten dann zum Beispiel Mechanismen in diese Messenger einbauen,
+337200	339200	die bei der Organisation helfen
+339200	342400	oder vielleicht einen Hinweis darauf liefern,
+342400	344800	in einem Gespräch mit einer wichtigen Person,
+344800	348200	dass es vielleicht eine gute Idee wäre, zu authentifizieren
+348200	350600	und auch, wenn man sich trifft,
+350600	353200	im richtigen Kontext auch eine Erinnerung schicken,
+353200	355600	so hey, du wolltest das eigentlich machen,
+355600	357600	jetzt wäre eine gute Gelegenheit dafür.
+357600	359400	Im richtigen Kontext heißt ja dann,
+359400	360800	dass der Messenger auch wissen muss,
+360800	363600	wann die Bedingungen aus dem Kontext erfüllt sind.
+363600	365200	Das ist korrekt.
+365200	369200	Und wir sind natürlich ein Institut für Informationssicherheit
+369200	373000	und uns schwebt vor, dass es natürlich passieren kann,
+373000	377400	ohne die Privatsphäre oder irgendwelche Geo-Standorte einen Preis zu geben.
+377400	380200	Also wir nennen das dann Zero-Knowledge-Proves,
+380200	382400	wo man kryptographisch vergleichen kann,
+382400	385000	ob man sich zum Beispiel am richtigen Ort befindet
+385000	386400	oder am selben Ort,
+386400	389600	aber ohne zu verraten, wo man sich aufhält.
+389800	395200	Reden wir nochmal über die Bedeutung dieser Authentifizierungszeremonien.
+395200	399800	So ein bisschen hört sich das ja an nach einem Sicherheitsniveau,
+399800	402000	was man dadurch schaffen kann,
+402000	407000	das vielleicht viele Privatleute gar nicht für nötig erachten.
+407000	408600	Da ist was dran.
+408600	413200	Also für die meisten Privatleute ist mir jetzt auch ganz wichtig zu sagen,
+413200	418400	ist der Messenger wie WhatsApp oder Signal auch die sicherste Art
+418400	420800	zu kommunizieren, die sie vermutlich auf ihrem Handy haben,
+420800	424600	also das ist definitiv sicherer als E-Mail oder SMS,
+424600	427400	auch wenn man nicht authentifiziert.
+427400	430400	Allerdings besteht natürlich die Gefahr,
+430400	432800	also für besonders exponierte Personen zum Beispiel
+432800	435400	oder wenn es einem besonders wichtig ist,
+435400	438800	dass es dann zu einem Manualmittelangriff kommen könnte
+438800	441000	und in solchen Fällen hilft es,
+441000	443000	diese Authentifizierungszeremonie durchzuführen
+443000	445600	und kann dieses Risiko abwehren.
+445600	447000	Kann es auch davor schützen,
+447000	450600	dass man, was mittlerweile ja sehr stark auch schon auf der SMS
+450600	452600	und auf der E-Mail-Schiene passiert,
+452600	457000	dass man gegen betrügerische Kommunikation gewappnet ist?
+457000	460600	Die betrügerische Kommunikation passiert auch über WhatsApp.
+460600	463000	Die ist dann üblicherweise halt nicht authentifiziert,
+463000	465800	weil man diese Person ja auch nicht getroffen hat.
+465800	468000	Das heißt, eine Authentifizierungszeremonie,
+468000	470800	wo man Leute trifft und diese Schlüssel vergleicht,
+470800	472400	hilft mir festzustellen,
+472400	474200	dass die Nachricht wirklich von diesem Handy,
+474200	476200	von dieser Person kommt.
+476200	479000	Diese Person kann einen natürlich auch
+479000	481400	in einen Betrugsfall verwickeln.
+481400	483400	Aber es hilft natürlich,
+483400	486000	Nachrichten, die von nicht verifizierten Sendern kommen,
+486000	487800	hier skeptisch zu betrachten.
+487800	490200	Reden wir noch ein bisschen über die Methode,
+490200	492600	mit denen Sie diese Untersuchung gemacht haben,
+492600	494200	der Selbstversuch.
+494200	496600	Da würde man ja normalerweise erwarten,
+496600	501400	dass man meinetwegen 100 oder 1000 Nutzerinnen und Nutzer beobachtet
+501400	503200	und dann feststellt, was sie tun
+503200	504600	und wo sie Probleme sehen,
+504600	508400	welche Schwierigkeiten sie sehen, wo die Lücken sind.
+508400	510800	Jetzt haben Sie einen Versuch gemacht,
+510800	514600	wo Sie selbst als Sicherheitsexperte tätig werden
+514600	516200	und sich selbst beurteilen.
+516200	519800	Ist diese Methode nicht an sich problematisch?
+519800	523200	Also diese Methode wird auch sehr skeptisch gesehen.
+523200	527200	Ich habe das auch im wissenschaftlichen Review-Prozess mitbekommen.
+527200	529800	Da gab es sehr viele Diskussionen dazu.
+529800	532800	Ich hatte mehrere Gründe für diese Methodenwahlen.
+532800	536400	Die eine ist natürlich, wenn ich mich selbst untersuche,
+536400	538600	kann ich an einen viel längeren Zeitraum
+538600	542800	in viel detaillierteren Ausmaß begutachten.
+542800	545800	Das heißt, man kriegt ein viel tieferes
+545800	548000	Informationsverständnis daraus.
+548000	549600	Und die andere ist natürlich,
+549600	553600	wir sehen, dass Leute, die noch keine Berührungspunkte mit hatten,
+553600	556000	eben an anderen Dingen scheitern.
+556000	558200	Also wenn sie Zerwonie noch nicht kennen
+558200	560000	und nicht wissen, was so ein Vorteil das bringt
+560000	563400	oder wie jetzt dieser Messenger korrekt zu bedienen ist.
+563400	565600	Und aus Sicherheitsforscherperspektive
+565600	568400	treffen diese Fälle zumindest nicht auf mich zu.
+568400	570800	Das heißt, im Selbstversuch konnte ich mich
+570800	572600	auf die sozialen Probleme,
+572600	575000	die wirklich im Alltag entstehen, konzentrieren.
+575000	578400	Das war Matthias Fassl vom CISPA Helmholtz Zentrum
+578400	579800	für Informationssicherheit
+579800	583600	über die sichere Authentifizierung von Kommunikationspartnern.

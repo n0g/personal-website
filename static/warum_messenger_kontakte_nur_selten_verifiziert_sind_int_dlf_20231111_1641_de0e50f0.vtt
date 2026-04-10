@@ -1,0 +1,548 @@
+WEBVTT
+
+00:00.000 --> 00:04.200
+Deutschlandfunk, Computer und Kommunikation.
+
+00:04.200 --> 00:09.200
+Ja, die Diskussion um die Chatkontrolle geht also auf EU-Ebene weiter.
+
+00:09.200 --> 00:13.600
+Doch während sich die Europapolitikerinnen und Politiker darüber streiten,
+
+00:13.600 --> 00:16.800
+wie Kommunikationskanäle überwacht werden sollen,
+
+00:16.800 --> 00:20.200
+damit sie nicht für schwere Straftaten missbraucht werden,
+
+00:20.200 --> 00:23.600
+machen sich Sicherheitsforscherinnen und Forscher weiter Gedanken
+
+00:23.600 --> 00:28.400
+über die wirklich sichere und zuverlässige Nutzung zum Beispiel von Messengern.
+
+00:28.600 --> 00:33.600
+Zwar bieten die meisten dieser Apps von sich aus gute Sicherheitsfunktionen an,
+
+00:33.600 --> 00:38.000
+doch sie müssen auch von den Userinnen und Usern richtig genutzt werden.
+
+00:38.000 --> 00:42.400
+So ist zum Beispiel für eine zuverlässige Ende-zu-Ende-Kommunikation
+
+00:42.400 --> 00:47.800
+die eindeutige Authentifizierung der Kommunikationspartnerinnen und Partner
+
+00:47.800 --> 00:50.400
+eine ganz wichtige Schlüsselfunktion.
+
+00:50.400 --> 00:55.600
+Matthias Fassl vom CISPA Helmholtz Zentrum für Informationssicherheit in Saarbrücken
+
+00:55.800 --> 01:01.200
+hat sich solche Authentifizierungs-Sessions in einem Selbstversuch genauer angesehen.
+
+01:01.200 --> 01:06.200
+Also in Ende-zu-Ende-verschlüsselten Messengern werden Nachrichten so verschlüsselt,
+
+01:06.200 --> 01:10.200
+dass sie nur vom Empfangsgerät wieder gelesen werden kann.
+
+01:10.200 --> 01:12.800
+Wichtig dafür ist allerdings, dass man auch weiß,
+
+01:12.800 --> 01:16.600
+dass dieser Empfangsschlüssel wirklich zu der Person gehört,
+
+01:16.600 --> 01:18.400
+mit der man wirklich reden will.
+
+01:18.400 --> 01:21.800
+Wenn man das nicht sicherstellt, könnte man Opfer eines sogenannten
+
+01:22.000 --> 01:27.000
+in den Mittelangriffs werden, wo dann die Angreifer auch mitlesen können
+
+01:27.000 --> 01:29.400
+oder auch selbst eigene Nachrichten schreiben.
+
+01:29.400 --> 01:31.200
+Was heißt denn sicherstellen?
+
+01:31.200 --> 01:37.000
+Also bei diesen Authentifizierungs-Sessions hat man ja die Möglichkeit zu bestätigen,
+
+01:37.000 --> 01:41.200
+ja, der Empfänger, der vorgibt, der Empfänger zu sein, ist es auch wirklich.
+
+01:41.200 --> 01:42.800
+Wie sieht das konkret aus?
+
+01:42.800 --> 01:46.200
+Also das sieht je nach Messenger ein bisschen anders aus.
+
+01:46.200 --> 01:50.000
+Allerdings läuft das meistens darauf hinaus, dass man dann entweder
+
+01:50.000 --> 01:54.600
+also auf seinem eigenen Handy einen QR-Code bekommt, den man vergleichen kann.
+
+01:54.600 --> 01:59.800
+Das heißt, man scannt mit seinem eigenen Handy den QR-Code der anderen Person
+
+01:59.800 --> 02:03.400
+und kriegt dann eine Bestätigung so, ja, das sind die richtigen Schlüssel.
+
+02:03.400 --> 02:06.800
+Oder man kriegt auch eine Zahlenkombination angezeigt,
+
+02:06.800 --> 02:09.200
+die kann man sich einander vorlesen.
+
+02:09.200 --> 02:11.600
+Wenn die übereinstimmen, passt das auch.
+
+02:11.600 --> 02:15.200
+Und wenn sie nicht übereinstimmen, sollte man tunlichst aufhören,
+
+02:15.200 --> 02:17.600
+diesen Kommunikationsweg zu nutzen.
+
+02:17.600 --> 02:20.800
+Und da die Gefahr sehr groß ist, dass man gerade abgehört wird.
+
+02:20.800 --> 02:23.400
+Um das wirklich bombensicher zu machen,
+
+02:23.400 --> 02:27.400
+worauf muss man dann als Nutzerin oder Nutzer genau achten?
+
+02:27.400 --> 02:31.200
+Also wenn man es wirklich bombensicher machen will, wäre es gut,
+
+02:31.200 --> 02:34.800
+wirklich mit der Person, mit der man sicher kommunizieren will,
+
+02:34.800 --> 02:37.600
+nur über verifizierte Kanäle zu kommunizieren,
+
+02:37.600 --> 02:42.000
+um solange diese Authentifizierungszeremonie noch nicht passiert ist,
+
+02:42.000 --> 02:46.400
+warten, bis man sich wirklich trifft, also persönlich, nicht übers Telefon
+
+02:46.400 --> 02:51.600
+und wirklich persönlich vergleichen und erst dann diesen Kanal nutzen.
+
+02:51.600 --> 02:54.800
+Und es kann auch vorkommen, dass sich diese Schlüssel ändern,
+
+02:54.800 --> 02:57.200
+oft auch durch sehr naheliegende Gründe,
+
+02:57.200 --> 03:02.000
+wie ich habe ein neues Smartphone bekommen oder ich habe die App neu installiert.
+
+03:02.000 --> 03:04.800
+Das ist dann ganz normal, dass eine Warnmeldung kommt,
+
+03:04.800 --> 03:06.800
+dass sich dieser Schlüssel verändert hat.
+
+03:06.800 --> 03:10.800
+Und dann sollte man diese Authentifizierungszeremonie einfach nochmal durchführen.
+
+03:10.800 --> 03:15.000
+So wie Sie das erklären, ehrlich gesagt, ist es dann für mich auch verständlich,
+
+03:15.000 --> 03:18.600
+warum viele Leute das nicht machen, weil man muss jetzt zum Beispiel
+
+03:18.600 --> 03:22.800
+erstmal die Gelegenheit haben, wieder auf den Kommunikationspartner zu treffen.
+
+03:22.800 --> 03:27.000
+Wenn das zum Beispiel eine Freundin oder ein Freund in den USA ist, ist das schwierig.
+
+03:27.000 --> 03:30.200
+Ist das die naheliegendste Erklärung oder was haben Sie jetzt
+
+03:30.200 --> 03:32.200
+in Ihrem Selbstversuch herausgefunden,
+
+03:32.200 --> 03:37.400
+warum eben halt diese Authentifizierungs-Sessions eben halt so mangelhaft
+
+03:37.400 --> 03:41.200
+von den Nutzerinnen und Nutzern genutzt werden?
+
+03:41.200 --> 03:44.600
+Also in unserem Selbstversuch haben wir festgestellt,
+
+03:44.600 --> 03:49.800
+im Alltag gibt es einfach, wie Sie schon erwähnt haben, Organisationsschwierigkeiten.
+
+03:49.800 --> 03:52.200
+Das heißt, man muss warten, bis man sich trifft.
+
+03:52.200 --> 03:54.800
+Vielleicht will man nicht für ein Treffen ausmachen.
+
+03:54.800 --> 03:57.800
+Und falls dieses Treffen auch wirklich stattfindet,
+
+03:57.800 --> 03:59.800
+hat man meistens ja auch bessere Dinge zu tun,
+
+03:59.800 --> 04:03.400
+als jetzt am Handy irgendwelche Schlüssel zu vergleichen.
+
+04:03.400 --> 04:07.200
+Das heißt, was sehr oft passiert ist, dass man einfach darauf vergisst,
+
+04:07.200 --> 04:10.000
+weil man sich halt in einem sozialen Gespräch austauschen will.
+
+04:10.000 --> 04:12.200
+Und dann gibt es oft wichtigere Dinge.
+
+04:12.200 --> 04:16.800
+Ein anderer Aspekt ist, wenn die andere Person das Konzept noch nicht kennt,
+
+04:16.800 --> 04:18.800
+gibt es vielleicht Erklärungsbedarf.
+
+04:18.800 --> 04:22.000
+Das heißt, man muss erklären, was ist das, wofür ist das
+
+04:22.000 --> 04:25.400
+und auch herzeigen können, wie man das macht.
+
+04:25.400 --> 04:30.200
+Das hört sich ja mehr nach sozialen oder persönlichen Faktoren an
+
+04:30.200 --> 04:32.600
+und weniger nach zum Beispiel Schwierigkeiten,
+
+04:32.600 --> 04:35.800
+die einfach die Anwendung solcher Authentifizierungs-Sessions
+
+04:35.800 --> 04:39.800
+in der Praxis durch technische Gegebenheiten auslösen.
+
+04:39.800 --> 04:43.000
+Also in der Forschung war uns auch vorher schon klar,
+
+04:43.000 --> 04:46.000
+dass es mit diesen Authentifizierungszeremonien Probleme gibt.
+
+04:46.000 --> 04:49.000
+Vorherige Forschungsprojekte waren primär im Labor
+
+04:49.000 --> 04:51.400
+und da ging es sehr um diese technischen Maßnahmen.
+
+04:51.400 --> 04:54.000
+Und dann haben die Forscher festgestellt,
+
+04:54.000 --> 04:57.800
+die Probleme liegen daran, dass Leute dieses Konzept nicht kennen.
+
+04:57.800 --> 05:00.600
+Also sie wissen nicht, was eine Authentifizierungszeremonie ist.
+
+05:00.600 --> 05:03.600
+Sie wissen auch nicht, was so ein Vorteil das für sie bringt
+
+05:03.800 --> 05:06.000
+und wie sie schon korrekt sagen.
+
+05:06.000 --> 05:09.000
+Es liegt dann auch oft an User Interface,
+
+05:09.000 --> 05:11.200
+wie der Messenger gestaltet ist
+
+05:11.200 --> 05:14.800
+und Leute scheitern auch daran, sie dann korrekt durchzuführen.
+
+05:22.800 --> 05:27.800
+Also unsere Erkenntnisse waren primär soziale und organisatorische Natur.
+
+05:27.800 --> 05:29.600
+Das ist auch vollkommen legitim.
+
+05:29.600 --> 05:32.400
+Aber das sind Dinge, die wir technisch unterstützen können.
+
+05:32.400 --> 05:37.200
+Also wir könnten dann zum Beispiel Mechanismen in diese Messenger einbauen,
+
+05:37.200 --> 05:39.200
+die bei der Organisation helfen
+
+05:39.200 --> 05:42.400
+oder vielleicht einen Hinweis darauf liefern,
+
+05:42.400 --> 05:44.800
+in einem Gespräch mit einer wichtigen Person,
+
+05:44.800 --> 05:48.200
+dass es vielleicht eine gute Idee wäre, zu authentifizieren
+
+05:48.200 --> 05:50.600
+und auch, wenn man sich trifft,
+
+05:50.600 --> 05:53.200
+im richtigen Kontext auch eine Erinnerung schicken,
+
+05:53.200 --> 05:55.600
+so hey, du wolltest das eigentlich machen,
+
+05:55.600 --> 05:57.600
+jetzt wäre eine gute Gelegenheit dafür.
+
+05:57.600 --> 05:59.400
+Im richtigen Kontext heißt ja dann,
+
+05:59.400 --> 06:00.800
+dass der Messenger auch wissen muss,
+
+06:00.800 --> 06:03.600
+wann die Bedingungen aus dem Kontext erfüllt sind.
+
+06:03.600 --> 06:05.200
+Das ist korrekt.
+
+06:05.200 --> 06:09.200
+Und wir sind natürlich ein Institut für Informationssicherheit
+
+06:09.200 --> 06:13.000
+und uns schwebt vor, dass es natürlich passieren kann,
+
+06:13.000 --> 06:17.400
+ohne die Privatsphäre oder irgendwelche Geo-Standorte einen Preis zu geben.
+
+06:17.400 --> 06:20.200
+Also wir nennen das dann Zero-Knowledge-Proves,
+
+06:20.200 --> 06:22.400
+wo man kryptographisch vergleichen kann,
+
+06:22.400 --> 06:25.000
+ob man sich zum Beispiel am richtigen Ort befindet
+
+06:25.000 --> 06:26.400
+oder am selben Ort,
+
+06:26.400 --> 06:29.600
+aber ohne zu verraten, wo man sich aufhält.
+
+06:29.800 --> 06:35.200
+Reden wir nochmal über die Bedeutung dieser Authentifizierungszeremonien.
+
+06:35.200 --> 06:39.800
+So ein bisschen hört sich das ja an nach einem Sicherheitsniveau,
+
+06:39.800 --> 06:42.000
+was man dadurch schaffen kann,
+
+06:42.000 --> 06:47.000
+das vielleicht viele Privatleute gar nicht für nötig erachten.
+
+06:47.000 --> 06:48.600
+Da ist was dran.
+
+06:48.600 --> 06:53.200
+Also für die meisten Privatleute ist mir jetzt auch ganz wichtig zu sagen,
+
+06:53.200 --> 06:58.400
+ist der Messenger wie WhatsApp oder Signal auch die sicherste Art
+
+06:58.400 --> 07:00.800
+zu kommunizieren, die sie vermutlich auf ihrem Handy haben,
+
+07:00.800 --> 07:04.600
+also das ist definitiv sicherer als E-Mail oder SMS,
+
+07:04.600 --> 07:07.400
+auch wenn man nicht authentifiziert.
+
+07:07.400 --> 07:10.400
+Allerdings besteht natürlich die Gefahr,
+
+07:10.400 --> 07:12.800
+also für besonders exponierte Personen zum Beispiel
+
+07:12.800 --> 07:15.400
+oder wenn es einem besonders wichtig ist,
+
+07:15.400 --> 07:18.800
+dass es dann zu einem Manualmittelangriff kommen könnte
+
+07:18.800 --> 07:21.000
+und in solchen Fällen hilft es,
+
+07:21.000 --> 07:23.000
+diese Authentifizierungszeremonie durchzuführen
+
+07:23.000 --> 07:25.600
+und kann dieses Risiko abwehren.
+
+07:25.600 --> 07:27.000
+Kann es auch davor schützen,
+
+07:27.000 --> 07:30.600
+dass man, was mittlerweile ja sehr stark auch schon auf der SMS
+
+07:30.600 --> 07:32.600
+und auf der E-Mail-Schiene passiert,
+
+07:32.600 --> 07:37.000
+dass man gegen betrügerische Kommunikation gewappnet ist?
+
+07:37.000 --> 07:40.600
+Die betrügerische Kommunikation passiert auch über WhatsApp.
+
+07:40.600 --> 07:43.000
+Die ist dann üblicherweise halt nicht authentifiziert,
+
+07:43.000 --> 07:45.800
+weil man diese Person ja auch nicht getroffen hat.
+
+07:45.800 --> 07:48.000
+Das heißt, eine Authentifizierungszeremonie,
+
+07:48.000 --> 07:50.800
+wo man Leute trifft und diese Schlüssel vergleicht,
+
+07:50.800 --> 07:52.400
+hilft mir festzustellen,
+
+07:52.400 --> 07:54.200
+dass die Nachricht wirklich von diesem Handy,
+
+07:54.200 --> 07:56.200
+von dieser Person kommt.
+
+07:56.200 --> 07:59.000
+Diese Person kann einen natürlich auch
+
+07:59.000 --> 08:01.400
+in einen Betrugsfall verwickeln.
+
+08:01.400 --> 08:03.400
+Aber es hilft natürlich,
+
+08:03.400 --> 08:06.000
+Nachrichten, die von nicht verifizierten Sendern kommen,
+
+08:06.000 --> 08:07.800
+hier skeptisch zu betrachten.
+
+08:07.800 --> 08:10.200
+Reden wir noch ein bisschen über die Methode,
+
+08:10.200 --> 08:12.600
+mit denen Sie diese Untersuchung gemacht haben,
+
+08:12.600 --> 08:14.200
+der Selbstversuch.
+
+08:14.200 --> 08:16.600
+Da würde man ja normalerweise erwarten,
+
+08:16.600 --> 08:21.400
+dass man meinetwegen 100 oder 1000 Nutzerinnen und Nutzer beobachtet
+
+08:21.400 --> 08:23.200
+und dann feststellt, was sie tun
+
+08:23.200 --> 08:24.600
+und wo sie Probleme sehen,
+
+08:24.600 --> 08:28.400
+welche Schwierigkeiten sie sehen, wo die Lücken sind.
+
+08:28.400 --> 08:30.800
+Jetzt haben Sie einen Versuch gemacht,
+
+08:30.800 --> 08:34.600
+wo Sie selbst als Sicherheitsexperte tätig werden
+
+08:34.600 --> 08:36.200
+und sich selbst beurteilen.
+
+08:36.200 --> 08:39.800
+Ist diese Methode nicht an sich problematisch?
+
+08:39.800 --> 08:43.200
+Also diese Methode wird auch sehr skeptisch gesehen.
+
+08:43.200 --> 08:47.200
+Ich habe das auch im wissenschaftlichen Review-Prozess mitbekommen.
+
+08:47.200 --> 08:49.800
+Da gab es sehr viele Diskussionen dazu.
+
+08:49.800 --> 08:52.800
+Ich hatte mehrere Gründe für diese Methodenwahlen.
+
+08:52.800 --> 08:56.400
+Die eine ist natürlich, wenn ich mich selbst untersuche,
+
+08:56.400 --> 08:58.600
+kann ich an einen viel längeren Zeitraum
+
+08:58.600 --> 09:02.800
+in viel detaillierteren Ausmaß begutachten.
+
+09:02.800 --> 09:05.800
+Das heißt, man kriegt ein viel tieferes
+
+09:05.800 --> 09:08.000
+Informationsverständnis daraus.
+
+09:08.000 --> 09:09.600
+Und die andere ist natürlich,
+
+09:09.600 --> 09:13.600
+wir sehen, dass Leute, die noch keine Berührungspunkte mit hatten,
+
+09:13.600 --> 09:16.000
+eben an anderen Dingen scheitern.
+
+09:16.000 --> 09:18.200
+Also wenn sie Zerwonie noch nicht kennen
+
+09:18.200 --> 09:20.000
+und nicht wissen, was so ein Vorteil das bringt
+
+09:20.000 --> 09:23.400
+oder wie jetzt dieser Messenger korrekt zu bedienen ist.
+
+09:23.400 --> 09:25.600
+Und aus Sicherheitsforscherperspektive
+
+09:25.600 --> 09:28.400
+treffen diese Fälle zumindest nicht auf mich zu.
+
+09:28.400 --> 09:30.800
+Das heißt, im Selbstversuch konnte ich mich
+
+09:30.800 --> 09:32.600
+auf die sozialen Probleme,
+
+09:32.600 --> 09:35.000
+die wirklich im Alltag entstehen, konzentrieren.
+
+09:35.000 --> 09:38.400
+Das war Matthias Fassl vom CISPA Helmholtz Zentrum
+
+09:38.400 --> 09:39.800
+für Informationssicherheit
+
+09:39.800 --> 09:43.600
+über die sichere Authentifizierung von Kommunikationspartnern.
+
