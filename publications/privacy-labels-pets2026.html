@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>“Because I didn’t touch these and even don’t know why I should to change these”: Why App Developers Do (Not) Update Apple’s Privacy Labels — Matthias Fassl</title>
+  <meta name="description" content="“Because I didn’t touch these and even don’t know why I should to change these”: Why App Developers Do (Not) Update Apple’s Privacy Labels — Arwa Alsahdi, Jialiang Yan, Monica Kodwani, Matthias Fassl, Chris Kanich, Adam J. Aviv — PETS 2026">
+  <meta name="citation_title" content="“Because I didn’t touch these and even don’t know why I should to change these”: Why App Developers Do (Not) Update Apple’s Privacy Labels">
+  <meta name="citation_author" content="Alsahdi, Arwa">
+  <meta name="citation_author" content="Yan, Jialiang">
+  <meta name="citation_author" content="Kodwani, Monica">
+  <meta name="citation_author" content="Fassl, Matthias">
+  <meta name="citation_author" content="Kanich, Chris">
+  <meta name="citation_author" content="Aviv, Adam J.">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_journal_title" content="Proceedings on Privacy Enhancing Technologies (PoPETs)">
+  <meta name="citation_doi" content="10.56553/popets-2026-0151">
+  <meta name="citation_pdf_url" content="Why_App_Developers_(do_not)_change_Privacy_Labels_PETS_2026.pdf">
+  <meta name="citation_abstract_html_url" content="privacy-labels-pets2026.html">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent:     #9e3269;
+      --accent-lt:  #fce8f1;
+      --text:       #1f1f23;
+      --muted:      #5c5c6a;
+      --border:     #e8e0e5;
+      --bg:         #ffffff;
+      --bg-alt:     #faf8f9;
+      --max:        680px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    header a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header a:hover { text-decoration: underline; }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .venue-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+    .badge-chi    { background: #f0e8f5; color: #6b2f8a; }
+    .badge-soups  { background: #fce8f1; color: #8c1f54; }
+    .badge-usenix { background: #f0e8f5; color: #6b2f8a; }
+    .badge-cscw   { background: #fce8f1; color: #8c1f54; }
+    .badge-tochi  { background: #f0e8f5; color: #6b2f8a; }
+    .badge-springer { background: #f0eef1; color: #4a4552; }
+    .badge-thesis  { background: #f0eef1; color: #4a4552; }
+    .badge-other   { background: #f0eef1; color: #4a4552; }
+    .badge-pets    { background: #fce8f1; color: #8c1f54; }
+    .badge-ccs     { background: #f0e8f5; color: #6b2f8a; }
+    .award-badge {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #fdf3e7;
+      color: #96631a;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .authors {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .authors .me { color: var(--text); font-weight: 500; }
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pub-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .pub-link:hover { background: var(--accent-lt); }
+    .pub-link-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+    }
+    .block {
+      margin-top: 36px;
+    }
+    .block h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .abstract {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--bg-alt);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .bibtex-wrap {
+      position: relative;
+    }
+    .bibtex {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      padding-right: 76px;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--accent);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: var(--accent-lt); }
+    .copy-btn.copied { color: #1f7a3d; border-color: #1f7a3d; }
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="../index.html">← Matthias Fassl</a>
+</header>
+
+<main>
+  <div class="venue-row">
+    <span class="badge badge-pets">PETS 2026</span>
+    
+  </div>
+
+  <h1>“Because I didn’t touch these and even don’t know why I should to change these”: Why App Developers Do (Not) Update Apple’s Privacy Labels</h1>
+  
+  <p class="authors">Arwa Alsahdi, Jialiang Yan, Monica Kodwani, <span class="me">Matthias Fassl</span>, Chris Kanich, Adam J. Aviv</p>
+
+  <div class="pub-links">
+        <a class="pub-link pub-link-icon" href="Why_App_Developers_(do_not)_change_Privacy_Labels_PETS_2026.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download PDF" title="Download PDF"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5v8.25m0 0L4.75 6.5M8 9.75 11.25 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.5 11.5v1.75a1.25 1.25 0 0 0 1.25 1.25h8.5a1.25 1.25 0 0 0 1.25-1.25V11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="pub-link" href="https://doi.org/10.56553/popets-2026-0151" target="_blank" rel="noopener noreferrer">DOI</a>
+  </div>
+  
+  <section class="block">
+    <h2>Abstract</h2>
+    <p class="abstract">Apple introduced app-based privacy labels in 2020 to improve apps&#x27; communication of their data practices. However, most developers appear to treat privacy labels as a &quot;set-once&quot; mechanism. To better understand the dynamics of this system, we first analyzed a four-year longitudinal dataset of Apple&#x27;s Privacy Label. Next, we conducted an email survey of developers who have changed (or not changed) their privacy labels during this period, and finally, performed follow-up interviews with developers from each group. We find that only 51,364 apps (less than 6%) over this period have made any changes to their privacy labels, many of them changing their initial &#x27;Do Not Collect&#x27; label to more refined classification. From the emails and interviews, the &quot;black box&quot; of third-party data practice may lead developers to underreport their app&#x27;s data practices. Many developers reported that privacy labels are a valuable marketing tool for promoting their apps as privacy-friendly. Privacy labels may appear stable not necessarily because practices are stable, but because ambiguity encourages minimal or optimistic disclosure. To improve privacy label maintenance, we recommend enhanced transparency mechanisms for third-party libraries, stronger workflow integration, and platform support that guides developers and strengthens users&#x27; control.</p>
+  </section>
+  
+  
+  <section class="block">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrap">
+      <button class="copy-btn" type="button" data-copy-target="bibtex-src">Copy</button>
+      <pre class="bibtex" id="bibtex-src">@article{Alsahdi2026BecauseIDidnt,
+  title     = {&quot;Because I didn&#x27;t touch these and even don&#x27;t know why I should to change these&quot;: Why App Developers Do (Not) Update Apple&#x27;s Privacy Labels},
+  author    = {Alsahdi, Arwa and Yan, Jialiang and Kodwani, Monica and Fassl, Matthias and Kanich, Chris and Aviv, Adam J.},
+  journal   = {Proceedings on Privacy Enhancing Technologies},
+  volume    = {2026},
+  number    = {4},
+  pages     = {906--926},
+  year      = {2026},
+  month     = oct,
+  issn      = {2299-0984},
+  doi       = {10.56553/popets-2026-0151}
+}</pre>
+    </div>
+  </section>
+</main>
+
+<script>
+  function flashCopied(btn) {
+    var original = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 1500);
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.getAttribute('data-copy-target'));
+      if (!el) return;
+      var text = el.textContent;
+      var done = false;
+      var finish = function () {
+        if (done) return;
+        done = true;
+        flashCopied(btn);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        // Some environments never resolve/reject this promise (e.g. blocked
+        // permission prompts), so race it against a fallback timeout.
+        setTimeout(function () {
+          if (!done) { fallbackCopy(text); finish(); }
+        }, 400);
+        navigator.clipboard.writeText(text).then(finish, function () {
+          fallbackCopy(text);
+          finish();
+        });
+      } else {
+        fallbackCopy(text);
+        finish();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

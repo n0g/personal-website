@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon — Matthias Fassl</title>
+  <meta name="description" content="Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon — Matthias Fassl, Alexander Ponticello, Adrian Dabrowski, Katharina Krombholz — ACM CSCW 2023">
+  <meta name="citation_title" content="Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon">
+  <meta name="citation_author" content="Fassl, Matthias">
+  <meta name="citation_author" content="Ponticello, Alexander">
+  <meta name="citation_author" content="Dabrowski, Adrian">
+  <meta name="citation_author" content="Krombholz, Katharina">
+  <meta name="citation_publication_date" content="2023">
+  <meta name="citation_journal_title" content="Proceedings of the ACM on Human-Computer Interaction (PACM HCI), CSCW">
+  <meta name="citation_doi" content="10.1145/3610193">
+  <meta name="citation_pdf_url" content="Investigating_Security_Folklore_A_Case_Study_on_the_Tor_over_VPN_Phenomenon_CSCW_2023.pdf">
+  <meta name="citation_abstract_html_url" content="tor-vpn-folklore-cscw2023.html">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent:     #9e3269;
+      --accent-lt:  #fce8f1;
+      --text:       #1f1f23;
+      --muted:      #5c5c6a;
+      --border:     #e8e0e5;
+      --bg:         #ffffff;
+      --bg-alt:     #faf8f9;
+      --max:        680px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    header a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header a:hover { text-decoration: underline; }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .venue-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+    .badge-chi    { background: #f0e8f5; color: #6b2f8a; }
+    .badge-soups  { background: #fce8f1; color: #8c1f54; }
+    .badge-usenix { background: #f0e8f5; color: #6b2f8a; }
+    .badge-cscw   { background: #fce8f1; color: #8c1f54; }
+    .badge-tochi  { background: #f0e8f5; color: #6b2f8a; }
+    .badge-springer { background: #f0eef1; color: #4a4552; }
+    .badge-thesis  { background: #f0eef1; color: #4a4552; }
+    .badge-other   { background: #f0eef1; color: #4a4552; }
+    .badge-pets    { background: #fce8f1; color: #8c1f54; }
+    .badge-ccs     { background: #f0e8f5; color: #6b2f8a; }
+    .award-badge {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #fdf3e7;
+      color: #96631a;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .authors {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .authors .me { color: var(--text); font-weight: 500; }
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pub-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .pub-link:hover { background: var(--accent-lt); }
+    .pub-link-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+    }
+    .block {
+      margin-top: 36px;
+    }
+    .block h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .abstract {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--bg-alt);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .bibtex-wrap {
+      position: relative;
+    }
+    .bibtex {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      padding-right: 76px;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--accent);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .copy-btn:hover { background: var(--accent-lt); }
+    .copy-btn.copied { color: #1f7a3d; border-color: #1f7a3d; }
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="../index.html">← Matthias Fassl</a>
+</header>
+
+<main>
+  <div class="venue-row">
+    <span class="badge badge-cscw">ACM CSCW 2023</span>
+    <span class="award-badge">★ Honorable Mention</span><span class="award-badge">★ Methods Recognition</span>
+  </div>
+
+  <h1>Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon</h1>
+  
+  <p class="authors"><span class="me">Matthias Fassl</span>, Alexander Ponticello, Adrian Dabrowski, Katharina Krombholz</p>
+
+  <div class="pub-links">
+        <a class="pub-link pub-link-icon" href="Investigating_Security_Folklore_A_Case_Study_on_the_Tor_over_VPN_Phenomenon_CSCW_2023.pdf" target="_blank" rel="noopener noreferrer" download aria-label="Download PDF" title="Download PDF"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 1.5v8.25m0 0L4.75 6.5M8 9.75 11.25 6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.5 11.5v1.75a1.25 1.25 0 0 0 1.25 1.25h8.5a1.25 1.25 0 0 0 1.25-1.25V11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3610193" target="_blank" rel="noopener noreferrer">ACM</a>
+  </div>
+  
+  <section class="block">
+    <h2>Abstract</h2>
+    <p class="abstract">Users face security folklore in their daily lives in the form of security advice, myths, and word-of-mouth stories. Using a VPN to access the Tor network, i.e., Tor over VPN, is an interesting example of security folklore because of its inconclusive security benefits and its occurrence in pop-culture media. Following the Theory of Reasoned Action, we investigated the phenomenon with three studies: (1) we quantified the behavior on real-world Tor traffic and measured a prevalence of 6.23%; (2) we surveyed users&#x27; intentions and beliefs, discovering that they try to protect themselves from the Tor network or increase their general security; and (3) we analyzed online information sources, suggesting that perceived norms and ease-of-use play a significant role while behavioral beliefs about the purpose and effect are less crucial in spreading security folklore. We discuss how to communicate security advice effectively and combat security misinformation and misconceptions.</p>
+  </section>
+  
+  
+  <section class="block">
+    <h2>BibTeX</h2>
+    <div class="bibtex-wrap">
+      <button class="copy-btn" type="button" data-copy-target="bibtex-src">Copy</button>
+      <pre class="bibtex" id="bibtex-src">@article{Fassl2023InvestigatingSecurityFolklore,
+  title     = {Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon},
+  author    = {Fassl, Matthias and Ponticello, Alexander and Dabrowski, Adrian and Krombholz, Katharina},
+  journal   = {Proceedings of the ACM on Human-Computer Interaction},
+  volume    = {7},
+  number    = {CSCW2},
+  articleno = {344},
+  pages     = {1--26},
+  year      = {2023},
+  month     = sep,
+  issn      = {2573-0142},
+  doi       = {10.1145/3610193},
+  url       = {https://dl.acm.org/doi/10.1145/3610193}
+}</pre>
+    </div>
+  </section>
+</main>
+
+<script>
+  function flashCopied(btn) {
+    var original = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 1500);
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.getAttribute('data-copy-target'));
+      if (!el) return;
+      var text = el.textContent;
+      var done = false;
+      var finish = function () {
+        if (done) return;
+        done = true;
+        flashCopied(btn);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        // Some environments never resolve/reject this promise (e.g. blocked
+        // permission prompts), so race it against a fallback timeout.
+        setTimeout(function () {
+          if (!done) { fallbackCopy(text); finish(); }
+        }, 400);
+        navigator.clipboard.writeText(text).then(finish, function () {
+          fallbackCopy(text);
+          finish();
+        });
+      } else {
+        fallbackCopy(text);
+        finish();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
