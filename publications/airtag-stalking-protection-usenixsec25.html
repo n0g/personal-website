@@ -140,6 +140,12 @@
       line-height: 1.7;
       color: var(--text);
     }
+    .video-caption {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
     .video-wrap {
       position: relative;
       width: 100%;
@@ -147,6 +153,9 @@
       border-radius: 8px;
       overflow: hidden;
       background: var(--bg-alt);
+    }
+    .video-wrap + .video-caption {
+      margin-top: 20px;
     }
     .video-wrap iframe {
       position: absolute;
@@ -218,6 +227,21 @@
     <p class="abstract">Apple introduced AirTags in 2021 to help users find lost items. Their small size, affordability, and precise tracking functionality predestined them for technology-facilitated stalking, i.e., consentless tracking of others. As a countermeasure, Apple introduced anti-stalking features to impede misuse of AirTags: unwanted tracking notifications and two locating features. However, the reliability and effectiveness of these measures remain unclear. We present two studies to evaluate unwanted tracking notifications and the tracker locating features. First, we quantify the reliability of unwanted tracking notifications on iOS and Android with NA = 50 fully informed participants. Second, we present a deception study to understand NB = 19 participants&#x27; reactions to an unexpected tracking notification. Additionally, we asked participants to locate a hidden AirTag to study the locating features. We found that unwanted tracking notifications are significantly more reliable and timely on iOS than on Android. Effective and safe responses to the tracking notification depended on prior knowledge about the technology or awareness of technology-facilitated abuse. Many participants disregarded the unobtrusive warning entirely. The Find My app&#x27;s confusing UI made locating the tracker harder than necessary. We recommend (i) enhancing the urgency and clarity of tracking notifications and (ii) offering a guided UX for identifying and disabling trackers.</p>
   </section>
   
+  <section class="block">
+    <h2>Talks</h2>
+    <p class="video-caption">USENIX Security &#x27;25</p>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/6QiRa686yFo" title="Talk: AirTag-Facilitated Stalking Protection: Evaluating Unwanted Tracking Notifications and Tracker Locating Features — USENIX Security &#x27;25"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="video-caption">CNIL Presentation</p>
+    <div class="video-wrap">
+      <iframe src="https://video.cnil.fr/videos/embed/mjoQ9EzE947D5JXYuTx3M8" title="Talk: AirTag-Facilitated Stalking Protection: Evaluating Unwanted Tracking Notifications and Tracker Locating Features — CNIL Presentation"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
   
   <section class="block">
     <h2>BibTeX</h2>

@@ -140,6 +140,12 @@
       line-height: 1.7;
       color: var(--text);
     }
+    .video-caption {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
     .video-wrap {
       position: relative;
       width: 100%;
@@ -147,6 +153,9 @@
       border-radius: 8px;
       overflow: hidden;
       background: var(--bg-alt);
+    }
+    .video-wrap + .video-caption {
+      margin-top: 20px;
     }
     .video-wrap iframe {
       position: absolute;

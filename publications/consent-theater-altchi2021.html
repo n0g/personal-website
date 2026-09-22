@@ -139,6 +139,12 @@
       line-height: 1.7;
       color: var(--text);
     }
+    .video-caption {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
     .video-wrap {
       position: relative;
       width: 100%;
@@ -146,6 +152,9 @@
       border-radius: 8px;
       overflow: hidden;
       background: var(--bg-alt);
+    }
+    .video-wrap + .video-caption {
+      margin-top: 20px;
     }
     .video-wrap iframe {
       position: absolute;
@@ -219,9 +228,10 @@
   
   <section class="block">
     <h2>Talk</h2>
+    
     <div class="video-wrap">
       <iframe src="https://www.youtube.com/embed/iojVPlzINPU" title="Talk: Stop the Consent Theater"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         allowfullscreen loading="lazy"></iframe>
     </div>
   </section>

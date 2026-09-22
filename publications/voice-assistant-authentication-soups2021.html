@@ -138,6 +138,12 @@
       line-height: 1.7;
       color: var(--text);
     }
+    .video-caption {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
     .video-wrap {
       position: relative;
       width: 100%;
@@ -145,6 +151,9 @@
       border-radius: 8px;
       overflow: hidden;
       background: var(--bg-alt);
+    }
+    .video-wrap + .video-caption {
+      margin-top: 20px;
     }
     .video-wrap iframe {
       position: absolute;
@@ -216,6 +225,15 @@
     <p class="abstract">Smart home assistants such as Amazon Alexa and Google Home are primarily used for day-to-day tasks like checking the weather or controlling other IoT devices. Security-sensitive use cases such as online banking and voice-controlled door locks are already available and are expected to become more popular in the future. However, the current state-of-the-art authentication for smart home assistants consists of users saying low-security PINs aloud, which does not meet the security requirements of security-sensitive tasks. Therefore, we explore the design space for future authentication mechanisms. We conducted semi-structured interviews with N = 16 Alexa-users incorporating four high-risk scenarios. Using these scenarios, we explored perceived risks, mitigation strategies, and design-aspects to create secure experiences. Among other things, we found that participants are primarily concerned about eavesdropping bystanders, do not trust voice-based PINs, and would prefer trustworthy voice recognition. Our results also suggest that they have context-dependent (location and bystanders) requirements for smart home assistant authentication. Based on our findings, we construct design recommendations to inform the design of future authentication mechanisms.</p>
   </section>
   
+  <section class="block">
+    <h2>Talk</h2>
+    
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/KvjAjBpU7jI" title="Talk: Exploring Authentication for Security-Sensitive Tasks on Smart Home Voice Assistants"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
   
   <section class="block">
     <h2>BibTeX</h2>
