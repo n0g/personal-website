@@ -67,7 +67,16 @@ def build_sitemap(pages):
 
 
 def build_robots():
-    return f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n"
+    # Deployment is a plain `git pull` on the server, so everything tracked
+    # in the repo — including this tools/ directory — ends up publicly
+    # servable. Nothing in tools/ is sensitive, but keep it out of search
+    # results since it's not real site content.
+    return (
+        f"User-agent: *\n"
+        f"Allow: /\n"
+        f"Disallow: /tools/\n\n"
+        f"Sitemap: {SITE}/sitemap.xml\n"
+    )
 
 
 def main():
