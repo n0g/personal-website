@@ -1,0 +1,36 @@
+slug: airtag-stalking-protection-usenixsec25
+order: 6
+title: 'AirTag-Facilitated Stalking Protection: Evaluating Unwanted Tracking Notifications and Tracker
+  Locating Features'
+authors:
+- Dañiel Gerhardt
+- Matthias Fassl
+- Carolyn Guthoff
+- Adrian Dabrowski
+- Katharina Krombholz
+year: 2025
+badge: USENIX Security 2025
+badge_class: badge-usenix
+pdf: AirTag_Facilitated_Stalking_Protection_USENIX_Security_2025.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/usenixsecurity25/presentation/gerhardt
+citation_type: conference
+venue_full: USENIX Security Symposium
+abstract: |-
+  Apple introduced AirTags in 2021 to help users find lost items. Their small size, affordability, and precise tracking functionality predestined them for technology-facilitated stalking, i.e., consentless tracking of others. As a countermeasure, Apple introduced anti-stalking features to impede misuse of AirTags: unwanted tracking notifications and two locating features. However, the reliability and effectiveness of these measures remain unclear. We present two studies to evaluate unwanted tracking notifications and the tracker locating features. First, we quantify the reliability of unwanted tracking notifications on iOS and Android with NA = 50 fully informed participants. Second, we present a deception study to understand NB = 19 participants' reactions to an unexpected tracking notification. Additionally, we asked participants to locate a hidden AirTag to study the locating features. We found that unwanted tracking notifications are significantly more reliable and timely on iOS than on Android. Effective and safe responses to the tracking notification depended on prior knowledge about the technology or awareness of technology-facilitated abuse. Many participants disregarded the unobtrusive warning entirely. The Find My app's confusing UI made locating the tracker harder than necessary. We recommend (i) enhancing the urgency and clarity of tracking notifications and (ii) offering a guided UX for identifying and disabling trackers.
+bibtex: |-
+  @inproceedings{Gerhardt2025AirTagFacilitatedStalking,
+    title     = {AirTag-Facilitated Stalking Protection: Evaluating Unwanted Tracking Notifications and Tracker Locating Features},
+    author    = {Gerhardt, Da\~{n}iel and Fassl, Matthias and Guthoff, Carolyn and Dabrowski, Adrian and Krombholz, Katharina},
+    booktitle = {Proceedings of the 34th USENIX Security Symposium},
+    year      = {2025},
+    address   = {Seattle, WA, USA},
+    month     = aug,
+    url       = {https://www.usenix.org/conference/usenixsecurity25/presentation/gerhardt}
+  }
+talks:
+- label: USENIX Security '25
+  embed_url: https://www.youtube.com/embed/6QiRa686yFo
+- label: CNIL Presentation
+  embed_url: https://video.cnil.fr/videos/embed/mjoQ9EzE947D5JXYuTx3M8

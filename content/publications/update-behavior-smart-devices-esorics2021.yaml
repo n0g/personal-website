@@ -1,0 +1,32 @@
+slug: update-behavior-smart-devices-esorics2021
+order: 16
+title: Transferring Update Behavior from Smartphones to Smart Consumer Devices
+authors:
+- Matthias Fassl
+- Michaela Neumayr
+- Oliver Schedler
+- Katharina Krombholz
+year: 2021
+badge: ESORICS 2021 Workshop
+badge_class: badge-other
+pdf: Transferring_Update_Behavior_from_Smartphones_to_Smart_Consumer_Devices_SPOSE_2021.pdf
+links:
+- label: Springer
+  url: https://link.springer.com/chapter/10.1007/978-3-030-95484-0_21
+citation_type: conference
+venue_full: Security and Privacy of Smart Devices Workshop (SPOSE), ESORICS 2021
+extra:
+  doi: 10.1007/978-3-030-95484-0_21
+abstract: |-
+  Automatic updates are becoming increasingly common, which minimizes the amount of update decisions that users have to make. Rapidly deployed important updates have a major impact on security. However, automatic updates also reduce the users' opportunities to build useful mental models which makes decision-making harder on other consumer devices without automatic updates. Users generally transfer their understanding from domains that they know well (i.e. smartphones) to others. We investigate how well this transfer process works with respect to updates and if users with automatic updates fare worse than those with manual updates. We conducted a formative field study (N = 52) to observe users' update settings on smartphones and examine reasons for their (de-)activation. Based on the results, we conducted an online survey (N = 91) to compare how users perceive update notifications for smartphones and smart consumer devices. One of our main findings is that update decisions based on expected changes do not apply well to these devices since participants do not expect meaningful and visual changes. We suggest naming updates for such devices 'maintenance' to move users' expectations from 'new features' to 'ensuring future functionality'.
+bibtex: |-
+  @inproceedings{Fassl2021TransferringUpdateBehavior,
+    title     = {Transferring Update Behavior from Smartphones to Smart Consumer Devices},
+    author    = {Fassl, Matthias and Neumayr, Michaela and Schedler, Oliver and Krombholz, Katharina},
+    booktitle = {Computer Security. ESORICS 2021 International Workshops (SPOSE)},
+    publisher = {Springer International Publishing},
+    year      = {2022},
+    pages     = {357--383},
+    isbn      = {9783030954840},
+    doi       = {10.1007/978-3-030-95484-0_21}
+  }

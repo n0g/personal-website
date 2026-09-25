@@ -1,0 +1,41 @@
+slug: systematic-review-empirical-methods-tochi2021
+order: 14
+title: A Systematic Literature Review of Empirical Methods and Risk Representation in Usable Privacy and
+  Security Research
+authors:
+- Verena Distler
+- Matthias Fassl
+- Hana Habib
+- Katharina Krombholz
+- Gabriele Lenzini
+- Carine Lallemand
+- Vincent Koenig
+- Lorrie Faith Cranor
+year: 2021
+badge: ACM TOCHI · Vol. 28, Issue 6
+badge_class: badge-tochi
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3469845
+citation_type: journal
+venue_full: ACM Transactions on Computer-Human Interaction (TOCHI)
+extra:
+  volume: '28'
+  issue: '6'
+  doi: 10.1145/3469845
+abstract: |-
+  Usable privacy and security researchers have developed a variety of approaches to represent risk to research participants. To understand how these approaches are used and when each might be most appropriate, we conducted a systematic literature review of methods used in security and privacy studies with human participants. From a sample of 633 papers published at five top conferences between 2014 and 2018 that included keywords related to both security/privacy and usability, we systematically selected and analyzed 284 full-length papers that included human subjects studies. Our analysis focused on study methods; risk representation; the use of prototypes, scenarios, and educational intervention; the use of deception to simulate risk; and types of participants. We discuss benefits and shortcomings of the methods, and identify key methodological, ethical, and research challenges when representing and assessing security and privacy risk. We also provide guidelines for the reporting of user studies in security and privacy.
+bibtex: |-
+  @article{Distler2021ASystematicLiterature,
+    title   = {A Systematic Literature Review of Empirical Methods and Risk Representation in Usable Privacy and Security Research},
+    author  = {Distler, Verena and Fassl, Matthias and Habib, Hana and Krombholz, Katharina and Lenzini, Gabriele and Lallemand, Carine and Cranor, Lorrie Faith and Koenig, Vincent},
+    journal = {ACM Transactions on Computer-Human Interaction},
+    volume  = {28},
+    number  = {6},
+    pages   = {1--50},
+    year    = {2021},
+    month   = dec,
+    issn    = {1557-7325},
+    doi     = {10.1145/3469845},
+    url     = {https://dl.acm.org/doi/10.1145/3469845}
+  }

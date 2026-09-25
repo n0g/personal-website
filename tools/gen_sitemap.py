@@ -1,7 +1,8 @@
-"""Regenerate sitemap.xml from the HTML pages actually present in the repo.
+"""Regenerate public/sitemap.xml and public/robots.txt from the HTML pages
+actually present in public/ (the build output — see tools/build.py, which
+calls this automatically as its last step).
 
-Run from anywhere: python3 tools/gen_sitemap.py
-Re-run whenever a page is added or removed.
+Run standalone if needed: python3 tools/gen_sitemap.py
 """
 import subprocess
 from pathlib import Path
@@ -9,16 +10,17 @@ from xml.sax.saxutils import escape
 
 SITE = "https://n0g.at"
 ROOT = Path(__file__).resolve().parent.parent
-
-# Directories/files to skip entirely (not part of the public site).
-SKIP_DIRS = {".venv", ".git", ".claude", "fonts", "static", "latex-sources", "tools"}
+PUBLIC = ROOT / "public"
 
 
-def last_modified(rel: Path) -> str | None:
-    """Latest git commit date touching this file (rel, relative to ROOT), as YYYY-MM-DD, or None."""
+def last_modified(rel_to_public: Path) -> str | None:
+    """Latest git commit date touching this file, as YYYY-MM-DD, or None.
+    public/ is git-committed build output, so this reflects the last time
+    the page's actual byte content changed (a no-op rebuild produces an
+    identical file, so nothing new gets committed for it)."""
     try:
         out = subprocess.run(
-            ["git", "log", "-1", "--format=%cs", "--", str(rel)],
+            ["git", "log", "-1", "--format=%cs", "--", str(Path("public") / rel_to_public)],
             cwd=ROOT, capture_output=True, text=True, check=True,
         ).stdout.strip()
         return out or None
@@ -27,13 +29,7 @@ def last_modified(rel: Path) -> str | None:
 
 
 def find_pages():
-    pages = []
-    for path in sorted(ROOT.rglob("*.html")):
-        rel = path.relative_to(ROOT)
-        if any(part in SKIP_DIRS for part in rel.parts):
-            continue
-        pages.append(rel)
-    return pages
+    return sorted(p.relative_to(PUBLIC) for p in PUBLIC.rglob("*.html"))
 
 
 def url_for(rel: Path) -> str:
@@ -67,28 +63,22 @@ def build_sitemap(pages):
 
 
 def build_robots():
-    # Deployment is a plain `git pull` on the server, so everything tracked
-    # in the repo — including this tools/ directory — ends up publicly
-    # servable. Nothing in tools/ is sensitive, but keep it out of search
-    # results since it's not real site content.
-    return (
-        f"User-agent: *\n"
-        f"Allow: /\n"
-        f"Disallow: /tools/\n\n"
-        f"Sitemap: {SITE}/sitemap.xml\n"
-    )
+    # public/ is the whole served tree now — content/, templates/, and
+    # tools/ never get deployed at all (see the site restructuring plan),
+    # so there's nothing left that needs a Disallow line.
+    return f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n"
 
 
 def main():
     pages = find_pages()
-    sitemap_path = ROOT / "sitemap.xml"
-    robots_path = ROOT / "robots.txt"
+    sitemap_path = PUBLIC / "sitemap.xml"
+    robots_path = PUBLIC / "robots.txt"
 
     sitemap_path.write_text(build_sitemap(pages), encoding="utf-8")
     robots_path.write_text(build_robots(), encoding="utf-8")
 
-    print(f"Wrote {sitemap_path.relative_to(ROOT)} with {len(pages)} URLs")
-    print(f"Wrote {robots_path.relative_to(ROOT)}")
+    print(f"Wrote public/sitemap.xml with {len(pages)} URLs")
+    print("Wrote public/robots.txt")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,28 @@
+slug: car-drivers-information-demand-poster-soups2022
+order: 22
+title: Investigating Car Drivers’ Information Demand after Safety and Security Critical Incidents
+authors:
+- Lea Gröber
+- Matthias Fassl
+- Abhilash Gupta
+- Katharina Krombholz
+year: 2022
+badge: SOUPS 2022 · Poster
+badge_class: badge-soups
+pdf: Investigating_Car_Drivers_Information_Demand_Poster_SOUPS_2022.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2022/presentation/grober-poster
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS) — Poster
+bibtex: |-
+  @inproceedings{Grober2022InvestigatingCarDrivers,
+    title     = {Investigating Car Drivers' Information Demand after Safety and Security Critical Incidents},
+    author    = {Gr{\"o}ber, Lea Theresa and Fassl, Matthias and Gupta, Abhilash and Krombholz, Katharina},
+    booktitle = {Eighteenth Symposium on Usable Privacy and Security (SOUPS 2022)},
+    year      = {2022},
+    address   = {Boston, MA, USA},
+    month     = aug,
+    note      = {Poster; based on the CHI 2021 paper},
+    url       = {https://www.usenix.org/conference/soups2022/presentation/grober-poster}
+  }

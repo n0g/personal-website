@@ -1,0 +1,30 @@
+slug: voice-assistant-authentication-soups2021
+order: 15
+title: Exploring Authentication for Security-Sensitive Tasks on Smart Home Voice Assistants
+authors:
+- Alexander Ponticello
+- Matthias Fassl
+- Katharina Krombholz
+year: 2021
+badge: SOUPS 2021
+badge_class: badge-soups
+pdf: Exploring_Authentication_Smart_Home_Voice_Assistants_SOUPS_2021.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2021/presentation/ponticello
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS)
+abstract: |-
+  Smart home assistants such as Amazon Alexa and Google Home are primarily used for day-to-day tasks like checking the weather or controlling other IoT devices. Security-sensitive use cases such as online banking and voice-controlled door locks are already available and are expected to become more popular in the future. However, the current state-of-the-art authentication for smart home assistants consists of users saying low-security PINs aloud, which does not meet the security requirements of security-sensitive tasks. Therefore, we explore the design space for future authentication mechanisms. We conducted semi-structured interviews with N = 16 Alexa-users incorporating four high-risk scenarios. Using these scenarios, we explored perceived risks, mitigation strategies, and design-aspects to create secure experiences. Among other things, we found that participants are primarily concerned about eavesdropping bystanders, do not trust voice-based PINs, and would prefer trustworthy voice recognition. Our results also suggest that they have context-dependent (location and bystanders) requirements for smart home assistant authentication. Based on our findings, we construct design recommendations to inform the design of future authentication mechanisms.
+bibtex: |-
+  @inproceedings{Ponticello2021ExploringAuthenticationFor,
+    title     = {Exploring Authentication for Security-Sensitive Tasks on Smart Home Voice Assistants},
+    author    = {Ponticello, Alexander and Fassl, Matthias and Krombholz, Katharina},
+    booktitle = {Seventeenth Symposium on Usable Privacy and Security (SOUPS 2021)},
+    year      = {2021},
+    address   = {Virtual Conference},
+    month     = aug,
+    url       = {https://www.usenix.org/conference/soups2021/presentation/ponticello}
+  }
+talks:
+- embed_url: https://www.youtube.com/embed/KvjAjBpU7jI

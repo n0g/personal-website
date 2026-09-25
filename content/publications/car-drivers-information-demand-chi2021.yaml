@@ -1,0 +1,33 @@
+slug: car-drivers-information-demand-chi2021
+order: 19
+title: Investigating Car Drivers’ Information Demand after Safety and Security Critical Incidents
+authors:
+- Lea Gröber
+- Matthias Fassl
+- Abhilash Gupta
+- Katharina Krombholz
+year: 2021
+badge: ACM CHI 2021
+badge_class: badge-chi
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3411764.3446862
+citation_type: conference
+venue_full: ACM CHI Conference on Human Factors in Computing Systems
+extra:
+  doi: 10.1145/3411764.3446862
+abstract: |-
+  Modern cars include a vast array of computer systems designed to remove the burden on drivers and enhance safety. As cars are evolving towards autonomy and taking over control, e.g. in the form of autopilots, it becomes harder for drivers to pinpoint the root causes of a car's malfunctioning. Drivers may need additional information to assess these ambiguous situations correctly. However, it is yet unclear which information is relevant and helpful to drivers in such situations. Hence, we conducted a mixed-methods online survey (N = 60) on Amazon MTurk where we exposed participants to two security- and safety-critical situations with one of three different explanations. We applied Thematic and Correspondence Analysis to understand which factors in these situations moderate drivers' information demand. We identified a fundamental information demand across scenarios that is expanded by error-specific information types. Moreover, we found that it is necessary to communicate error sources, since drivers might not be able to identify them correctly otherwise. Thereby, malicious intrusions are typically perceived as more critical than technical malfunctions.
+bibtex: |-
+  @inproceedings{Grober2021InvestigatingCarDrivers,
+    title     = {Investigating Car Drivers' Information Demand after Safety and Security Critical Incidents},
+    author    = {Gr{\"o}ber, Lea Theresa and Fassl, Matthias and Gupta, Abhilash and Krombholz, Katharina},
+    booktitle = {Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+    series    = {CHI '21},
+    year      = {2021},
+    month     = may,
+    pages     = {1--17},
+    publisher = {ACM},
+    doi       = {10.1145/3411764.3446862},
+    url       = {https://dl.acm.org/doi/10.1145/3411764.3446862}
+  }

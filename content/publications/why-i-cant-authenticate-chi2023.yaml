@@ -1,0 +1,32 @@
+slug: why-i-cant-authenticate-chi2023
+order: 12
+title: Why I Can’t Authenticate – Understanding the Low Adoption of Authentication Ceremonies with Autoethnography
+authors:
+- Matthias Fassl
+- Katharina Krombholz
+year: 2023
+badge: ACM CHI 2023
+badge_class: badge-chi
+pdf: Why_I_Cant_Authenticate_Understanding_the_Low_Adoption_of_Authentication_Ceremonies_with_Autoethnography_CHI_2023.pdf
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3544548.3581508
+citation_type: conference
+venue_full: ACM CHI Conference on Human Factors in Computing Systems
+extra:
+  doi: 10.1145/3544548.3581508
+abstract: |-
+  Authentication ceremonies detect and mitigate Man-in-the-Middle (MitM) attacks on end-to-end encrypted messengers, such as Signal, WhatsApp, or Threema. However, prior work found that adoption remains low as non-expert users have difficulties using them correctly. Anecdotal evidence suggests that security researchers also have trouble authenticating others. Since their issues are probably unrelated to user comprehension or usability, the root causes may lie deeper. This work explores these root causes using autoethnography. The first author kept a five-month research diary of their experience with authentication ceremonies. The results uncover points of failure while planning and conducting authentication ceremonies. They include cognitive load, forgetfulness, social awkwardness, and explanations required by a communication partner. Additionally, this work identifies and discusses how sociocultural aspects affect authentication ceremonies. Lastly, this work discusses a design approach for cooperative security that employs cultural transcoding to improve sociocultural aspects of security by design.
+bibtex: |-
+  @inproceedings{Fassl2023WhyICant,
+    title     = {Why I Can't Authenticate --- Understanding the Low Adoption of Authentication Ceremonies with Autoethnography},
+    author    = {Fassl, Matthias and Krombholz, Katharina},
+    booktitle = {Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems},
+    series    = {CHI '23},
+    year      = {2023},
+    month     = apr,
+    pages     = {1--15},
+    publisher = {ACM},
+    doi       = {10.1145/3544548.3581508},
+    url       = {https://dl.acm.org/doi/10.1145/3544548.3581508}
+  }

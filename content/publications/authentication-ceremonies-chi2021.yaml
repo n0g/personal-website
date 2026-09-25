@@ -1,0 +1,35 @@
+slug: authentication-ceremonies-chi2021
+order: 18
+title: Exploring User-Centered Security Design for Usable Authentication Ceremonies
+authors:
+- Matthias Fassl
+- Lea Gröber
+- Katharina Krombholz
+year: 2021
+badge: ACM CHI 2021
+badge_class: badge-chi
+pdf: Exploring_User_Centered_Security_Design_for_Usable_Authentication_Ceremonies_CHI_2021.pdf
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3411764.3445164
+citation_type: conference
+venue_full: ACM CHI Conference on Human Factors in Computing Systems
+extra:
+  doi: 10.1145/3411764.3445164
+abstract: |-
+  Security technology often follows a systems design approach that focuses on components instead of users. As a result, the users' needs and values are not sufficiently addressed, which has implications on security usability. In this paper, we report our lessons learned from applying a user-centered security design process to a well-understood security usability challenge, namely key authentication in secure instant messaging. Users rarely perform these key authentication ceremonies, which makes their end-to-end encrypted communication vulnerable. Our approach includes collaborative design workshops, an expert evaluation, iterative storyboard prototyping, and an online evaluation. While we could not demonstrate that our design approach resulted in improved usability or user experience, we found that user-centered prototypes can increase the users' comprehension of security implications. Hence, prototypes based on users' intuitions, needs, and values are useful starting points for approaching long-standing security challenges. Applying complementary design approaches may improve usability and user experience further.
+bibtex: |-
+  @inproceedings{Fassl2021ExploringUserCentered,
+    title     = {Exploring User-Centered Security Design for Usable Authentication Ceremonies},
+    author    = {Fassl, Matthias and Gr{\"o}ber, Lea Theresa and Krombholz, Katharina},
+    booktitle = {Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+    series    = {CHI '21},
+    year      = {2021},
+    month     = may,
+    pages     = {1--15},
+    publisher = {ACM},
+    doi       = {10.1145/3411764.3445164},
+    url       = {https://dl.acm.org/doi/10.1145/3411764.3445164}
+  }
+talks:
+- embed_url: https://www.youtube.com/embed/cHoDTVv4mpM

@@ -1,0 +1,258 @@
+Herzlich willkommen zum CISPA Podcast TLDR. Für alle, die diese Abkürzung nicht kennen,
+sie steht für Too Long Didn't Read. Also etwas, das auf dem Papier sehr lang und vielleicht
+für die meisten ein bisschen zu mühselig zu lesen ist. Trotzdem sind es viele unglaublich
+interessante Arbeiten, die wir euch hier in der Pilotfolge und in den kommenden Ausgaben
+von TLDR, dem ersten CISPA Podcast vorstellen möchten. Heute geht es um Ende-zu-Ende-Verschlüsselung
+von Messengern wie WhatsApp und warum die Kommunikation darüber nicht unbedingt so
+hundertprozentig sicher ist, wie wir alle hoffen. Ich bin Sebastian Klöckner aus der CISPA
+Kommunikationsabteilung und zu Gast heute bei uns ist Matthias Fassl aus der Usable
+Security Research Gruppe. Sehr schön. Hallo Matthias, herzlich willkommen. Du bist 31 Jahre,
+kommst aus Wien ursprünglich und du bist in der Gruppe von Katharina Krompolz. Bevor wir auf das
+alles eingehen, erzähl uns doch bitte kurz, wie bist du nach Saarbrücken gekommen? Was
+hat dich hierher verschlagen? Es ist ja doch ein bisschen weit weg von zu Hause. Also die
+kurze Geschichte ist, ich habe meine Masterarbeit bei Katharina geschrieben. Sie war zufrieden mit
+der Arbeit und hat mir angeboten, hier nach Saarbrücken zu kommen. Zufälligerweise kannte
+ich Saarbrücken schon vom Namen, aber ich habe trotzdem ein wenig Bedenkzeit gebraucht,
+aber ich bereue es nicht. Vielleicht kannst du noch mal ganz kurz für die Leute, die das jetzt nicht
+genau wissen, wer ist Katharina, was ist sie für dich? Die Katharina Krompolz hat ihr Doktorat an
+der TU Wien gemacht, auch in einem Postdoc und ist in der Usable Security Community ziemlich bekannt,
+auch weil sie mit Server-Administratoren arbeitet und auch viel mit HTTPS gemacht hat. Und sie hat
+da dann quasi so eine Art wie einen Ruf oder ist ans TISPA gekommen und du bist dir quasi gefolgt,
+ja? Okay, das ist doch interessant. Kannst du uns ein bisschen erklären, worum es in deinem
+Forschungsgebiet genau geht, also für die, die jetzt nicht direkt aus der Cyber Security Forschung
+kommen. Worum handelt es sich bei euch? Die Usable Security beschäftigt sich größtenteils damit,
+wie Menschen mit Security-Mechanismen umgehen, das heißt, an welchen alltäglichen Sachen scheitern
+sie, wo passieren Fehler, was kann man besser machen und auch wie kann man die Tools, die Leute
+täglich verwenden, besser machen. Und was wäre das zum Beispiel für ein alltägliches Tool, was ich
+zum Beispiel jeden Tag benutze, mit welchem beschäftigst du dich da auf Forschungsebene?
+Ich beschäftige mich konkret, was jetzt das PIP angeht, auch sehr viel mit Instant-Messagen,
+also WhatsApp, Signal, Telegram. Andere Forschungsthemen, mit denen Leute sehr oft im Kontakt sind,
+sind zum Beispiel sichere Webseiten, diese Warnmeldungen, die kommen, wenn das Zertifikat
+nicht passt. Das war sehr lange ein wichtiges Forschungsthema und natürlich Passwörter. Ich
+glaube, alle verwenden Passwörter täglich. Okay, und Passwörter, das ist auch ein Bereich,
+in dem ihr mit eurer Forschung ganz tief drin seid. Das ist quasi euer Kernthema. Ja, das ist
+schon ziemlich tiefer forscht. Also wie suchen Leute sich Passwörter aus? Welche Strategien haben
+sie sich zu merken? Wie kann man sie dazu bringen, bessere Passwörter zu verwenden? Wie bist du denn
+persönlich in dieses Forschungsgebiet gekommen? Hast du schon direkt im Studium gemerkt, dass das
+der Weg ist, den du einschlagen solltest? Oder ist da quasi das Forschungsgebiet zu dir gekommen?
+Hast du dir das ausgesucht? Wie kam es dazu? Das ist eigentlich lustig. Ich wollte immer was ganz
+anderes machen. Ich wollte mich im Computerarchitekturbereich beschäftigen und auch
+spezialisieren. Und spätestens in einem Zeitpunkt, wo ich dann die Masterarbeit begonnen habe und
+begonnen habe, Papers dazu zu lesen, mich einzulesen, habe ich festgestellt, es interessiert mich überhaupt
+nicht. Also da fehlt der Funke. Und dann war ich frustriert und habe nachgeschaut, mit was ich mich
+sonst noch so beschäftigt habe. Und etwas, was mich jahrelang begleitet hat, war das Security-Thema
+und das Privacy-Thema. Und auch der Gedanke, wie man die Barrieren verringern kann, die Leute haben,
+um ihre Datenschutzrechte nutzen zu können. Und da kommt man dann sehr schnell in diese
+Usable-Privacy-Geschichte. Und dann habe ich mich umgeschaut, wer in der TU Wien das machen
+würde. Und bin dann relativ bald bei Katharina gelandet. Okay, und was waren dann so die ersten
+Dinge, bei denen du eingestiegen bist? War das dann auch eher Passwörter oder waren das dann schon
+Messenger? Ursprünglich plante ich, mehr im Datenschutzbereich zu machen. Dann wurde mir gesagt,
+ich soll mir mal aktuelle Konferenzen anschauen, was mich da interessieren würde. Und dann bin
+ich sehr schnell auf dieses Messenger-Thema aufgestiegen. Okay, das heißt, man ist da schon relativ
+frei in der Wahl und kann seinen Fühler in alle Richtungen ausstrecken und ist dann auch nicht
+begrenzt an irgendeiner Stelle? Auf keinen Fall. Also vor allem in der Gruppe, wo ich in Wien
+angefangen habe, war das üblich, dass sich Leute immer selbst ein Thema aussuchen müssen. Und ich
+finde, das ist schwer. Aber ich glaube, es ist es wert. Also ja, gerade wenn man ein Thema einfach
+gesagt bekommt, dann ist es manchmal ein bisschen eine Glückssache, ob das dann passt oder nicht.
+Nachdem du aus Wien weggegangen bist, in Saarbrücken angekommen bist, haben wir uns ja auch schon öfters
+unterhalten. Und du hast immer wieder davon berichtet, dass du an einem bestimmten Paper
+arbeitest. Und nun wurde dieses Paper zum ersten Mal auf einer Top-Tier-Konferenz angenommen. Die
+Konferenz heißt CHI. Von daher erst mal herzlichen Glückwunsch, weil das ist ein ganz besonderer Moment,
+wenn das erste Paper jetzt erst mal angenommen wurde. Kannst du mir bitte nochmal erklären,
+was es mit diesen Papern auf sich hat, bis die zu einer Konferenz angenommen werden bzw. was es
+bedeutet, an einer Top-Tier-Konferenz angenommen zu werden? Ja, es ist üblicherweise ein ziemlicher
+Prozess, bis das angenommen wird. Also sehr selten werden Papers sofort angenommen. Also
+üblicherweise werden die zumindest zwei-, dreimal abgelehnt, bis es dann genommen wird. In dem Fall
+war es auch ein bisschen ein schwieriges Thema und ich musste mich halt auch einarbeiten, wie man
+Papers schreibt. Das heißt, das ist insgesamt viermal, fünfmal abgelehnt worden. Ja, das heißt also das
+Wort Reject war dir schon ein wenig geläufig bei dem Papier oder? Ja, ich habe Rejects gesammelt.
+Wie demotivierend sind diese Rejects? Das kommt immer auf den Inhalt an. Also manchmal können
+Rejects auch wirklich gut funktionieren, wenn sie gut begründet sind und auch gleichzeitig
+motivierend sind, weil sie einen Ausblick geben. Und manche sind auch einfach sehr demotivierend,
+wenn man nicht versteht, warum es zu dem Reject kommt und man sich einfach von den Reviewern dann
+schlecht behandelt fühlt. Also du hattest mir das mal erzählt, Reject 1, Reject 2, du hast das
+Paper immer weiterentwickelt. An welcher Stelle gab es denn dann den entscheidenden Hinweis,
+dass du in welche Richtung du weiterarbeiten sollst? An mehreren Stellen, würde ich sagen. Also relativ
+am Anfang war auch aus den Reviews und aus unserer eigenen Meinung relativ klar, in welche Richtung
+sich das Paper bewegen sollen. Haben gedacht, okay, wenn wir das machen, dann steigen unsere
+Chancen wahrscheinlich, dass das Paper gut ankommt. Und irgendwann war der Zeitpunkt erreicht, wo wir
+dann nicht mehr genau wussten, woran es scheitert. Einfach weil es schon relativ komplett war und die
+Argumente in den Reviews auch schwerer zu durchschauen waren. Und da haben wir dann einfach Leute aus der
+Community, die um Feedback gebeten und die konnten uns dann weiterhelfen. Also die auch an ähnlichen
+Themen arbeiten und die haben uns dann Tipps gegeben, die glaube ich erfolgreich waren. Bevor wir jetzt
+weiter über dieses große Mysterium Paper Paper, das wir noch gar nicht benannt haben, sprechen,
+kennst du noch den Titel von deinem Paper? Nein. Dann lese ich es dir nochmal vor, das Paper heißt
+Exploring User Centered Security Design for Usable Authentication Ceremonies. Hast du es
+wirklich nicht gewusst? Doch. Habe ich es richtig vorgetragen? Ja, ich glaube schon. Dann könntest du
+uns bitte kurz beschreiben, worum es in diesem Paper geht. Es geht um Authentizierungszeremonien
+in Instant Messengen. Ich glaube die meisten von uns verwenden sichere Messenger wie WhatsApp,
+Telegram und Signal. Die verwenden etwas, was Ende-zu-Ende-Verschlüsselung genannt wird. Das ist
+cool, weil nur der Sender und wirklich der Empfänger die Nachricht lesen kann. Das heißt,
+sie wird vom Sender am Handy verschlüsselt, dann versandt über verschiedene Server und erst beim
+Empfänger wieder entschlüsselt und alle die dazwischen sind, können die Nachricht nicht lesen.
+Das ist eine coole Idee, sie hat nur eine wichtige Voraussetzung, nämlich dass man den richtigen
+Schlüssel zum Verschlüsseln nimmt, sonst weiß man ja nicht, bei wem es ankommt und wer sie
+dann entschlüsseln kann. Da gibt es auch einen Angriff, der Man in the Middle Angriff genannt
+wird, wo sich dann ein Angreifer in der Mitte so tut, als wäre der Empfänger und dann sagt,
+ich bin der Richtige, schick mir das und dann schickst du es dem, ohne zu wissen, dass es die falsche
+Person ist und der leitet das dann weiter. Und um das zu verhindern, gibt es diese
+Authentifizierungszeremonien, wo sich die richtigen Senderempfänger treffen und abgleichen, ob das
+Schlüsselmaterial zusammenpasst. Wenn wir dieses banale Beispiel mal am Beispiel von WhatsApp
+durchsprechen, für die Leute, die das hören und jetzt eben nicht wissen, wovon wir reden,
+wenn man also in seinem WhatsApp-Kanal reingeht, steht ja dort erstmal immer wieder die Nachricht
+von Ende zu Ende verschlüsselt, aber so ist das gar nicht unbedingt, sondern man muss erst sich
+physisch mit jemandem treffen, mit dem man den Schlüssel austauschen will. Man muss dann auf
+diesen Kontakt draufklicken, in seinem Profil ein wenig runterscrollen, kommt dann an eine Stelle,
+wo man lesen kann, Verschlüsselung. Klickt man diese Stelle an, erscheint ein QR-Code und dieser
+muss wiederum erst von dem Partner gescannt werden und dann tatsächlich dann erst kommunizieren diese
+beide von Ende zu Ende verschlüsselt. Also sie kommunizieren auch so, Ende zu Ende verschlüsselt,
+nur erst nachdem man überprüft hat, ob die Schlüssel auch zusammenpasst, hat man sichergestellt,
+dass man nicht abgehört wird von einer Person in der Mitte. Wo greift dein Paper jetzt ein? Also
+dein Paper möchte ja quasi, kümmert sich um diese man in the middle Attacke, setzt diese voraus und
+versucht diese zu umgehen. Das Problem, das wir schon seit mehreren Jahren beobachten können, ist,
+dass diese Authentifizierungszeremonien, diese Telegram, WhatsApp und Signal gibt, wirklich
+schlecht funktionieren. Also schlecht heißt hier, Leute wissen nicht, dass es es gibt, sie wissen
+nicht wofür es sie gibt und wenn sie das wissen, machen sie Fehler beim benutzen. Und das sind viele
+Probleme und unser Ansatz hier war diese Zeremonien von Grund auf neu zu designen, also anstatt
+vorhandene Zeremonien zu verbessern und schauen, wo Probleme liegt, damit zu schauen, wie können
+die Zeremonien bauen, die vielleicht besser zu dem passen, was sich Leute erwarten. Und dann habe ich
+erfahren, das wären zum Beispiel, dass man sich über Video vorher austauscht und sich mit speziellen
+Bewegungen quasi ein Zeichen zu setzen. Kannst du darauf ein bisschen eingehen, wie ihr euch das
+vorgestellt habt? Ja, eine dieser Kategorien von Zeremonien, die Leute vorgeschlagen haben, mit denen
+sie was anfangen können, ist eben die visuelle Überprüfung, ob sie mit der richtigen Person reden,
+um hier Vertrauen aufzubauen. Und wir dachten uns, dass wir diesen Mechanismus hier verwenden
+könnten, um über diese visuelle Bildaustausch, Kommunikation, die Schlüsselinformation zu
+verifizieren. Und die Idee war hier, über diese Bilder, die Schlüssel, die verwendet werden, zu
+codieren, über verschiedene Gesten. Das heißt, man macht dann zum Beispiel ein Bild von sich, wo
+das Handy sagt, ja, halt dir deine Handfläche vor die Stirn und dann schickst du das Bild. Und die
+andere Person kann dann schauen, ob dieses Bild zu dem passt, was sie sich erwarten. Weil die prüfen
+dann, hey, der Schlüssel schaut so aus. Das heißt, die Person müsste jetzt die Handfläche vor der
+Stirn haben. Und wenn es zusammenpasst, ist der Schlüssel wahrscheinlich der Richtige. Ist der
+Denkansatz so ein bisschen übertragen aus diesen Bildern, die man am Zug gezeigt bekommt? Klicke
+alle Bilder an, auf denen ein Zebrastreifen oder ein Bus zu sehen ist? Oder ist das nicht
+vergleichbar? Ich glaube, es ist halbwegs vergleichbar, aber der Gedanke kommt eher aus einem TV-Trope.
+Es gibt nämlich diesen Echtheitsbeweis von Personen. Das heißt, bei einer Geiselnahme zum
+Beispiel gibt es diesen Trope im Fernsehen. Wenn das passiert, macht man ein Bild von der Person,
+die muss eine Zeitung ins Bild halten, um zu zeigen, dass das aktuell ist und dass es die
+richtige Person ist. Und das ist ein bisschen der Gedanke. Man macht Bilder, aber um zu zeigen,
+dass sie nicht gefälscht sind oder so, muss man immer was anderes herteilen. Eure Methode oder diese
+Methode, wenn ich mich hier bei der Forschung im CISPO ein bisschen umhöre, könnte ja dann auch
+Gegenangriffe bekommen aus dem Bereich des Diebfake. Auf alle Fälle, also das ist definitiv nicht die
+sicherste Variante, aber sie bietet zumindest einen grundlegenden Schutz. Also das ist besser
+als gar nicht zu bepuschen. Jetzt habe ich mich ein bisschen umgehört zu dem Paper und zu eurer
+Forschung und herausbekommen, dass ihr zwar ein bahnbrechendes Paper auf den Weg gebracht habt,
+aber leider dann doch keine endgültige Lösung für das Problem habt. Ist das richtig? Ja. Und was
+bedeutet das? Ich glaube, das Spannende an unserem Paper ist der neue Designansatz, um zu zeigen,
+dass man Security-Mechanismen auch von Grund auf so designen kann, damit sie besser zu den
+Vorstellungen der User passen. Das heißt nicht, dass diese Vorstellungen automatisch gut sind. Und
+wir haben gesehen, dass alle drei Varianten, die wir ausprobiert haben und weiterentwickelt haben,
+dass die noch einiges an Arbeit brauchen und auch einige Nachteile haben. Also wahrscheinlich
+nicht die perfekten Lösungen sind. Aber ihr seid auf einem guten Weg, das kann man auf jeden Fall sagen,
+sonst wäre das Paper ja niemals angenommen worden. Ja, ich glaube, das bietet sehr gute Ansätze. Was
+wird der nächste Schritt sein? In welche Richtung werdet ihr euch jetzt dahin weiterentwickeln? Was
+werdet ihr euch jetzt genau ansehen in der Forschung oder in der Weiterarbeit an diesem Paper? Ich glaube,
+zu diesem Zeitpunkt geht es dann mehr um die Kollaborationen mit anderen Gruppen, die sich
+auch mit dem Thema beschäftigen, um hier vielleicht Synergien zu finden. Also unser Designansatz
+spielt eher am Anfang und andere Gruppen sind sehr gut darin, diese Sachen zu verbessern und
+Alternativen zu finden. Ja und natürlich auch zu schauen, welche Varianten wir noch nicht
+untersucht haben, ob wir da vielleicht was übersehen haben, was man auch noch probieren könnte. Okay,
+jetzt stehst du ja nicht alleine auf dem Paper, das ist auch ganz normal. Jetzt stehen noch zwei
+andere Personen auf dem Paper. Kannst du sagen, wie die Arbeit, die Zusammenarbeit da war oder
+beziehungsweise welche Gewichtung wer bei dem Paper hat? Oder sagt man einfach drei Leute stehen auf
+dem Paper? Das ist das Paper von uns drei und du sprichst ja auch immer von uns oder das ist dein
+Paper. Kannst du dazu noch was sagen? Ja, also es ist ganz üblich, dass man gemeinsam an Papers
+arbeitet und es ist auch häufig so, dass die Leute auf dem Paper einfach andere Aufgaben haben. Also
+meine Betreuerin, die Katharina, steht auf dem Paper und da war natürlich sehr viel davon abhängig,
+wie, welche Methoden wähle ich, was verfolge ich weiter. Also hier viel Feedback zu kriegen und
+natürlich ihre Erfahrung im Papers inmitten herauszufinden, was muss da drinstehen, wie kann
+man Sachen formulieren. Das ist einfach sehr wichtig. Und ja, was sind so die Qualitätskriterien?
+Das weiß ich als frischer Doktorand natürlich nicht und da ist sehr viel Input notwendig. Und
+die andere Autorin, das ist die Lea, ist meine Kollegin, die jetzt mittlerweile auch Doktorandin
+ist. Da war sehr viel Feldarbeit sozusagen. Also mit der plant man dann gemeinsam die Vorgehensweise
+und redet auch gemeinsam mit Studienteilnehmerinnen. Ich muss noch einmal zurückgehen auf das Paper,
+weil es ja vielleicht auch für den einen oder anderen sich die Frage stellt, warum ist das denn
+so wichtig, dass es Ende zu Ende Verschlüsselungen gibt? Wem dient das Ganze denn? Also wenn ich mit
+meiner Mutter Bilder von meinen Kindern hin und her schicke, hilft das schon oder hilft das vielleicht
+diese Ende zu Ende Verschlüsselungen gerade irgendwelchen Kriminellen, die eben nicht
+abgehört werden wollen oder hilft es Menschen, die sich in Not befinden, weil sie von einem Staat
+abgehört werden. Für wen ist das besonders wichtig, dass die Nachrichten von Ende zu Ende
+verschlüsselt sind? Für einige Leute interessanterweise. Also das Thema wird jetzt ja auch auf EU-Ebene
+besprochen und da ist ein sehr wichtig, also für die EU-Ebene ist ein sehr wichtiger Punkt,
+dass Internet, also kommerzieller Internetgebrauch einfach sehr auf diesen Verschlüsselungsparadigmen
+aufbaut. Das heißt, wenn die nicht mehr Ende zu Ende verschlüsselt sein können, lässt sich auch
+schwer Vertrauen aufbauen in Bezahlprozesse oder Ähnliches. Aber natürlich gibt es auch
+Personengruppen, für die das deutlich mehr wichtig ist. Also politische Aktivisten zum Beispiel. Für
+die ist es extrem wichtig, dass sie da jetzt nicht von staatlichen Institutionen oder gegnerischen
+Gruppen abgehört werden können und dass sie sich auch nachvollziehbar schützen können. Die
+Ende zu Ende Verschlüsselung ist ja nicht das einzige Forschungsgebiet, was dich interessiert.
+Wir hatten ja schon darüber gesprochen, dass es auch Passwörter sind. Gibt es denn noch was,
+was dich auf dem Weg zu deinem Doktortitel jetzt intensiv begleiten wird oder bleibst du jetzt auf
+diesem Thema? Ich würde sagen, ich bleibe wahrscheinlich auf größerer Ebene in der
+Nähe des Themas. Also zwei Sachen, die mich noch interessieren, sind die sozialen Aspekte von
+Security. Also wie das auch bei den Authentizierungstermonien ist, das macht man nicht alleine. Da braucht man
+irgendwie Leute, die mitmachen, die Leute mit denen kommuniziert und da muss auch auf sozialer Ebene
+was ausverhandelt werden. Und da muss ich dir erklären, warum ist es wichtig, warum will ich,
+dass du mitmachst. Frage, wie viel muss ich dir eigentlich erklären oder sage ich dir einfach,
+mach das, das und das und dann passt. Und das andere ist, nie viel Security-Mechanismen verwendet
+werden, ohne dass Leute wirklich wissen, wie viel es bringt. Das heißt, das ist teilweise schwer
+abzuschätzen, aber oft, oder nicht oft, manchmal kommt es vor, dass Leute Security-Mechanismen
+verwenden, im Glauben, dass es viel hilft und es dann aber doch nicht so viel hilft oder im
+schlimmsten Fall gar nichts hilft. Und das kann unter Umständen gefährlich werden und das ist ein
+Thema, das ich sehr spannend finde. Und hast du da die ersten Schritte auch schon gemacht oder hat
+dieses letzte Paper zur Ende-zu-ende-Verschlüsselung jetzt zu viel Zeit gefressen, sodass du die ganze
+Zeit da konzentriert warst? Nein, also ich arbeite natürlich immer an mehreren Papern parallel und
+in dem Fall konkret interessiert mich auch, warum Leute, wenn sie TOR verwenden, also den
+TOR Browser, warum sie da zusätzlich noch an VPN verwenden. Das ist ganz spannend, weil das unter
+Umständen Sinn machen kann, aber in sehr begrenzten Fällen. Also viele Leute, die das so machen,
+denen wird das wahrscheinlich nichts bringen. Noch eine Frage zur Kai hätte ich dieser Konferenz.
+Für euch Wissenschaftler ist das ja ganz normal, dass ihr immer wieder um die Welt fahrt oder euch
+eure Paper auf besonderen Konferenzen bzw. an besonderen Orten präsentiert. Jetzt ist dir mit
+durch den Corona-Virus eben eine Reise nach Japan verwehrt geblieben, um dein Paper zu präsentieren.
+Trifft dich das hart oder ist es okay? Wärst du gerne nach Yokohama gefahren? Natürlich wäre ich auch
+gern nach Yokohama gefahren, ist keine Frage. Aber was mich eigentlich härter trifft ist, dass diese
+Konferenz nicht in person stattfindet. Also eins der wichtigen Teile von Konferenzen ist das
+Networking, dass man Forscher trifft, mit denen auf informeller Ebene quatschen kann, sich austauschen
+und vielleicht neue Projektideen ausbaldowern kann. Und das geht nicht so richtig gut, wenn man es
+online macht. Also online kann man gut diese Vorträge abbilden, aber diesen informellen Aspekt,
+das ist relativ schwierig. Und da geht es dann weniger um Japan per se, auch wenn Japan toll ist,
+sondern einfach dieses Treffen. Ja, das ist wirklich schade. Dann hoffe ich, dass das irgendwann
+nachgeholt werden kann und diese wichtigen Punkte der Forschung dann doch noch weiter treiben kannst
+und zum Ziel kommst, sodass wir alle davon profitieren werden eines Tages. Okay Matthias,
+wir wollen dich gar nicht zu lange von deiner Forschung abhalten, aber doch noch ein bisschen
+was von dir erfahren. Du bist, ich glaube, mit dem Auto mindestens sieben Stunden von zu Hause
+entfernt. Ich weiß nicht genau, wie viele Kilometer es sind, aber es sind einige. Was vermisst du am
+meisten? Aus Wien habe ich lange gebraucht, um das herauszufinden, aber richtig Resche Wiener
+Kaisersemmeln. Resche Wiener Kaisersemmeln. Bedeutet das, du vermisst eine besondere Art
+Backware? Ja. Also ein Semmel als ein Brötchen und was ist Resch knusprig? Resch ist, glaube ich,
+am ehesten zu übersetzen mit Cross. Und diese Art des Backens ist dir hier noch nicht in die Hand
+gefallen? Also man kriegt hier schon auch Semmeln, sie sind halt einfach nicht das gleiche. Ich weiß
+nicht, was hier anders gemacht wird. Na irgendwie werden sie anscheinend anders gemacht. Es ist halt ein sehr
+alltägliches Ding, also ist auch sehr häufig in Wien zu Mittagessen eine extra Wurstsemmel mit
+Gurkel zu essen und das gibt es hier einfach gar nicht. Und sonst erster Bezirk, zweiter Bezirk,
+dritter Bezirk, das ist alles einerlei. Das findest du hier im Saarland genauso? Würde ich nicht sagen,
+dass es genauso da ist, aber ich würde sagen, die wichtigen Dinge gibt es auch in Saarbrücken auf
+weniger Platz. Du hast mir sogar verraten, dass du eine ganz Besonderheit in Saarbrücken probiert
+hast, nämlich ein Bier, das du vielleicht sagen würdest, dass es dir so gut schmeckt wie kein
+anderes. Ah ja, die Bruchbrauerei hat 2018 zumindest eine Hopfenperle gehabt und das war ein wirklich,
+wirklich gutes Bier. Wie gefällt dir denn das Leben außerhalb des CISPA-Roads bzw. wie gefällt
+dir überhaupt das Leben am CISPA, wenn es wieder Leben gibt? Ja, also es ist schon sehr ein fast
+einzigartiges Gefühl in einem Forschungszentrum zu sein, wo sich wirklich alle mit Security
+beschäftigen. Es hat irgendwas Befreiendes, wenn man zu beliebigen Personen hingehen kann,
+seine eigene Forschung erzählen und die können zumindest mit der Thematik was anfangen, auch wenn
+sie sich im Konkreten jetzt auf andere Weise damit beschäftigen. Aber sie haben doch alle einen
+Security-Bezug und das ist schon nett. Und wenn du jetzt Besuch aus Wien oder aus Schweden oder aus
+all den anderen Ländern, in denen du schon gelebt und gearbeitet und geforscht hast, bekommst,
+was machst du mit denen in Saarbrücken bzw. im Saarland? Das kommt sehr auf den Besuch an. Ja,
+ich weiß, deine Mutter war schon zu Besuch. Ja, mit meiner Mutter war ich sehr viel in Frankreich.
+Ja, das riecht jetzt nicht gerade mit der Brücken, aber gut. Es ist schon eine der Vorteile,
+dass man schnell wegkommt, auch wenn das nicht so toll klingt. Ansonsten, ich gehe gerne mit Leuten
+in die Parkanlagen, also am Staden zum Beispiel, der deutsch-französische Garten ist alles so
+hübsch. Ansonsten, die Vöcklinger Hütte ist immer einen Besuch wert, der Saarbrücker Stadtwald ist
+auch immer toll. Und der St. Johannermarkt im Sommer, hat er für dich das Flair, den Flair,
+den er so oft verspricht? Ja, der St. Johannermarkt im Sommer, so gegen 10, 11 ist einzigartig. Also,
+ich glaube, das gibt es auch in Wien nicht so wirklich. Okay, Matthias, dann vielen, vielen Dank
+für deine Zeit, vielen Dank für deine Forschung und vielen Dank für deine Erklärung. Ich nehme
+einiges mit. Ich wünsche dir viel Erfolg und hoffe, dass die nächsten Paper auch wieder
+angenommen werden. Du schnell deinen Doktor machst und uns dann doch vielleicht nicht so
+schnell verlässt und einiger Zeit noch erhalten bleibt. Warten wir es ab, bis dahin haben wir noch
+ein bisschen Zeit und ich freue mich auf unsere nächsten Gespräche. Ich auch.

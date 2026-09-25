@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.name }}</title>
+  <meta name="author" content="{{ site.name }}">
+  <meta name="description" content="{{ site.meta_description }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ site.name }}">
+  <meta property="og:description" content="{{ site.og_description }}">
+  <meta property="og:image" content="{{ site.hero_photo }}">
+  <meta property="profile:first_name" content="{{ site.name.split(' ')[0] }}">
+  <meta property="profile:last_name" content="{{ site.name.split(' ')[-1] }}">
+{% set asset_prefix = "" %}
+{% include "_head_common.html.j2" %}
+</head>
+<body class="index-page">
+
+<nav>
+  <div class="inner">
+    <a class="logo" href="#about">{{ site.name }}</a>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<!-- ── ABOUT ─────────────────────────────────────────────── -->
+<section id="about">
+  <div class="hero">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="{{ site.hero_photo }}" alt="Photo of {{ site.name }}" width="1400" height="1750">
+    </div>
+    <div class="hero-text">
+      <h1>{{ site.name }}</h1>
+      <p class="role" id="role-line"><span class="cursor"></span></p>
+{% for p in site.bio_paragraphs %}
+      <p>
+        {{ p | safe }}
+      </p>
+{% endfor %}
+      <div class="links">
+{% for link in site.links %}
+        <a href="{{ link.url }}"{% if not link.url.startswith("mailto:") %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<!-- ── RESEARCH ──────────────────────────────────────────── -->
+<section id="research">
+  <h2>Research</h2>
+  <div class="research-grid">
+{% for card in research_focus %}
+    <div class="research-card">
+      <h3>{{ card.title | safe }}</h3>
+      <p>{{ card.description | safe }}</p>
+    </div>
+{% endfor %}
+  </div>
+</section>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<!-- ── PUBLICATIONS ──────────────────────────────────────── -->
+<section id="publications">
+  <h2>Publications</h2>
+
+{% for year, pubs_in_year in publications_by_year %}
+  <!-- {{ year }} -->
+  <div class="pub-year-group">
+    <div class="pub-year">{{ year }}</div>
+
+{% for pub in pubs_in_year %}
+    <div class="pub">
+      <div class="pub-title"><a href="publications/{{ pub.slug }}.html">{{ pub.title }}{% if pub.subtitle %} <em style="font-weight:400;font-size:12px;color:var(--muted)">{{ pub.subtitle }}</em>{% endif %}</a></div>
+      <div class="pub-authors">{% for author in pub.authors %}{% if author == "Matthias Fassl" %}<span class="me">{{ author }}</span>{% else %}{{ author }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+      <div class="pub-meta">
+        <span class="badge {{ pub.badge_class }}">{{ pub.badge }}</span>
+{% for a in (pub.award or []) %}
+        <span class="award-badge">{{ a }}</span>
+{% endfor %}
+      </div>
+    </div>
+
+{% endfor %}
+  </div>
+{% endfor %}
+</section>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<!-- ── AWARDS ────────────────────────────────────────────── -->
+<section id="awards">
+  <h2>Awards</h2>
+  <div class="awards-list">
+
+{% for award in awards %}
+    <div class="award-item">
+      <div class="award-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="#7a2d55" xmlns="http://www.w3.org/2000/svg"><path d="M 12.0 2.0 L 14.23 8.93 L 21.51 8.91 L 15.61 13.17 L 17.88 20.09 L 12.0 15.8 L 6.12 20.09 L 8.39 13.17 L 2.49 8.91 L 9.77 8.93 Z"/></svg></div>
+      <div class="award-body">
+        <div class="award-title">{{ award.title | safe }}</div>
+        <div class="award-issuer">{{ award.issuer | safe }}</div>
+{% if award.note %}
+        <div class="award-note">{{ award.note | safe }}</div>
+{% endif %}
+      </div>
+    </div>
+
+{% endfor %}
+  </div>
+</section>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<!-- ── PRESS ─────────────────────────────────────────────── -->
+<section id="press">
+  <h2>Press</h2>
+
+{% for group_name, items in press_by_group %}
+  <div class="press-group">
+    <div class="press-group-label">{{ group_name }}</div>
+{% if group_name == "News" %}
+{% for item in items %}
+    <div class="press-item">
+      <span class="press-outlet">{{ item.outlet }}</span>
+      <span class="press-title"><a href="{{ item.title_url }}" target="_blank" rel="noopener noreferrer">{{ item.title | safe }}</a></span>
+      <span class="press-date">{{ item.date }}</span>
+    </div>
+{% endfor %}
+{% else %}
+{% for item in items %}
+    <div class="press-item-wrap">
+      <div class="press-item">
+        <span class="press-outlet">{{ item.outlet }}</span>
+        <span class="press-title"><a href="{{ item.title_url }}" target="_blank" rel="noopener noreferrer">{{ item.title | safe }}</a>{% if item.lang %}<span class="press-lang">{{ item.lang }}</span>{% endif %}{% if item.translation_page %} <a href="{{ item.translation_page }}" style="font-size:11px;color:var(--accent);font-weight:500;text-decoration:none;" title="English translation">EN ↗</a>{% endif %}{% if item.subtitle %}<br><small style="color:var(--muted);font-size:11px;">{{ item.subtitle | safe }}</small>{% endif %}</span>
+        <span class="press-date">{{ item.date }}</span>
+      </div>
+    </div>
+{% endfor %}
+{% endif %}
+  </div>
+
+{% endfor %}
+</section>
+
+<div class="wave-divider" aria-hidden="true"></div>
+
+<!-- ── CONTACT ───────────────────────────────────────────── -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="font-size:14px;color:#374151;margin-bottom:8px;">
+{% for line in site.contact.address_lines %}
+    {{ line | safe }}{% if not loop.last %}<br>{% endif %}
+
+{% endfor %}
+  </p>
+  <p style="font-size:14px;margin-top:12px;">
+    <a href="mailto:{{ site.contact.email }}" style="color:var(--accent);text-decoration:none;font-weight:500;">{{ site.contact.email }}</a>
+  </p>
+</section>
+
+</main>
+
+<footer>
+</footer>
+
+<script>
+  (function() {
+    const el = document.getElementById('role-line');
+    const plain   = {{ site.role_plain | tojson }};
+    const bold    = {{ site.role_bold | tojson }};
+    const full    = plain + bold;
+    let i = 0;
+
+    function render(typed) {
+      const inPlain = typed.slice(0, plain.length);
+      const inBold  = typed.length > plain.length ? typed.slice(plain.length) : '';
+      el.innerHTML =
+        (inPlain ? inPlain : '') +
+        (inBold  ? '<strong>' + inBold + '</strong>' : '') +
+        '<span class="cursor"></span>';
+    }
+
+    render('');
+    const iv = setInterval(() => {
+      i++;
+      render(full.slice(0, i));
+      if (i >= full.length) {
+        clearInterval(iv);
+        // blink cursor for 2 s then remove it
+        setTimeout(() => {
+          el.querySelector('.cursor').remove();
+        }, 2000);
+      }
+    }, 40);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+slug: authentication-ceremonies-poster-soups2022
+order: 21
+title: Exploring User-Centered Security Design for Usable Authentication Ceremonies
+authors:
+- Matthias Fassl
+- Lea Gröber
+- Katharina Krombholz
+year: 2022
+badge: SOUPS 2022 · Poster
+badge_class: badge-soups
+pdf: Exploring_User_Centered_Security_Design_Poster_SOUPS_2022.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2022/presentation/fassi-poster
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS) — Poster
+bibtex: |-
+  @inproceedings{Fassl2022ExploringUserCentered,
+    title     = {Exploring User-Centered Security Design for Usable Authentication Ceremonies},
+    author    = {Fassl, Matthias and Gr{\"o}ber, Lea Theresa and Krombholz, Katharina},
+    booktitle = {Eighteenth Symposium on Usable Privacy and Security (SOUPS 2022)},
+    year      = {2022},
+    address   = {Boston, MA, USA},
+    month     = aug,
+    note      = {Poster; based on the CHI 2021 paper},
+    url       = {https://www.usenix.org/conference/soups2022/presentation/fassi-poster}
+  }

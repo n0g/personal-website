@@ -1,0 +1,28 @@
+slug: blv-authentication-ccs2026
+order: 3
+title: A Mixed-Methods Analysis of Account Creation & Authentication Inaccessibility for Blind and Low
+  Vision Users
+authors:
+- Adryana Hutchinson
+- Smirity Kaushik
+- Matthias Fassl
+- Adam J. Aviv
+year: 2026
+badge: ACM CCS 2026
+badge_class: badge-ccs
+pdf: A_Mixed_Methods_Analysis_of_Account_Creation_and_Authentication_Inaccessibility_for_Blind_and_Low_Vision_Users_CCS_2026.pdf
+citation_type: conference
+venue_full: ACM SIGSAC Conference on Computer and Communications Security (CCS)
+abstract: |-
+  For many blind and low-vision (BLV) users, interacting with security and privacy mechanisms, such as password policies and two-factor authentication, presents significant accessibility barriers. Likewise, interacting with account creation (sign-up) and authentication (login) mechanisms, such as email, password, and other fields/elements on sign-up and login pages, can also present serious barriers to BLV users. While prior work has highlighted the inaccessibility of specific mechanisms, understanding how the broader inaccessibility of elements on account creation and authentication interfaces impacts both security and privacy decisions remains underexplored. To assess the breadth and depth of these challenges, we conducted a two-part, mixed-method study, first using automated auditing to measure accessibility issues across 11,273 sign-up and login pages (including 325 manual audits). We then conducted 14 semi-structured interviews to explore BLV users' broader experiences. Through the measurement, 81% of the identified errors pose potentially significant barriers to people with disabilities. Expanding on those findings through interviews, we further identified seven major inaccessibility categories, including inoperable buttons, unlabeled fields, and inaccessible error messages. Participants also reported significant friction with other mechanisms, such as CAPTCHAs and recovery mechanisms, electing not to use these systems to avoid inaccessibility fatigue. Our findings highlight a disconnect between current security and privacy practices and the needs of BLV users. We provide specific recommendations for practitioners to improve authentication accessibility holistically.
+bibtex: |-
+  @inproceedings{Hutchinson2026AMixedMethods,
+    title     = {A Mixed-Methods Analysis of Account Creation \& Authentication Inaccessibility for Blind and Low Vision Users},
+    author    = {Hutchinson, Adryana and Kaushik, Smirity and Fassl, Matthias and Aviv, Adam J.},
+    booktitle = {Proceedings of the 2026 ACM SIGSAC Conference on Computer and Communications Security (CCS '26)},
+    year      = {2026},
+    address   = {The Hague, Netherlands},
+    month     = nov,
+    pages     = {15},
+    doi       = {10.1145/3830454.3846545}
+  }

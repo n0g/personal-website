@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Messenger Contacts Are Rarely Verified — Deutschlandfunk, Computer und Kommunikation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent:  #9e3269;
+      --text:    #1f1f23;
+      --muted:   #5c5c6a;
+      --border:  #e8e0e5;
+      --bg:      #ffffff;
+      --bg-alt:  #faf8f9;
+      --max:     680px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    header a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header a:hover { text-decoration: underline; }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .meta-dot { color: var(--border); }
+    .meta a { color: var(--muted); }
+    .meta a:hover { color: var(--accent); }
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 20px; }
+    blockquote {
+      margin: 28px 0;
+      padding: 14px 20px;
+      background: var(--bg-alt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 12.5px;
+      font-style: normal;
+      color: var(--muted);
+    }
+    .section-break {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+      padding: 12px 16px;
+      background: var(--bg-alt);
+      border-radius: 6px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← Matthias Fassl</a>
+</header>
+
+<main>
+  <div class="meta">
+    <span>Deutschlandfunk</span>
+    <span class="meta-dot">·</span>
+    <span>Computer und Kommunikation</span>
+    <span class="meta-dot">·</span>
+    <span>11 November 2023</span>
+  </div>
+
+  <h1>Why Messenger Contacts Are Rarely Verified</h1>
+  <p class="subtitle">Hosted by Manfred Kläuber. With Matthias Fassl, CISPA Helmholtz Center for Information Security.</p>
+
+  <p class="note">English translation of the 11 November 2023 edition of <em>Computer und Kommunikation</em>. Matthias Fassl appears as a researcher and interviewee. Translation lightly edited for readability.</p>
+
+  <p>While EU politicians continue to argue about how to monitor communication channels to prevent serious crimes — the chat control debate — security researchers are focusing on a different question: how to make messenger apps truly secure and reliable in practice. Most of these apps already offer strong security features out of the box, but those features have to be used correctly by their users. For reliable end-to-end encrypted communication, the unambiguous authentication of one's communication partners is a critical function. Matthias Fassl from CISPA Helmholtz Center for Information Security in Saarbrücken examined these authentication sessions in a self-experiment.</p>
+
+  <hr class="section-break">
+
+  <blockquote>
+    "In end-to-end encrypted messengers, messages are encrypted so that only the recipient's device can read them again. What matters, though, is that you also know that this recipient key really belongs to the person you actually want to talk to. If you don't verify that, you could become the victim of a so-called man-in-the-middle attack, where the attacker can read along — or even write their own messages."
+    <cite>— Matthias Fassl, CISPA Helmholtz Center for Information Security, Saarbrücken</cite>
+  </blockquote>
+
+  <p>The host asks: what does verifying look like in practice?</p>
+
+  <blockquote>
+    "It looks a little different depending on the messenger. But it usually comes down to one of two things: either you get a QR code on your own phone, which you can compare — you scan the other person's QR code with your phone and get a confirmation that yes, those are the right keys. Or you get a number combination displayed, which you can read out to each other. If they match, you're good. If they don't match, you should immediately stop using that communication channel, because there's a very high risk that you're currently being intercepted."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>And to make it truly bulletproof?</p>
+
+  <blockquote>
+    "If you really want to make it bulletproof, it would be ideal to only communicate via verified channels with the person you want to talk to securely — meaning you wait until you actually meet in person, not over the phone, compare keys physically, and only then use that channel. It's also worth knowing that keys can change, often for very mundane reasons — like getting a new smartphone or reinstalling the app. When that happens, it's perfectly normal to receive a warning that the key has changed. And then you should simply perform the authentication ceremony again."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>The host observes that this makes it easy to understand why most people don't bother: you first need the opportunity to meet your contact in person. If that's a friend in the US, for instance, it becomes difficult. What did Fassl find in his self-experiment about why authentication sessions are used so poorly?</p>
+
+  <blockquote>
+    "In our self-experiment, we found that in everyday life there are simply — as you already mentioned — organizational difficulties. You have to wait until you see each other. Maybe you don't want to arrange a meeting specifically for this. And even if that meeting does happen, you usually have better things to do than compare keys on your phone. What happens very often is that you simply forget, because you want to have a social conversation. And then there are more important things. Another aspect: if the other person doesn't know the concept yet, there's some explaining to do — you have to explain what this is, what it's for, and also show how it's done."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>This sounds more like social and personal factors, the host notes, rather than technical difficulties caused by the apps themselves. Was that a surprise?</p>
+
+  <blockquote>
+    "In research, we already knew there were problems with authentication ceremonies. But previous research projects were primarily conducted in the lab, and there the focus was very much on the technical hurdles. Researchers found that problems stemmed from people not knowing the concept — they didn't know what an authentication ceremony was, didn't know what benefit it would give them, and as you correctly noted, often failed to perform it correctly because of how the messenger's user interface was designed. Our findings, by contrast, were primarily social and organizational in nature. But that's actually good news, because these are things we can support technically. We could, for example, build mechanisms into messengers that help with the organizational side — or perhaps provide a nudge during a conversation with an important person suggesting it might be a good idea to authenticate. And when you do meet in person, the app could send a reminder at the right moment: 'hey, you wanted to do this — now would be a good opportunity.'"
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>The host notes: "in the right context" implies the messenger would need to know when the conditions are met — which sounds like it could require location data or other private information.</p>
+
+  <blockquote>
+    "That's correct. And we are, of course, an institute for information security, so we envision this happening without surrendering any privacy or geographic location data. This is what we call zero-knowledge proofs — where you can cryptographically verify whether you're in the right place, or at the same place as someone else, without revealing where you actually are."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>The host turns to the broader significance of authentication ceremonies: doesn't all this describe a level of security that most ordinary people don't think they need?</p>
+
+  <blockquote>
+    "There's something to that. For most private individuals, I want to be clear: a messenger like WhatsApp or Signal is already the most secure way to communicate that they probably have on their phone — it's definitely more secure than email or SMS, even without authentication. That said, there is of course a real risk, especially for particularly exposed persons — journalists, activists — or anyone for whom it matters that a man-in-the-middle attack could occur. In those cases, performing the authentication ceremony helps, and can ward off that risk."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <p>Can authentication ceremonies also protect against the kind of fraudulent communication that has already become rampant via SMS and email?</p>
+
+  <blockquote>
+    "Fraudulent communication also happens via WhatsApp. It's usually not authenticated, because you haven't actually met the person. An authentication ceremony — where you meet in person and compare keys — helps you confirm that a message really came from that phone, from that specific person. That person could still involve you in fraud, of course. But it does help to be skeptical of messages from unverified senders."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+
+  <hr class="section-break">
+
+  <p>Finally, the host asks about the methodology of the study: normally one would expect to observe a hundred or a thousand users, and then determine what they do and where they struggle. Fassl instead conducted a self-experiment, acting as both researcher and subject. Isn't that inherently problematic?</p>
+
+  <blockquote>
+    "This method is indeed viewed very skeptically — I experienced that directly during the scientific review process, where there were many discussions about it. But I had several reasons for this choice of methodology. One is that if I study myself, I can examine a much longer time period in much greater detail, which yields a much deeper understanding of the information. The other reason is that we see people who haven't had prior exposure to these tools failing at other things first — they don't know what a ceremony is yet, don't understand what benefit it offers, or don't know how to correctly operate the messenger. From a security researcher's perspective, at least those cases don't apply to me. So in the self-experiment, I was able to focus specifically on the social problems that actually arise in everyday life."
+    <cite>— Matthias Fassl</cite>
+  </blockquote>
+</main>
+
+</body>
+</html>

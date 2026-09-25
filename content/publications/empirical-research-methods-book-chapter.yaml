@@ -1,0 +1,35 @@
+slug: empirical-research-methods-book-chapter
+order: 13
+title: Empirical Research Methods in Usable Privacy and Security
+authors:
+- Verena Distler
+- Matthias Fassl
+- Hana Habib
+- Katharina Krombholz
+- Gabriele Lenzini
+- Carine Lallemand
+- Vincent Koenig
+- Lorrie Faith Cranor
+year: 2023
+badge: Book Chapter · Springer
+badge_class: badge-springer
+links:
+- label: Springer
+  url: https://link.springer.com/chapter/10.1007/978-3-031-28643-8_3
+citation_type: book
+extra:
+  publisher: Springer
+  doi: 10.1007/978-3-031-28643-8_3
+abstract: |-
+  A variety of methods and techniques are used in usable privacy and security (UPS) to study users' experiences and behaviors. When applying empirical methods, researchers in UPS face specific challenges, for instance, to represent risk to research participants. This chapter provides an overview of the empirical research methods used in UPS and highlights associated opportunities and challenges. This chapter also draws attention to important ethical considerations in UPS research with human participants and highlights possible biases in study design.
+bibtex: |-
+  @incollection{Distler2023EmpiricalResearchMethods,
+    title     = {Empirical Research Methods in Usable Privacy and Security},
+    author    = {Distler, Verena and Fassl, Matthias and Habib, Hana and Krombholz, Katharina and Lenzini, Gabriele and Lallemand, Carine and Koenig, Vincent and Cranor, Lorrie Faith},
+    booktitle = {Human Factors in Privacy Research},
+    publisher = {Springer International Publishing},
+    year      = {2023},
+    pages     = {29--53},
+    isbn      = {9783031286438},
+    doi       = {10.1007/978-3-031-28643-8_3}
+  }

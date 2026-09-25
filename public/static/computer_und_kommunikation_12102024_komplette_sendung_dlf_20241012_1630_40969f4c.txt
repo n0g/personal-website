@@ -1,0 +1,525 @@
+Mit Manfred Kläuber und das sind die Themen heute.
+Timing-Attacke, das Anonymisierungsnetzwerk Tor,
+ist angreifbar.
+Angekommen, künstliche Intelligenz hat auch bei den Nobelpreisen gewonnen.
+Datenschutz zitronen, fünf Überwachungstechnologien
+erhalten den Big Brother Award und das digitale Logbuch IT-Zombies.
+Wenn man Anonymisierung will im Internet,
+ist der Tor-Browser immer noch die erste Möglichkeit.
+Es gibt hier praktisch nicht so viele Alternativen, die sinnvoll sind.
+Das sagt Matthias Fassel vom CISPA Helmholtz Zentrum
+für Informationssicherheit in Saarbrücken.
+So ganz selbstverständlich ist seine Einschätzung im Moment nicht.
+Denn vor Kurzem sind gravierende Zweifel aufgekommen,
+dass die Analyse der Analyse nicht in der Analyse ist.
+Es gibt auch noch einen Zweifel,
+ob das Anonymisierungsnetzwerk Tor, das Akronym steht für TheOnion-Router,
+überhaupt noch sicher und vertrauenswürdig ist.
+Denn am 18. September meldeten Kollegen des NDR
+Anonymisierungsdienst Tor angreifbar.
+Sie berichteten über erfolgreiche Timing-Attacken
+von Strafverfolgungsbehörden auf das Tor-Netzwerk.
+Bei mir ist mein Kollege Michael Gessert.
+Über was die Kollegen hier berichtet haben,
+das waren nachträglich bekanntgewordene Ermittlungsdetails
+zu einem Fall aus dem Jahr 2021.
+Damals hatten deutsche Strafverfolgungsbehörden
+den Betreiber der pädokriminellen Plattform Boys Town
+im sogenannten Darknet identifizieren können, oder?
+Genau, wir sprechen wohlgemerkt über einen etwas länger zurückliegenden Fall,
+bei dem die Ermittlungsmaßnahmen und ihre technische Vorbereitung
+deutlich länger zurückliegen, bei dem aber diese technischen Details,
+die zu dem Ermittlungserfolg geführt haben,
+eben erst jetzt bekannt geworden sind.
+Durch ein Posting auf der Internetplattform Reddit
+Anfang des Jahres mit Ermittlungsdetails
+lagen den Kollegen vom NDR und den für eine Einschätzung
+hinzugezogenen Experten vom Chaos-Computer-Club CCC
+aber auch noch weitere Informationen vor.
+Und an dieser Stelle kam es dann zu gewissen Irritationen
+oder auch zu einer Verunsicherung bei allen an Tor Interessierten.
+Gab oder gibt es eben irgendeine grundsätzlich unbekannte Schwäche
+im technischen Design des Anonymisierungsnetzwerkes?
+Michael, an dieser Stelle sollten wir sofort auch mal auf das große,
+ja, ziemlich grundsätzliche Dilemma zu sprechen kommen.
+Im Sinne des Tor-Netzwerkes ist es ja im Internet vertraulich
+und anonyme Infos abrufen oder kommunizieren zu können.
+Zum Beispiel als Dissident in einem totalitären Regime
+oder als Whistleblowerin in einem korrupten und böswilligen Unternehmen.
+Das ist ja eigentlich die Idee von Tor, nicht?
+Das ist eigentlich die Idee und deswegen setzen sich seit Jahrzehnten
+Freiwillige aus der Open Source und aus der Privacy Community
+intensiv für Tor ein.
+Aber völlig klar von anonymer, nicht nachvollziehbarer Kommunikation im Netz.
+Da profitieren auch Kriminelle.
+Die verschleierten sogenannten Hidden Services im Tor-Netzwerk
+sind eben das, was landläufig als Darknet bezeichnet wird.
+Wobei wohlgemerkt, Hidden Services und damit auch das sogenannte Darknet,
+das ist noch keinesfalls per se kriminell.
+Aber dort tummeln sich eben auch viele Kriminelle.
+Vielleicht müssen wir hier noch mal ganz kurz erklären,
+wie Tor grundsätzlich funktioniert oder wie da die grundsätzliche Idee ist,
+wenn ich über Tor mit dem Tor-Browser eine Webseite ansurfen will,
+dann betrete ich das Tor-Netzwerk über einen Eintrittsserver,
+den Entry-Node oder den Eintrittsknoten.
+Von dort aus werden meine Kommunikations- und Surfdaten verschlüsselt,
+weitergeleitet an einen mittleren Middle-Node
+und von dort wiederum verschlüsselt an einen Exit-Node,
+also an einen Ausgangsknoten, der dann die Webseite aufruft.
+Der Witz, die angesteuerte Webseite weiß nicht,
+von wem eigentlich die Anfrage kommt.
+Und mein Provider und auch der Eingangsknoten
+und auch irgendwelche Behörden wiederum, die mich eventuell überwachen,
+die wissen gar nicht, was ich aufrufe.
+Das ist das Konzept.
+Jetzt hatte ja der Ex-US-Geheimdienstmitarbeiter
+und Whistleblower Edward Snowden schon 2013
+auf den Super-GAU für dieses Konzept hingewiesen.
+Wenn ein Akteur, ein Geheimdienst, die technischen Ressourcen hat,
+sowohl Eingänge als auch Ausgänge aus dem Tor-Netzwerk
+quasi umfassend überwachen zu können,
+dann kann er einfach feststellen,
+jetzt gerade beginnt z.B. an einem Eingangsknoten in Deutschland
+ein Download und gleichzeitig an einem Ausgangsknoten
+in den USA ein Upload.
+Das ist also sozusagen die Mutter
+der sogenannten Korrelationsangriffe auf das Tor-Netzwerk.
+Wenn ich eben an sich verschlüsselte und verschleierte Aktivitäten
+zeitlich zueinander zuordnen kann,
+dann lässt sich dadurch die Anonymität aushebeln.
+Eine solche Korrelations- oder Timing-Attacke,
+die funktioniert aber nicht nur bei Kommunikation
+durch das Tor-Netzwerk hindurch,
+sondern auch bei Verbindungen von außen in Tor hinein
+zu den sogenannten Hidden Services, also zum Darknet.
+Der Betreiber der pädokriminellen Plattform Boys Town
+kommunizierte offenbar mit einem vermeintlich sicheren
+torinternen Messenger namens Ricochet.
+Dieser Messenger läuft im Tor-Netzwerk als Hidden Service,
+als verdeckter Dienst.
+Um mit diesem zu kommunizieren,
+wird eine Art Treffpunkt im Tor-Netz ausgemacht.
+Matthias Fassel vom CISPA Helmholtz-Zentrum
+für Informationssicherheit in Saarbrücken.
+Und dann sage ich diesem versteckten Dienst,
+bitte verbinde dich auch dahin, damit wir kommunizieren können.
+Das heißt, eine Behörde kann im Prinzip so oft
+diesem versteckten Dienst sagen,
+hey, baue doch eine neue Verbindung auf
+und dann schauen, ob der versteckte Dienst
+jetzt einen Knoten verwendet hat, der der Behörde untersteht,
+also den sie betreibt oder überwachen kann.
+So lief das offenbar auch im Boys Town-Fall ab.
+Die Ermittlungsbehörden konnten mit dem Verdächtigen
+über einen von ihnen kontrollierten Server
+in Echtzeit kommunizieren.
+Stellten sie eine Frage, dann konnten sie direkt in Echtzeit abgleichen,
+über welchen Eingangsknoten zum Tornetz die Messenger-Antwort reinkommt.
+Gegen solche Timing- und Echtzeitkorrelationsanalysen
+gäbe es prinzipiell ein Gegenmittel, sagt Matthias Fassel.
+Das Tornetzwerk könnte eine Art Datenrauschen
+oder eine zufällige Verzögerung der übertragenen Daten einführen.
+Aber wenn man das abändern würde
+und zusätzliche Zeitverzögerungen einführt,
+würde eben auch die Popularität abnehmen,
+weil es dann weniger hilfreich wird.
+Also noch mühsamer, das Tornetzwerk zu verwenden.
+Und das würde auch mein Anonymity-Set dann einschränken,
+weil es weniger Leute im Tornetzwerk gibt.
+Und ein Tornetzwerk, das nur von drei Leuten verwendet wird,
+ist halt auch nicht mehr besonders anonym.
+Genau dieses Dilemma sieht auch Joachim Selzer vom CCC,
+vom Chaos Computer Club.
+Nach seiner Einschätzung werden Ermittlungsbehörden
+und Geheimdienste auch weiterhin permanent versuchen,
+kompromittierte Server, also Knoten, in das Tornetzwerk einzuschleusen.
+Das heißt, wenn ich jetzt ein staatlicher Angreifer wäre,
+würde ich kompromittierte Server ins Netz stellen,
+würde sie vielleicht nicht zu attraktiv sein lassen,
+damit sie dann eben auch keinen Verdacht erregen.
+Und dann würde ich einfach abwarten,
+dann würde ich so ein halbes Jahr oder Jahr warten.
+Und das lohnt sich dann eben auch, weil ich dann nach einem Jahr sagen kann,
+okay, jetzt habe ich ausreichend Server in dieses Netzwerk eingespeist.
+Und dann würde ich anfangen, Leute aufzudecken.
+Das Tor-Projekt hat auf die Neuigkeiten im Fall Boys Town
+sofort in einem Blogpost reagiert.
+Tor sei weiterhin technisch sicher.
+Der Ermittlungserfolg und die Deanonymisierung des Plattformbetreibers
+sei vermutlich auf die Verwendung des veralteten Messengers,
+Ricochet oder anderer veralteter Software zurückzuführen.
+Inzwischen hat Tor einen neuen Schutz namens Vanguard eingeführt,
+der genau gegen die im Ermittlungsverfahren verwendeten Timing-Analysen helfen soll.
+Pavel Tsonev vom Tor-Projekt gibt deshalb Entwarnung,
+räumt aber zugleich ein, dass den Tor-Verantwortlichen
+noch nicht völlig klar sei, ob es noch weitere,
+bislang unbekannte Design-Schwächen geben könnte.
+Was nach wie vor für uns spannend ist,
+ein bisschen mehr Hintergründe zu erfahren,
+hoffentlich im Rahmen unserer eigenen Recherchen und Analysen,
+die wir da anstellen, wie genau dieser Eingangsknoten entdeckt wurde.
+Da sind die Tor-Aktivisten sich noch immer nicht sicher,
+ob die Sache vollkommen geklärt ist, oder, Michael?
+Ja, das stimmt. Ich will das auch nicht vollkommen klären können.
+Ich habe keinen Zugang zu Non-Disclosure-Informationen bekommen
+und auch gar nicht versucht, die zu bekommen.
+Ich habe aus meinen Gesprächen mit Matthias Fassel vom CISPA,
+mit Joachim Selzer vom Chaos-Computer-Club
+und auch mit der Kölner Cyber-Staatsanwaltschaft
+zack insgesamt den Eindruck gewonnen,
+es gibt vermutlich keine neue unbekannte Schwäche im Tor-Design,
+die sozusagen einen General-Schlüssel für Ermittler darstellen würde.
+Was die wissenschaftliche Community angeht,
+die versucht ja permanent, neue Korrelationsanalysen zu entwickeln,
+aber um Tor sicherer zu machen.
+Was den CCC angeht, der ist natürlich grundsätzlich
+auf der Seite von Privacy.
+Da würde ich mal trotz irgendwelcher Verschwiegenheitsvereinbarungen
+vermuten, wenn es ein dramatisches, ungestopftes Sicherheitsproblem
+bei Tor geben sollte, dann würden sie das vermutlich irgendwie signalisieren.
+Was die Ermittlungsbehörden angeht,
+wenn es diese fundamentale Lücke geben sollte,
+dann würden die kriminellen Darknet-Plattformen
+nicht nur sporadisch, sondern am laufenden Band auffliegen.
+Das ist ein gutes Stichwort, denn am Dienstag hat ja die Polizei Duisburg
+das Innen- und Justizministerium und eben auch die Zentrale
+und Ansprechstelle Cybercrime in Nordrhein-Westfalen
+wieder einen Ermittlungserfolg in einer großen Pressekonferenz
+bekannt gegeben. Da ist wiederum eine Plattform im Darknet,
+also damit auch im Tornetz enttarnt und geschlossen worden.
+Betreiber und eine Reihe von Nutzern wurden identifiziert.
+NRW-Justizminister Benjamin Limbach wird da mit der Botschaft
+an potenzielle Täter zitiert,
+Ihr könnt euch nicht verstecken, nicht hinter vier Wänden,
+nicht hinter einem Pseudonym und auch nicht im Darknet.
+War das etwa ein weiterer Hinweis auf technische Möglichkeiten
+der Ermittler oder etwaige Schwächen bei Tor?
+Also ich glaube nicht. Ich habe den Fall gestern
+nochmal mit der Staatsanwaltschaft Köln bzw. dem ZAK besprochen.
+Und hier sieht es wirklich nach klassischer Polizeiarbeit aus.
+Da war bei Ermittlungen in Bayern eine Person mit Wohnsitz Duisburg
+als möglicher Nutzer einer Darknet-Missbrauchsplattform aufgefallen.
+Dann hat die Polizei in NRW dort eine Durchsuchung durchgeführt.
+Und der Verdächtige war offenbar auch räuhig und kooperativ
+und hat eine Menge Zugangspasswörter zu entsprechenden Accounts
+rausgerückt. Und darüber hat man wieder weitere Personen
+und Strukturen ermitteln können.
+Das ist, glaube ich, auch nochmal eine ganz wichtige Erkenntnis.
+Ermittlungserfolge sind eben trotz Tor
+und übrigens auch trotz Messenger End-zu-End-Verschlüsselung
+weiterhin möglich.
+Wie verletzlich ist das Tor-Netzwerk?
+Darüber sprach ich mit Michael Gessert. Danke.
+Das ist schon ziemlich auffällig.
+Wann immer zurzeit Neuheiten oder technologische Entwicklungen
+angepriesen werden, dann ist auch immer KI mit im Spiel.
+Künstliche Intelligenz ist nicht nur eine ziemlich alte Disziplin
+der Informatik, die gerade mal vor zwei Jahren
+so richtig aus dem Dornröschenschlaf erwacht ist,
+sondern auch ein Trendthema und ein Buzzword,
+das offenbar nahezu automatisch Türen in viele Richtungen öffnet.
+Kein Wunder also, dass KI im Überfluss
+für alles Mögliche bemüht wird.
+Aber dass nun ausgerechnet auch im alt ehrwürdigen Nobelpreis KI
+mit drin ist, frankrothelischen, musste das wirklich sein?
+Ja, offenbar schon, denn das Nobelpreiskomitee in Stockholm
+hat am Mittwoch gleich noch einen weiteren Nobelpreis
+und nicht nur den Physiknobelpreis für ein KI-Thema springen lassen.
+Auch den Nobelpreis für Chemie.
+Da geht es um einen Algorithmus,
+der die Form von Proteinen präziser ausrechnen kann.
+Wichtig etwa für die Suche nach neuen Medikamenten.
+Ja, und zwei der drei Chemielauriaten
+kommen von Google, DeepMind, also der KI-Schmiede von Google.
+Ja, und dass das Nobelpreiskomitee so munter mitmacht bei diesem KI-Hype,
+das mag vielleicht damit zu tun haben,
+dass man ihm schon öfter vorgeworfen hat,
+eben allzu alt ehrwürdig unterwegs zu sein
+und Errungenschaften auszuzeichnen, die schon Jahrzehnte her sind
+und mit unserem Alltag vielleicht gar nicht so viel zu tun haben.
+Ja, und vielleicht wollte das Komitee nun ganz deutlich zeigen,
+hey, wir sind auf der Höhe der Zeit und zeichnen was aus,
+was unsere Gesellschaft wirklich prägt.
+Da könnte man aber einwenden, dass die Arbeiten ja,
+zumindest der beiden Physikpreisträger,
+auch schon etwas länger her sind, aus den 80er Jahren.
+Aber reden wir drüber, was haben die gemacht
+und warum ist es für die heutigen KI-Systeme so wichtig?
+Ja, also der ältere der beiden, John Hopfield,
+hat sich in den frühen 80er Jahren mit neuronalen Netzwerken befasst.
+Das sind Programme, die die Funktion des menschlichen Gehirns
+quasi imitieren, also da gibt es sogenannte Knoten,
+das sind künstliche Neuronen,
+die sind miteinander verbunden wie im Hirn
+und können sich gegenseitig beeinflussen
+und diese Verbindungen, die können sich verändern,
+können also z.B. stärker werden,
+wenn zwei Knoten oft miteinander agieren.
+Ja, und das macht den Computer lernfähig.
+Man spricht also auch von Machine Learning.
+Und John Hopfield hat diese neuronalen Netzwerke erfunden?
+Ja, das nicht, aber er hat 1982 eine Art assoziatives Gedächtnis
+basierend auf einem neuronalen Netz entwickelt
+und das kann nicht nur bekannte Bilder erkennen,
+wie vorher die Systeme, sondern wenn ihm ein unvollständiges
+oder irgendwie verzerrtes Bild gegeben wird,
+dann kann die Methode ein abgespeichertes Bild finden,
+das ihm ähnlich ist.
+Ja, und das Verfahren ließ sich dann verwenden,
+um beschädigte Daten oder Bilder wiederherzustellen.
+Was hat denn der zweite Preisträger Joffrey Hinton vollbracht?
+Ja, der hat die neuronalen Netzwerke weiterentwickelt
+zu dem, was man heute Deep Learning nennt.
+Da tastet sich das neuronale Netz Schicht für Schicht immer tiefer vor
+und kann dadurch Bilder erkennen, die es nie zuvor gesehen hat.
+Also Beispiel, man will dem Computer beibringen,
+Katzenbilder von Hundebildern zu unterscheiden.
+Dazu trainiert man ihn mit vielen Katzen- und Hundefotos
+und zuerst lernt die KI einfache Dinge wie Linien oder Kanten.
+Und bei weiteren Durchgängen lernt sie dann,
+wie die Kombinationen dieser Linien aussehen,
+zum Beispiel Ohren oder Augen.
+Ja, und am Ende kann die KI dann von selbst entscheiden,
+ob ein Bild eine Katze zeigt oder ein Hund.
+Ich hatte ja eingangs schon gesagt,
+dass KI eigentlich eine ziemlich alte Disziplin der Informatik ist.
+Aber warum hat es seit diesen Arbeiten aus den 80er Jahren
+so lange gedauert, bis KI wirklich den Durchbruch dann schaffte?
+Ja, also damals in den 80er Jahren,
+da waren die Rechner noch viel zu langsam
+und die Datenspeicher auch waren viel zu klein.
+Also John Hopfield zum Beispiel verwendete damals ein Netzwerk
+mit 30 künstlichen Neuronen und knapp 500 Parametern.
+Mehr ging mit den damaligen Rechnern einfach nicht.
+Heute arbeiten Sprachmodelle wie ChetGPT
+mit mehr als einer Billion Parametern.
+Und das funktioniert eben nur mit modernen, schnellen Rechnern
+und auch mit großen Festplatten,
+die also Unmengen an Daten speichern können.
+Denn viele Daten, das ist eine weitere Voraussetzung,
+um eine KI vernünftig zu trainieren.
+Reden wir noch über eine bemerkenswerte Tatsache,
+nämlich, dass sich Joffrey hinten gar nicht mehr
+so uneingeschränkt über KI freut, sondern er hat auch Befürchtungen.
+Was konkret befürchtet er?
+Also er glaubt, dass die KI Millionen an Arbeitsplätzen vernichten wird,
+dass die Algorithmen Wahlen beeinflussen durch gefälschte Videos zum Beispiel,
+dass sich mit KI Cyberangriffe anzetteln
+und tödliche Viren zur biologischen Kriegsführung entwickeln lassen.
+Und er meint sogar, dass KI-Systeme letztlich intelligenter sein werden,
+als wir uns schon heute in vielen Bereichen Hausrüberlegen sind.
+Um KI ging es auch bei den diesjährigen Nobelpreisen
+für Physik und Chemie.
+Darüber sprach ich mit Frank Grotelüschen. Dankeschön.
+Zum 24. Male wurden gestern Abend in Bielefeld
+fünf Negativpreise an sogenannte Datenkraken verliehen.
+So bezeichnet der Bielefelder Datenschutzverein
+Digitalcourage Unternehmen, Institutionen oder Behörden,
+die den notwendigen Datenschutz für ihre Kunden oder für Bürger
+nicht so genau nehmen oder bewusst sogar missachten.
+Der Negativpreis, eine Big Brother-Figur,
+soll nach Vorstellung des Vereins die Preisträger nicht lächerlich machen,
+sondern zum Nachdenken anregen.
+Und tatsächlich stellten sich bereits einige Preisträger der Diskussion
+mit ihrem bislang stets wohlgesinnten Publikum.
+In diesem Jahr war jedoch keiner der fünf neuen Preisträger
+im voll besetzten Land zu sehen.
+Wolfgang Neukir berichtet.
+Zu den prominenten Preisträgern zielt Bundesgesundheitsminister
+Karl Lauterbach wegen der geplanten nach Auffassung von Digitalcourage
+unzureichend geschützten Weitergabe
+von Patientendaten an europäische Interessenten.
+Dies sei, so der ehemalige Datenschutzbeauftragte
+des Landesschleswig-Holstein Thilo Weichert,
+das Ende der ärztlichen Schweigepflicht.
+Zugang zu den pseudonymen Daten bekommt jeder.
+Jedermann kann die anfordern, ohne auch nur eine Qualifikation
+oder eine Fachkenntnis nachweisen zu müssen.
+Die größte Unverschämtheit aber ist,
+dass den Betroffenen bei der Sekundärnutzung
+von pseudonymen Daten kein Auskunst- und kein Widersprucherecht
+zugestanden wird.
+Peris ist das Kürzel-für-Personen-Identifikationssystem,
+dessen mobile Kameras anhand biometrischer Merkwale
+Tatverdächtige in Echtzeit erkennen.
+Letzteres, die Echtzeiterkennung ist aber der Polizei streng verboten.
+Nach einem ersten Test in Sachsen wurde das System dort abgeschaltet,
+vermutlich aber an die Hamburger Polizei verliehen,
+die das Echtzeitverbot trickreich interpretiert haben soll.
+Laudator Frank Rosengardt vom Chaos Computer Club.
+Die Software Peris wird so eingestellt,
+dass die Erkennung nicht in Echtzeit passiert,
+sondern ein bisschen später.
+Was später bedeutet, ist allerdings nur irgendwo festgeschrieben.
+Wahrscheinlich reichen einige Sekunden Verzögerung,
+um nicht in Echtzeit zu arbeiten.
+Hier wird die gesetzlich erlaubte technische,
+kurzfristige Speicherung von Bildern praktisch missbraucht,
+um sie für eine Gesichtserkennung zu nutzen.
+Das war der Jury einen Big Brother für Sachsens Innenminister Armin Schuster wert.
+Und der Arbeitsrechtler Peter Wedde fand auch die verwirrenden Geschäftsbedingungen
+der beiden chinesischen Handelsplattformen Teemu und Shein
+seien eine Datenschutz-Zitrone wert,
+nämlich für die Kunst alle rechtlichen Risiken auf Kunden abzuwälzen.
+Wer als Importeur in China Textilien für 300 Euro bestellt
+und sie in Teillieferung zu 100 Euro bekommt,
+dem kann es passieren, dass der Zoll dafür rund 100 Euro an Gebühren nachfordert.
+Entdeckt der Zoll ein Plagiat oder eine Produktfälschung,
+darf er die Hersteller der Originale über den Importeur informieren.
+Aus ganz billig kann so ganz schnell ziemlich teuer werden.
+Auch die Deutsche Bahn verdiene nach Meinung der Jury einen Big Brother,
+denn deren sogenannter Digitalzwang,
+zum Beispiel bei der Bahncard,
+erschwere zunehmend anonymes Reisen für Menschen ohne Handy und E-Mail-Konto
+als lästigen Trend.
+So heißt eine neue Big Brother Kategorie,
+empfindet Digitalcourage-Mitgründerin Rena Tangens
+den sogenannten Technik-Paternalismus,
+jene Hörigkeit auf allgegenwärtig bevormundende, piepsende digitale Geräte,
+übergriffige Navis und Suchmaschinen.
+Je weniger Überblick wir selber haben,
+desto anfälliger werden wir für Manipulation.
+Schau hier hin, geh dorthin, kauf das.
+Hintergrundtext, wir kennen dich so gut,
+dass wir das alles für dich entscheiden können.
+Technik-Paternalismus sei darauf angelegt,
+so Tangens, Menschen zu entmündigen
+oder gar nicht erst mündig werden zu lassen.
+Wir haben es in der Hand, andere Technik zu fordern,
+Monopole aufzubrechen und die Rahmenbedingungen anders zu gestalten.
+Lobby-Control und Rebalance Now, zwei deutsche Organisationen,
+haben gemeinsam mit anderen Organisationen
+ein White Paper erarbeitet, das beschreibt, wie das gelingen kann.
+Beyond Big Tech ist ein langfristiges Projekt,
+das Mut und Hartnäckigkeit erfordert.
+Wolfgang Nölke über die Preisverleihung
+des Big Brother Awards gestern Abend in Bielefeld.
+Digitales Logbuch, Computer und Kommunikation.
+Eintrag 17.0.23.
+Im Oktober, als die Blätter gefallen waren,
+schien es ruhig auf den Friedhöfen der Welt zu sein.
+Ahorn, Efeu, Buchenblätter in Braun lagen auf den Gräbern.
+Wie konnte da jemand auf die Idee von Zombies kommen,
+dumpfen Kreaturen, die stolperten und Menschen totbissen?
+Totaler Quatsch.
+Während wir das Denken und fast schon
+in einen netten Nachmittagsschlaf versinken,
+tut sich ein Spalt auf, schiebt die Blätter zur Seite,
+heraussteigt tatsächlich etwas Zombieartiges,
+nennt sich Windows,
+schleppt mit lautem Geklappere etwas hinter sich her,
+das heißt, MS-DOS.
+Ah nee, gehen wir lieber in die Kapelle, bevor was passiert.
+Nützt natürlich nichts, denn Zombies überwinden alle Hindernisse,
+jedenfalls im Horrorfilm.
+Während wir es trotzdem versuchen,
+sehen wir ein weiteres Grab, das sich aufspaltet,
+da kriecht ein Zombie namens Apple heraus,
+im Schlepptau fiese Kleinere mit dem Namen iPod und iPhone.
+Ah nee reißt das Portal zur Kapelle auf,
+will stürzen hinein und verrammeln die Tür von innen.
+Draußen klopfen jetzt laut Windows und Apple dagegen.
+Hast du Angst? Du zitterst ja richtig, fragt Ah nee.
+Ja, ich hab Angst.
+Vor streinalten Computern und Betriebssystemen?
+Ah nee, das sind IT-Zombies.
+Der Lärm lässt nach.
+Die Idee, bald die Tür zu öffnen und nach Hause gehen zu können,
+müssen wir leider knicken.
+Denn mit einem großen Krach bricht das Kapellenfenster auf
+und hinter den Scherben hereingeflogen
+kommt ein fürchterlich gefährlich aussehendes Zombie.
+Ich bin Google, grunzt das Zombie, während es auf uns niederkommt.
+Ich war die erste große Datenkrake und nannte mich Suchmaschine.
+Ich suche auch heute noch alles.
+Gut, dass ich euch zwei gefunden habe.
+Kommt näher, ihr Süßen.
+Darf ich euch? Ich darf euch doch.
+Widerrede ist zwecklos.
+Zu allem Überfluss springt jetzt auch noch die Kapellentüre auf.
+Kichernd kommen die Apple und Windows-Zombies mit ihrer Nachhut herein.
+Schreckliches Ende dieses netten Herbst-Spaziergangs.
+Das digitales Logbuch.
+Name Schönherr Maximilian Vollklaus.
+Die Ampelkoalition einigt sich auf den Einsatz
+digitaler Gesichtserkennung.
+Mit dieser Meldung startet unser Info-Update
+von und mit Michael Strang.
+Die Fraktionen von SPD, Grünen und FDP wollen in der kommenden Woche
+die gesetzlichen Änderungen für das sogenannte Sicherheitspaket beschließen.
+Die Koalition hatte sich im August auf das Sicherheitspaket geeinigt.
+Demnach soll die Polizei künftig Fotos von Verdächtigen
+mit allgemein öffentlich zugänglichen Internetdaten abgleichen dürfen,
+um die Identifizierung von Tatverdächtigen
+oder gesuchten Personen zu erleichtern.
+Vernetzte Geräte sollen besser gegen Cyberangriffe geschützt werden.
+Um smarte Kaffeemaschinen, Computeruhren
+und intelligente Babyphones sicherer zu machen,
+hat der Rat der EU-Innenministerinnen und Minister in Luxemburg
+den Cyber Resilience Act beschlossen.
+Die neuen Regelungen legen erstmals verbindliche Cyber-Sicherheitsanforderungen
+für alle vernetzten Geräte fest.
+Die Regelung verpflichtet Hersteller, Importeure und den Handel.
+Sie müssen künftig sicherstellen, dass ihre Produkte den Anforderungen genügen
+und mit einem entsprechenden Kennzeichen versehen sind.
+Nach einem jahrelangen Rechtsstreit hat sich Meta
+gegenüber dem Bundeskartellamt zu Nachbesserungen
+und strengeren Regeln beim Datenschutz verpflichtet.
+Der US-Konzern darf persönliche Informationen der Nutzenden
+aus Diensten des Plattformbetreibers wie Facebook, WhatsApp und Instagram
+nicht ohne deren Einwilligung zusammenführen und verarbeiten.
+Die deutschen Kartellwächter hatten dies dem Unternehmen schon 2019 aufgetragen,
+doch Meta klagte dagegen.
+Das Funksystem der Lichtsignalanlagen KAR in den Niederlanden erlaubt es
+unter anderem, Rettungskräften aus der Ferne die Ampeln auf ihrem Weg auf grün zu stellen.
+Der Hacker Alwin Peppels hat nun entdeckt,
+dass sich das System über ein selbstgebautes System steuern lässt
+und diese Sicherheitslücke der niederländischen Cyber-Sicherheitsbehörde mitgeteilt,
+berichtet RTL News.
+Daher müssen nun landesweit die Steuerungsanlagen
+von zehntausenden Ampeln ausgetauscht werden.
+Bis zum Jahr 2027 sollen unter dem Dach von Connecting Europe Facility Digital
+vor allem Verbindungsinfrastrukturen besser werden,
+teilte die EU-Kommission diese Woche mit.
+Konkret sollen damit 5G-Verbindungen in Europa auf- und ausgebaut,
+Back-Bauennetze modernisiert und der Energieverbrauch reduziert werden.
+Jede zweite Lehrkraft hat KI beruflich genutzt.
+Die, die bereits im Unterricht verwendet haben,
+nutzten 81% KI zur Wissensvermittlung.
+Sternzeit, 12. Oktober.
+Die Radarsonde für die Vulkane auf der Venus.
+Morgen vor 30 Jahren verglühte die NASA-Sonde Magellan
+in der Venus-Atmosphäre.
+Magellan hatte vier Jahre lang unsere Nachbarplaneten umkreist
+und wurde dann gezielt zum Absturz gebracht.
+Mit einem Radarinstrument hat die Sonde durch die dicke Wolkenhülle
+der Venus geblickt und nahezu die gesamte Oberfläche erfasst.
+Die Venus hat fast die Ausmaße der Erde.
+Die kleinsten Details, die Magellan erkennen konnte,
+sind etwa 200 Meter groß.
+Damit war Magellan deutlich scharfsichtiger
+als zwei sowjetische Venera-Sonden zehn Jahre zuvor.
+Wie sich zeigte, sind fast 90% der Venus-Oberfläche
+vulkanisch geprägt.
+In der Venus-Landschaft wimmelt es von Vulkankegeln,
+Lavaströmen, Einschlags-Kratern und Dünenfeldern.
+Auf unserem Nachbarplaneten herrscht 100-mal höherer Luftdruck
+als auf der Erde und die Temperatur liegt bei fast 500 Grad Celsius.
+Allerdings gibt es keinerlei Wasser.
+Erosion spielt offenbar kaum eine Rolle.
+Die Sonde mag seit drei Jahrzehnten Geschichte sein,
+doch ihre Daten werden bis heute genutzt.
+Erst vor wenigen Monaten bemerkten Fachleute
+anhand der Magellan-Radarbilder, dass Anfang der 90er-Jahre
+einige Vulkane auf der Venus aktiv waren.
+Magellan hat die Ausbrüche nicht live erfasst,
+aber Aufnahmen mit einigem zeitlichen Abstand
+zeigen an einigem Kratern und Berghängen
+deutliche Veränderungen.
+Das lässt sich wohl nur mit hervorgequollener Lava erklären.
+Die Venus zeigt sich derzeit kurz nach so einem Untergang
+tief im Südwesten.
+Dort strahlt ein Planet mit aktiven Vulkanen.
+Das war Computer und Kommunikation für diese Woche.
+Am Mikrofon begleitete sie Manfred Kleuber.
+Copyright WDR 2021

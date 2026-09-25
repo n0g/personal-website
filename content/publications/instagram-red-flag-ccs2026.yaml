@@ -1,0 +1,27 @@
+slug: instagram-red-flag-ccs2026
+order: 2
+title: '“That’s a Red Flag!”: How Young Adult Instagram Users Assess Sexual Threats and Perceive Nudity
+  Protection in Direct Messages'
+authors:
+- Anna Calmbach
+- Carolyn Guthoff
+- Matthias Fassl
+- Katharina Krombholz
+year: 2026
+badge: ACM CCS 2026
+badge_class: badge-ccs
+pdf: Thats_a_Red_Flag_How_Young_Adult_Instagram_Users_Assess_Sexual_Threats_and_Perceive_Nudity_Protection_in_Direct_Messages_CCS_2026.pdf
+citation_type: conference
+venue_full: ACM SIGSAC Conference on Computer and Communications Security (CCS)
+abstract: |-
+  Young adults increasingly seek intimacy and express their sexuality online. At the same time, harmful experiences such as image-based sexual abuse are also on the rise. To counter this, Meta has introduced safety tools for Instagram Direct Messages in early 2024 that blur intimate images and display informational pop-ups when receiving, sending, or forwarding them. While these safety measures exist, we do not know how they are received and if they support users' intuitive threat evaluation. We conducted qualitative, scenario-based interviews with n = 17 participants aged 18 to 21 to identify detection factors for threat assessment and gather insights into users' perceptions of these safety tools. We present the identified detection factors and suggest how this information can be used to contextualize future safety measures and guide users during risk assessment. Grounded in participant feedback, we argue for providing adequate user agency without offloading responsibility, and for greater reliability and transparency of safety tools.
+bibtex: |-
+  @inproceedings{Calmbach2026ThatsARed,
+    title     = {"That's a Red Flag!": How Young Adult Instagram Users Assess Sexual Threats and Perceive Nudity Protection in Direct Messages},
+    author    = {Calmbach, Anna and Guthoff, Carolyn and Fassl, Matthias and Krombholz, Katharina},
+    booktitle = {Proceedings of the 2026 ACM SIGSAC Conference on Computer and Communications Security (CCS '26)},
+    year      = {2026},
+    address   = {The Hague, Netherlands},
+    month     = nov,
+    doi       = {10.1145/3830454.3846560}
+  }

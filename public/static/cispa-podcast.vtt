@@ -1,0 +1,776 @@
+WEBVTT
+
+00:00.000 --> 00:14.600
+Herzlich willkommen zum CISPA Podcast TLDR. Für alle, die diese Abkürzung nicht kennen,
+
+00:14.600 --> 00:19.960
+sie steht für Too Long Didn't Read. Also etwas, das auf dem Papier sehr lang und vielleicht
+
+00:19.960 --> 00:25.320
+für die meisten ein bisschen zu mühselig zu lesen ist. Trotzdem sind es viele unglaublich
+
+00:25.320 --> 00:30.400
+interessante Arbeiten, die wir euch hier in der Pilotfolge und in den kommenden Ausgaben
+
+00:30.400 --> 00:37.600
+von TLDR, dem ersten CISPA Podcast vorstellen möchten. Heute geht es um Ende-zu-Ende-Verschlüsselung
+
+00:37.600 --> 00:42.360
+von Messengern wie WhatsApp und warum die Kommunikation darüber nicht unbedingt so
+
+00:42.360 --> 00:47.520
+hundertprozentig sicher ist, wie wir alle hoffen. Ich bin Sebastian Klöckner aus der CISPA
+
+00:47.520 --> 00:53.280
+Kommunikationsabteilung und zu Gast heute bei uns ist Matthias Fassl aus der Usable
+
+00:53.280 --> 00:58.160
+Security Research Gruppe. Sehr schön. Hallo Matthias, herzlich willkommen. Du bist 31 Jahre,
+
+00:58.160 --> 01:05.280
+kommst aus Wien ursprünglich und du bist in der Gruppe von Katharina Krompolz. Bevor wir auf das
+
+01:05.280 --> 01:10.400
+alles eingehen, erzähl uns doch bitte kurz, wie bist du nach Saarbrücken gekommen? Was
+
+01:10.400 --> 01:16.080
+hat dich hierher verschlagen? Es ist ja doch ein bisschen weit weg von zu Hause. Also die
+
+01:16.080 --> 01:21.880
+kurze Geschichte ist, ich habe meine Masterarbeit bei Katharina geschrieben. Sie war zufrieden mit
+
+01:21.880 --> 01:26.800
+der Arbeit und hat mir angeboten, hier nach Saarbrücken zu kommen. Zufälligerweise kannte
+
+01:26.800 --> 01:31.480
+ich Saarbrücken schon vom Namen, aber ich habe trotzdem ein wenig Bedenkzeit gebraucht,
+
+01:31.480 --> 01:36.280
+aber ich bereue es nicht. Vielleicht kannst du noch mal ganz kurz für die Leute, die das jetzt nicht
+
+01:36.280 --> 01:44.280
+genau wissen, wer ist Katharina, was ist sie für dich? Die Katharina Krompolz hat ihr Doktorat an
+
+01:44.280 --> 01:49.960
+der TU Wien gemacht, auch in einem Postdoc und ist in der Usable Security Community ziemlich bekannt,
+
+01:49.960 --> 01:56.960
+auch weil sie mit Server-Administratoren arbeitet und auch viel mit HTTPS gemacht hat. Und sie hat
+
+01:56.960 --> 02:02.520
+da dann quasi so eine Art wie einen Ruf oder ist ans TISPA gekommen und du bist dir quasi gefolgt,
+
+02:02.520 --> 02:08.520
+ja? Okay, das ist doch interessant. Kannst du uns ein bisschen erklären, worum es in deinem
+
+02:08.520 --> 02:13.280
+Forschungsgebiet genau geht, also für die, die jetzt nicht direkt aus der Cyber Security Forschung
+
+02:13.280 --> 02:19.480
+kommen. Worum handelt es sich bei euch? Die Usable Security beschäftigt sich größtenteils damit,
+
+02:19.480 --> 02:25.600
+wie Menschen mit Security-Mechanismen umgehen, das heißt, an welchen alltäglichen Sachen scheitern
+
+02:25.600 --> 02:31.120
+sie, wo passieren Fehler, was kann man besser machen und auch wie kann man die Tools, die Leute
+
+02:31.120 --> 02:38.320
+täglich verwenden, besser machen. Und was wäre das zum Beispiel für ein alltägliches Tool, was ich
+
+02:38.320 --> 02:42.320
+zum Beispiel jeden Tag benutze, mit welchem beschäftigst du dich da auf Forschungsebene?
+
+02:42.320 --> 02:47.560
+Ich beschäftige mich konkret, was jetzt das PIP angeht, auch sehr viel mit Instant-Messagen,
+
+02:47.680 --> 02:55.000
+also WhatsApp, Signal, Telegram. Andere Forschungsthemen, mit denen Leute sehr oft im Kontakt sind,
+
+02:55.000 --> 03:00.480
+sind zum Beispiel sichere Webseiten, diese Warnmeldungen, die kommen, wenn das Zertifikat
+
+03:00.480 --> 03:05.680
+nicht passt. Das war sehr lange ein wichtiges Forschungsthema und natürlich Passwörter. Ich
+
+03:05.680 --> 03:10.600
+glaube, alle verwenden Passwörter täglich. Okay, und Passwörter, das ist auch ein Bereich,
+
+03:10.600 --> 03:17.440
+in dem ihr mit eurer Forschung ganz tief drin seid. Das ist quasi euer Kernthema. Ja, das ist
+
+03:17.440 --> 03:23.840
+schon ziemlich tiefer forscht. Also wie suchen Leute sich Passwörter aus? Welche Strategien haben
+
+03:23.840 --> 03:28.800
+sie sich zu merken? Wie kann man sie dazu bringen, bessere Passwörter zu verwenden? Wie bist du denn
+
+03:28.800 --> 03:34.600
+persönlich in dieses Forschungsgebiet gekommen? Hast du schon direkt im Studium gemerkt, dass das
+
+03:34.600 --> 03:40.160
+der Weg ist, den du einschlagen solltest? Oder ist da quasi das Forschungsgebiet zu dir gekommen?
+
+03:40.160 --> 03:45.440
+Hast du dir das ausgesucht? Wie kam es dazu? Das ist eigentlich lustig. Ich wollte immer was ganz
+
+03:45.560 --> 03:50.720
+anderes machen. Ich wollte mich im Computerarchitekturbereich beschäftigen und auch
+
+03:50.720 --> 03:55.520
+spezialisieren. Und spätestens in einem Zeitpunkt, wo ich dann die Masterarbeit begonnen habe und
+
+03:55.520 --> 04:00.280
+begonnen habe, Papers dazu zu lesen, mich einzulesen, habe ich festgestellt, es interessiert mich überhaupt
+
+04:00.280 --> 04:07.320
+nicht. Also da fehlt der Funke. Und dann war ich frustriert und habe nachgeschaut, mit was ich mich
+
+04:07.320 --> 04:12.560
+sonst noch so beschäftigt habe. Und etwas, was mich jahrelang begleitet hat, war das Security-Thema
+
+04:12.560 --> 04:19.840
+und das Privacy-Thema. Und auch der Gedanke, wie man die Barrieren verringern kann, die Leute haben,
+
+04:19.840 --> 04:25.880
+um ihre Datenschutzrechte nutzen zu können. Und da kommt man dann sehr schnell in diese
+
+04:25.880 --> 04:30.360
+Usable-Privacy-Geschichte. Und dann habe ich mich umgeschaut, wer in der TU Wien das machen
+
+04:30.360 --> 04:35.240
+würde. Und bin dann relativ bald bei Katharina gelandet. Okay, und was waren dann so die ersten
+
+04:35.240 --> 04:40.280
+Dinge, bei denen du eingestiegen bist? War das dann auch eher Passwörter oder waren das dann schon
+
+04:40.280 --> 04:45.240
+Messenger? Ursprünglich plante ich, mehr im Datenschutzbereich zu machen. Dann wurde mir gesagt,
+
+04:45.240 --> 04:49.880
+ich soll mir mal aktuelle Konferenzen anschauen, was mich da interessieren würde. Und dann bin
+
+04:49.880 --> 04:55.880
+ich sehr schnell auf dieses Messenger-Thema aufgestiegen. Okay, das heißt, man ist da schon relativ
+
+04:55.880 --> 05:00.920
+frei in der Wahl und kann seinen Fühler in alle Richtungen ausstrecken und ist dann auch nicht
+
+05:00.920 --> 05:06.160
+begrenzt an irgendeiner Stelle? Auf keinen Fall. Also vor allem in der Gruppe, wo ich in Wien
+
+05:06.160 --> 05:10.560
+angefangen habe, war das üblich, dass sich Leute immer selbst ein Thema aussuchen müssen. Und ich
+
+05:10.560 --> 05:18.480
+finde, das ist schwer. Aber ich glaube, es ist es wert. Also ja, gerade wenn man ein Thema einfach
+
+05:18.480 --> 05:22.800
+gesagt bekommt, dann ist es manchmal ein bisschen eine Glückssache, ob das dann passt oder nicht.
+
+05:22.800 --> 05:28.440
+Nachdem du aus Wien weggegangen bist, in Saarbrücken angekommen bist, haben wir uns ja auch schon öfters
+
+05:28.440 --> 05:34.480
+unterhalten. Und du hast immer wieder davon berichtet, dass du an einem bestimmten Paper
+
+05:34.480 --> 05:42.120
+arbeitest. Und nun wurde dieses Paper zum ersten Mal auf einer Top-Tier-Konferenz angenommen. Die
+
+05:42.120 --> 05:47.080
+Konferenz heißt CHI. Von daher erst mal herzlichen Glückwunsch, weil das ist ein ganz besonderer Moment,
+
+05:47.080 --> 05:51.760
+wenn das erste Paper jetzt erst mal angenommen wurde. Kannst du mir bitte nochmal erklären,
+
+05:51.760 --> 05:58.320
+was es mit diesen Papern auf sich hat, bis die zu einer Konferenz angenommen werden bzw. was es
+
+05:58.320 --> 06:03.800
+bedeutet, an einer Top-Tier-Konferenz angenommen zu werden? Ja, es ist üblicherweise ein ziemlicher
+
+06:03.800 --> 06:08.520
+Prozess, bis das angenommen wird. Also sehr selten werden Papers sofort angenommen. Also
+
+06:08.520 --> 06:14.760
+üblicherweise werden die zumindest zwei-, dreimal abgelehnt, bis es dann genommen wird. In dem Fall
+
+06:14.760 --> 06:19.040
+war es auch ein bisschen ein schwieriges Thema und ich musste mich halt auch einarbeiten, wie man
+
+06:19.040 --> 06:25.720
+Papers schreibt. Das heißt, das ist insgesamt viermal, fünfmal abgelehnt worden. Ja, das heißt also das
+
+06:25.720 --> 06:32.360
+Wort Reject war dir schon ein wenig geläufig bei dem Papier oder? Ja, ich habe Rejects gesammelt.
+
+06:32.360 --> 06:43.360
+Wie demotivierend sind diese Rejects? Das kommt immer auf den Inhalt an. Also manchmal können
+
+06:43.360 --> 06:47.520
+Rejects auch wirklich gut funktionieren, wenn sie gut begründet sind und auch gleichzeitig
+
+06:47.520 --> 06:52.640
+motivierend sind, weil sie einen Ausblick geben. Und manche sind auch einfach sehr demotivierend,
+
+06:52.640 --> 06:58.240
+wenn man nicht versteht, warum es zu dem Reject kommt und man sich einfach von den Reviewern dann
+
+06:58.240 --> 07:03.440
+schlecht behandelt fühlt. Also du hattest mir das mal erzählt, Reject 1, Reject 2, du hast das
+
+07:03.440 --> 07:07.800
+Paper immer weiterentwickelt. An welcher Stelle gab es denn dann den entscheidenden Hinweis,
+
+07:07.800 --> 07:14.720
+dass du in welche Richtung du weiterarbeiten sollst? An mehreren Stellen, würde ich sagen. Also relativ
+
+07:14.720 --> 07:19.080
+am Anfang war auch aus den Reviews und aus unserer eigenen Meinung relativ klar, in welche Richtung
+
+07:19.080 --> 07:23.080
+sich das Paper bewegen sollen. Haben gedacht, okay, wenn wir das machen, dann steigen unsere
+
+07:23.080 --> 07:27.720
+Chancen wahrscheinlich, dass das Paper gut ankommt. Und irgendwann war der Zeitpunkt erreicht, wo wir
+
+07:27.720 --> 07:32.400
+dann nicht mehr genau wussten, woran es scheitert. Einfach weil es schon relativ komplett war und die
+
+07:32.400 --> 07:38.240
+Argumente in den Reviews auch schwerer zu durchschauen waren. Und da haben wir dann einfach Leute aus der
+
+07:38.240 --> 07:43.560
+Community, die um Feedback gebeten und die konnten uns dann weiterhelfen. Also die auch an ähnlichen
+
+07:43.560 --> 07:49.080
+Themen arbeiten und die haben uns dann Tipps gegeben, die glaube ich erfolgreich waren. Bevor wir jetzt
+
+07:49.080 --> 07:54.080
+weiter über dieses große Mysterium Paper Paper, das wir noch gar nicht benannt haben, sprechen,
+
+07:54.080 --> 08:00.920
+kennst du noch den Titel von deinem Paper? Nein. Dann lese ich es dir nochmal vor, das Paper heißt
+
+08:00.920 --> 08:07.760
+Exploring User Centered Security Design for Usable Authentication Ceremonies. Hast du es
+
+08:07.760 --> 08:14.920
+wirklich nicht gewusst? Doch. Habe ich es richtig vorgetragen? Ja, ich glaube schon. Dann könntest du
+
+08:14.920 --> 08:21.400
+uns bitte kurz beschreiben, worum es in diesem Paper geht. Es geht um Authentizierungszeremonien
+
+08:21.400 --> 08:26.000
+in Instant Messengen. Ich glaube die meisten von uns verwenden sichere Messenger wie WhatsApp,
+
+08:26.000 --> 08:31.920
+Telegram und Signal. Die verwenden etwas, was Ende-zu-Ende-Verschlüsselung genannt wird. Das ist
+
+08:31.920 --> 08:37.160
+cool, weil nur der Sender und wirklich der Empfänger die Nachricht lesen kann. Das heißt,
+
+08:37.160 --> 08:43.240
+sie wird vom Sender am Handy verschlüsselt, dann versandt über verschiedene Server und erst beim
+
+08:43.240 --> 08:46.880
+Empfänger wieder entschlüsselt und alle die dazwischen sind, können die Nachricht nicht lesen.
+
+08:46.880 --> 08:52.040
+Das ist eine coole Idee, sie hat nur eine wichtige Voraussetzung, nämlich dass man den richtigen
+
+08:52.040 --> 08:55.880
+Schlüssel zum Verschlüsseln nimmt, sonst weiß man ja nicht, bei wem es ankommt und wer sie
+
+08:55.880 --> 09:01.560
+dann entschlüsseln kann. Da gibt es auch einen Angriff, der Man in the Middle Angriff genannt
+
+09:01.560 --> 09:08.000
+wird, wo sich dann ein Angreifer in der Mitte so tut, als wäre der Empfänger und dann sagt,
+
+09:08.000 --> 09:13.280
+ich bin der Richtige, schick mir das und dann schickst du es dem, ohne zu wissen, dass es die falsche
+
+09:13.280 --> 09:16.800
+Person ist und der leitet das dann weiter. Und um das zu verhindern, gibt es diese
+
+09:16.800 --> 09:24.520
+Authentifizierungszeremonien, wo sich die richtigen Senderempfänger treffen und abgleichen, ob das
+
+09:24.520 --> 09:32.120
+Schlüsselmaterial zusammenpasst. Wenn wir dieses banale Beispiel mal am Beispiel von WhatsApp
+
+09:32.120 --> 09:36.680
+durchsprechen, für die Leute, die das hören und jetzt eben nicht wissen, wovon wir reden,
+
+09:36.680 --> 09:42.880
+wenn man also in seinem WhatsApp-Kanal reingeht, steht ja dort erstmal immer wieder die Nachricht
+
+09:42.880 --> 09:47.560
+von Ende zu Ende verschlüsselt, aber so ist das gar nicht unbedingt, sondern man muss erst sich
+
+09:47.560 --> 09:53.560
+physisch mit jemandem treffen, mit dem man den Schlüssel austauschen will. Man muss dann auf
+
+09:53.560 --> 09:59.800
+diesen Kontakt draufklicken, in seinem Profil ein wenig runterscrollen, kommt dann an eine Stelle,
+
+09:59.800 --> 10:06.080
+wo man lesen kann, Verschlüsselung. Klickt man diese Stelle an, erscheint ein QR-Code und dieser
+
+10:06.080 --> 10:12.840
+muss wiederum erst von dem Partner gescannt werden und dann tatsächlich dann erst kommunizieren diese
+
+10:12.840 --> 10:19.280
+beide von Ende zu Ende verschlüsselt. Also sie kommunizieren auch so, Ende zu Ende verschlüsselt,
+
+10:19.280 --> 10:23.960
+nur erst nachdem man überprüft hat, ob die Schlüssel auch zusammenpasst, hat man sichergestellt,
+
+10:23.960 --> 10:29.560
+dass man nicht abgehört wird von einer Person in der Mitte. Wo greift dein Paper jetzt ein? Also
+
+10:29.560 --> 10:35.680
+dein Paper möchte ja quasi, kümmert sich um diese man in the middle Attacke, setzt diese voraus und
+
+10:35.680 --> 10:41.720
+versucht diese zu umgehen. Das Problem, das wir schon seit mehreren Jahren beobachten können, ist,
+
+10:41.720 --> 10:46.320
+dass diese Authentifizierungszeremonien, diese Telegram, WhatsApp und Signal gibt, wirklich
+
+10:46.320 --> 10:51.000
+schlecht funktionieren. Also schlecht heißt hier, Leute wissen nicht, dass es es gibt, sie wissen
+
+10:51.000 --> 10:57.760
+nicht wofür es sie gibt und wenn sie das wissen, machen sie Fehler beim benutzen. Und das sind viele
+
+10:57.760 --> 11:04.720
+Probleme und unser Ansatz hier war diese Zeremonien von Grund auf neu zu designen, also anstatt
+
+11:04.720 --> 11:09.840
+vorhandene Zeremonien zu verbessern und schauen, wo Probleme liegt, damit zu schauen, wie können
+
+11:09.840 --> 11:15.960
+die Zeremonien bauen, die vielleicht besser zu dem passen, was sich Leute erwarten. Und dann habe ich
+
+11:15.960 --> 11:22.440
+erfahren, das wären zum Beispiel, dass man sich über Video vorher austauscht und sich mit speziellen
+
+11:22.440 --> 11:27.520
+Bewegungen quasi ein Zeichen zu setzen. Kannst du darauf ein bisschen eingehen, wie ihr euch das
+
+11:27.520 --> 11:33.560
+vorgestellt habt? Ja, eine dieser Kategorien von Zeremonien, die Leute vorgeschlagen haben, mit denen
+
+11:33.560 --> 11:39.280
+sie was anfangen können, ist eben die visuelle Überprüfung, ob sie mit der richtigen Person reden,
+
+11:39.280 --> 11:45.480
+um hier Vertrauen aufzubauen. Und wir dachten uns, dass wir diesen Mechanismus hier verwenden
+
+11:45.480 --> 11:51.800
+könnten, um über diese visuelle Bildaustausch, Kommunikation, die Schlüsselinformation zu
+
+11:51.800 --> 11:57.640
+verifizieren. Und die Idee war hier, über diese Bilder, die Schlüssel, die verwendet werden, zu
+
+11:57.640 --> 12:02.160
+codieren, über verschiedene Gesten. Das heißt, man macht dann zum Beispiel ein Bild von sich, wo
+
+12:02.160 --> 12:07.360
+das Handy sagt, ja, halt dir deine Handfläche vor die Stirn und dann schickst du das Bild. Und die
+
+12:07.360 --> 12:13.680
+andere Person kann dann schauen, ob dieses Bild zu dem passt, was sie sich erwarten. Weil die prüfen
+
+12:13.680 --> 12:18.200
+dann, hey, der Schlüssel schaut so aus. Das heißt, die Person müsste jetzt die Handfläche vor der
+
+12:18.200 --> 12:22.720
+Stirn haben. Und wenn es zusammenpasst, ist der Schlüssel wahrscheinlich der Richtige. Ist der
+
+12:22.720 --> 12:28.480
+Denkansatz so ein bisschen übertragen aus diesen Bildern, die man am Zug gezeigt bekommt? Klicke
+
+12:28.480 --> 12:33.720
+alle Bilder an, auf denen ein Zebrastreifen oder ein Bus zu sehen ist? Oder ist das nicht
+
+12:33.720 --> 12:39.320
+vergleichbar? Ich glaube, es ist halbwegs vergleichbar, aber der Gedanke kommt eher aus einem TV-Trope.
+
+12:39.320 --> 12:47.800
+Es gibt nämlich diesen Echtheitsbeweis von Personen. Das heißt, bei einer Geiselnahme zum
+
+12:47.800 --> 12:52.200
+Beispiel gibt es diesen Trope im Fernsehen. Wenn das passiert, macht man ein Bild von der Person,
+
+12:52.200 --> 12:55.880
+die muss eine Zeitung ins Bild halten, um zu zeigen, dass das aktuell ist und dass es die
+
+12:55.880 --> 12:59.680
+richtige Person ist. Und das ist ein bisschen der Gedanke. Man macht Bilder, aber um zu zeigen,
+
+12:59.680 --> 13:05.280
+dass sie nicht gefälscht sind oder so, muss man immer was anderes herteilen. Eure Methode oder diese
+
+13:05.280 --> 13:10.200
+Methode, wenn ich mich hier bei der Forschung im CISPO ein bisschen umhöre, könnte ja dann auch
+
+13:10.200 --> 13:16.520
+Gegenangriffe bekommen aus dem Bereich des Diebfake. Auf alle Fälle, also das ist definitiv nicht die
+
+13:16.520 --> 13:22.360
+sicherste Variante, aber sie bietet zumindest einen grundlegenden Schutz. Also das ist besser
+
+13:22.360 --> 13:27.040
+als gar nicht zu bepuschen. Jetzt habe ich mich ein bisschen umgehört zu dem Paper und zu eurer
+
+13:27.040 --> 13:32.600
+Forschung und herausbekommen, dass ihr zwar ein bahnbrechendes Paper auf den Weg gebracht habt,
+
+13:32.600 --> 13:41.040
+aber leider dann doch keine endgültige Lösung für das Problem habt. Ist das richtig? Ja. Und was
+
+13:41.040 --> 13:47.720
+bedeutet das? Ich glaube, das Spannende an unserem Paper ist der neue Designansatz, um zu zeigen,
+
+13:48.000 --> 13:53.480
+dass man Security-Mechanismen auch von Grund auf so designen kann, damit sie besser zu den
+
+13:53.480 --> 13:59.680
+Vorstellungen der User passen. Das heißt nicht, dass diese Vorstellungen automatisch gut sind. Und
+
+13:59.680 --> 14:04.280
+wir haben gesehen, dass alle drei Varianten, die wir ausprobiert haben und weiterentwickelt haben,
+
+14:04.280 --> 14:09.080
+dass die noch einiges an Arbeit brauchen und auch einige Nachteile haben. Also wahrscheinlich
+
+14:09.080 --> 14:13.080
+nicht die perfekten Lösungen sind. Aber ihr seid auf einem guten Weg, das kann man auf jeden Fall sagen,
+
+14:13.080 --> 14:17.360
+sonst wäre das Paper ja niemals angenommen worden. Ja, ich glaube, das bietet sehr gute Ansätze. Was
+
+14:17.360 --> 14:22.940
+wird der nächste Schritt sein? In welche Richtung werdet ihr euch jetzt dahin weiterentwickeln? Was
+
+14:22.940 --> 14:28.320
+werdet ihr euch jetzt genau ansehen in der Forschung oder in der Weiterarbeit an diesem Paper? Ich glaube,
+
+14:28.320 --> 14:32.360
+zu diesem Zeitpunkt geht es dann mehr um die Kollaborationen mit anderen Gruppen, die sich
+
+14:32.360 --> 14:37.760
+auch mit dem Thema beschäftigen, um hier vielleicht Synergien zu finden. Also unser Designansatz
+
+14:37.760 --> 14:43.720
+spielt eher am Anfang und andere Gruppen sind sehr gut darin, diese Sachen zu verbessern und
+
+14:43.720 --> 14:49.160
+Alternativen zu finden. Ja und natürlich auch zu schauen, welche Varianten wir noch nicht
+
+14:49.160 --> 14:53.600
+untersucht haben, ob wir da vielleicht was übersehen haben, was man auch noch probieren könnte. Okay,
+
+14:53.600 --> 14:58.040
+jetzt stehst du ja nicht alleine auf dem Paper, das ist auch ganz normal. Jetzt stehen noch zwei
+
+14:58.040 --> 15:02.800
+andere Personen auf dem Paper. Kannst du sagen, wie die Arbeit, die Zusammenarbeit da war oder
+
+15:02.800 --> 15:07.520
+beziehungsweise welche Gewichtung wer bei dem Paper hat? Oder sagt man einfach drei Leute stehen auf
+
+15:07.520 --> 15:11.280
+dem Paper? Das ist das Paper von uns drei und du sprichst ja auch immer von uns oder das ist dein
+
+15:11.280 --> 15:15.960
+Paper. Kannst du dazu noch was sagen? Ja, also es ist ganz üblich, dass man gemeinsam an Papers
+
+15:15.960 --> 15:21.120
+arbeitet und es ist auch häufig so, dass die Leute auf dem Paper einfach andere Aufgaben haben. Also
+
+15:21.120 --> 15:26.480
+meine Betreuerin, die Katharina, steht auf dem Paper und da war natürlich sehr viel davon abhängig,
+
+15:26.480 --> 15:31.880
+wie, welche Methoden wähle ich, was verfolge ich weiter. Also hier viel Feedback zu kriegen und
+
+15:31.880 --> 15:36.880
+natürlich ihre Erfahrung im Papers inmitten herauszufinden, was muss da drinstehen, wie kann
+
+15:36.880 --> 15:42.120
+man Sachen formulieren. Das ist einfach sehr wichtig. Und ja, was sind so die Qualitätskriterien?
+
+15:42.120 --> 15:47.360
+Das weiß ich als frischer Doktorand natürlich nicht und da ist sehr viel Input notwendig. Und
+
+15:47.360 --> 15:51.280
+die andere Autorin, das ist die Lea, ist meine Kollegin, die jetzt mittlerweile auch Doktorandin
+
+15:51.280 --> 15:58.400
+ist. Da war sehr viel Feldarbeit sozusagen. Also mit der plant man dann gemeinsam die Vorgehensweise
+
+15:58.400 --> 16:04.600
+und redet auch gemeinsam mit Studienteilnehmerinnen. Ich muss noch einmal zurückgehen auf das Paper,
+
+16:04.600 --> 16:09.560
+weil es ja vielleicht auch für den einen oder anderen sich die Frage stellt, warum ist das denn
+
+16:09.560 --> 16:15.880
+so wichtig, dass es Ende zu Ende Verschlüsselungen gibt? Wem dient das Ganze denn? Also wenn ich mit
+
+16:15.880 --> 16:21.280
+meiner Mutter Bilder von meinen Kindern hin und her schicke, hilft das schon oder hilft das vielleicht
+
+16:21.280 --> 16:26.040
+diese Ende zu Ende Verschlüsselungen gerade irgendwelchen Kriminellen, die eben nicht
+
+16:26.040 --> 16:30.880
+abgehört werden wollen oder hilft es Menschen, die sich in Not befinden, weil sie von einem Staat
+
+16:30.880 --> 16:35.120
+abgehört werden. Für wen ist das besonders wichtig, dass die Nachrichten von Ende zu Ende
+
+16:35.120 --> 16:42.000
+verschlüsselt sind? Für einige Leute interessanterweise. Also das Thema wird jetzt ja auch auf EU-Ebene
+
+16:42.000 --> 16:46.560
+besprochen und da ist ein sehr wichtig, also für die EU-Ebene ist ein sehr wichtiger Punkt,
+
+16:46.560 --> 16:51.680
+dass Internet, also kommerzieller Internetgebrauch einfach sehr auf diesen Verschlüsselungsparadigmen
+
+16:51.680 --> 16:56.000
+aufbaut. Das heißt, wenn die nicht mehr Ende zu Ende verschlüsselt sein können, lässt sich auch
+
+16:56.000 --> 17:00.400
+schwer Vertrauen aufbauen in Bezahlprozesse oder Ähnliches. Aber natürlich gibt es auch
+
+17:00.400 --> 17:06.760
+Personengruppen, für die das deutlich mehr wichtig ist. Also politische Aktivisten zum Beispiel. Für
+
+17:06.760 --> 17:12.440
+die ist es extrem wichtig, dass sie da jetzt nicht von staatlichen Institutionen oder gegnerischen
+
+17:12.440 --> 17:17.640
+Gruppen abgehört werden können und dass sie sich auch nachvollziehbar schützen können. Die
+
+17:17.640 --> 17:22.080
+Ende zu Ende Verschlüsselung ist ja nicht das einzige Forschungsgebiet, was dich interessiert.
+
+17:22.080 --> 17:25.520
+Wir hatten ja schon darüber gesprochen, dass es auch Passwörter sind. Gibt es denn noch was,
+
+17:25.680 --> 17:31.280
+was dich auf dem Weg zu deinem Doktortitel jetzt intensiv begleiten wird oder bleibst du jetzt auf
+
+17:31.280 --> 17:36.040
+diesem Thema? Ich würde sagen, ich bleibe wahrscheinlich auf größerer Ebene in der
+
+17:36.040 --> 17:42.080
+Nähe des Themas. Also zwei Sachen, die mich noch interessieren, sind die sozialen Aspekte von
+
+17:42.080 --> 17:48.480
+Security. Also wie das auch bei den Authentizierungstermonien ist, das macht man nicht alleine. Da braucht man
+
+17:48.480 --> 17:53.720
+irgendwie Leute, die mitmachen, die Leute mit denen kommuniziert und da muss auch auf sozialer Ebene
+
+17:53.960 --> 17:58.400
+was ausverhandelt werden. Und da muss ich dir erklären, warum ist es wichtig, warum will ich,
+
+17:58.400 --> 18:02.920
+dass du mitmachst. Frage, wie viel muss ich dir eigentlich erklären oder sage ich dir einfach,
+
+18:02.920 --> 18:09.040
+mach das, das und das und dann passt. Und das andere ist, nie viel Security-Mechanismen verwendet
+
+18:09.040 --> 18:13.760
+werden, ohne dass Leute wirklich wissen, wie viel es bringt. Das heißt, das ist teilweise schwer
+
+18:13.760 --> 18:19.600
+abzuschätzen, aber oft, oder nicht oft, manchmal kommt es vor, dass Leute Security-Mechanismen
+
+18:19.600 --> 18:24.560
+verwenden, im Glauben, dass es viel hilft und es dann aber doch nicht so viel hilft oder im
+
+18:24.560 --> 18:28.920
+schlimmsten Fall gar nichts hilft. Und das kann unter Umständen gefährlich werden und das ist ein
+
+18:28.920 --> 18:33.280
+Thema, das ich sehr spannend finde. Und hast du da die ersten Schritte auch schon gemacht oder hat
+
+18:33.280 --> 18:38.920
+dieses letzte Paper zur Ende-zu-ende-Verschlüsselung jetzt zu viel Zeit gefressen, sodass du die ganze
+
+18:38.920 --> 18:44.360
+Zeit da konzentriert warst? Nein, also ich arbeite natürlich immer an mehreren Papern parallel und
+
+18:44.360 --> 18:51.000
+in dem Fall konkret interessiert mich auch, warum Leute, wenn sie TOR verwenden, also den
+
+18:51.000 --> 18:57.520
+TOR Browser, warum sie da zusätzlich noch an VPN verwenden. Das ist ganz spannend, weil das unter
+
+18:57.520 --> 19:03.920
+Umständen Sinn machen kann, aber in sehr begrenzten Fällen. Also viele Leute, die das so machen,
+
+19:03.920 --> 19:09.200
+denen wird das wahrscheinlich nichts bringen. Noch eine Frage zur Kai hätte ich dieser Konferenz.
+
+19:09.200 --> 19:13.600
+Für euch Wissenschaftler ist das ja ganz normal, dass ihr immer wieder um die Welt fahrt oder euch
+
+19:13.600 --> 19:20.080
+eure Paper auf besonderen Konferenzen bzw. an besonderen Orten präsentiert. Jetzt ist dir mit
+
+19:20.080 --> 19:26.440
+durch den Corona-Virus eben eine Reise nach Japan verwehrt geblieben, um dein Paper zu präsentieren.
+
+19:26.440 --> 19:33.600
+Trifft dich das hart oder ist es okay? Wärst du gerne nach Yokohama gefahren? Natürlich wäre ich auch
+
+19:33.600 --> 19:40.400
+gern nach Yokohama gefahren, ist keine Frage. Aber was mich eigentlich härter trifft ist, dass diese
+
+19:40.400 --> 19:45.560
+Konferenz nicht in person stattfindet. Also eins der wichtigen Teile von Konferenzen ist das
+
+19:45.560 --> 19:51.640
+Networking, dass man Forscher trifft, mit denen auf informeller Ebene quatschen kann, sich austauschen
+
+19:51.640 --> 19:57.040
+und vielleicht neue Projektideen ausbaldowern kann. Und das geht nicht so richtig gut, wenn man es
+
+19:57.040 --> 20:01.640
+online macht. Also online kann man gut diese Vorträge abbilden, aber diesen informellen Aspekt,
+
+20:01.640 --> 20:06.440
+das ist relativ schwierig. Und da geht es dann weniger um Japan per se, auch wenn Japan toll ist,
+
+20:06.440 --> 20:12.800
+sondern einfach dieses Treffen. Ja, das ist wirklich schade. Dann hoffe ich, dass das irgendwann
+
+20:12.800 --> 20:19.160
+nachgeholt werden kann und diese wichtigen Punkte der Forschung dann doch noch weiter treiben kannst
+
+20:19.160 --> 20:24.520
+und zum Ziel kommst, sodass wir alle davon profitieren werden eines Tages. Okay Matthias,
+
+20:24.520 --> 20:28.680
+wir wollen dich gar nicht zu lange von deiner Forschung abhalten, aber doch noch ein bisschen
+
+20:28.680 --> 20:33.400
+was von dir erfahren. Du bist, ich glaube, mit dem Auto mindestens sieben Stunden von zu Hause
+
+20:33.400 --> 20:37.600
+entfernt. Ich weiß nicht genau, wie viele Kilometer es sind, aber es sind einige. Was vermisst du am
+
+20:37.600 --> 20:44.000
+meisten? Aus Wien habe ich lange gebraucht, um das herauszufinden, aber richtig Resche Wiener
+
+20:44.000 --> 20:50.600
+Kaisersemmeln. Resche Wiener Kaisersemmeln. Bedeutet das, du vermisst eine besondere Art
+
+20:50.600 --> 20:59.280
+Backware? Ja. Also ein Semmel als ein Brötchen und was ist Resch knusprig? Resch ist, glaube ich,
+
+20:59.280 --> 21:04.760
+am ehesten zu übersetzen mit Cross. Und diese Art des Backens ist dir hier noch nicht in die Hand
+
+21:04.760 --> 21:10.440
+gefallen? Also man kriegt hier schon auch Semmeln, sie sind halt einfach nicht das gleiche. Ich weiß
+
+21:10.440 --> 21:15.040
+nicht, was hier anders gemacht wird. Na irgendwie werden sie anscheinend anders gemacht. Es ist halt ein sehr
+
+21:15.040 --> 21:21.240
+alltägliches Ding, also ist auch sehr häufig in Wien zu Mittagessen eine extra Wurstsemmel mit
+
+21:21.240 --> 21:26.480
+Gurkel zu essen und das gibt es hier einfach gar nicht. Und sonst erster Bezirk, zweiter Bezirk,
+
+21:26.480 --> 21:32.800
+dritter Bezirk, das ist alles einerlei. Das findest du hier im Saarland genauso? Würde ich nicht sagen,
+
+21:32.800 --> 21:38.600
+dass es genauso da ist, aber ich würde sagen, die wichtigen Dinge gibt es auch in Saarbrücken auf
+
+21:38.600 --> 21:43.820
+weniger Platz. Du hast mir sogar verraten, dass du eine ganz Besonderheit in Saarbrücken probiert
+
+21:43.820 --> 21:47.480
+hast, nämlich ein Bier, das du vielleicht sagen würdest, dass es dir so gut schmeckt wie kein
+
+21:47.480 --> 21:54.840
+anderes. Ah ja, die Bruchbrauerei hat 2018 zumindest eine Hopfenperle gehabt und das war ein wirklich,
+
+21:54.920 --> 21:59.560
+wirklich gutes Bier. Wie gefällt dir denn das Leben außerhalb des CISPA-Roads bzw. wie gefällt
+
+21:59.560 --> 22:04.880
+dir überhaupt das Leben am CISPA, wenn es wieder Leben gibt? Ja, also es ist schon sehr ein fast
+
+22:04.880 --> 22:11.160
+einzigartiges Gefühl in einem Forschungszentrum zu sein, wo sich wirklich alle mit Security
+
+22:11.160 --> 22:15.640
+beschäftigen. Es hat irgendwas Befreiendes, wenn man zu beliebigen Personen hingehen kann,
+
+22:15.640 --> 22:20.160
+seine eigene Forschung erzählen und die können zumindest mit der Thematik was anfangen, auch wenn
+
+22:20.160 --> 22:25.960
+sie sich im Konkreten jetzt auf andere Weise damit beschäftigen. Aber sie haben doch alle einen
+
+22:25.960 --> 22:31.520
+Security-Bezug und das ist schon nett. Und wenn du jetzt Besuch aus Wien oder aus Schweden oder aus
+
+22:31.520 --> 22:35.600
+all den anderen Ländern, in denen du schon gelebt und gearbeitet und geforscht hast, bekommst,
+
+22:35.600 --> 22:42.000
+was machst du mit denen in Saarbrücken bzw. im Saarland? Das kommt sehr auf den Besuch an. Ja,
+
+22:42.000 --> 22:46.680
+ich weiß, deine Mutter war schon zu Besuch. Ja, mit meiner Mutter war ich sehr viel in Frankreich.
+
+22:46.680 --> 22:52.840
+Ja, das riecht jetzt nicht gerade mit der Brücken, aber gut. Es ist schon eine der Vorteile,
+
+22:52.840 --> 22:59.560
+dass man schnell wegkommt, auch wenn das nicht so toll klingt. Ansonsten, ich gehe gerne mit Leuten
+
+22:59.560 --> 23:05.320
+in die Parkanlagen, also am Staden zum Beispiel, der deutsch-französische Garten ist alles so
+
+23:05.320 --> 23:11.400
+hübsch. Ansonsten, die Vöcklinger Hütte ist immer einen Besuch wert, der Saarbrücker Stadtwald ist
+
+23:11.400 --> 23:17.320
+auch immer toll. Und der St. Johannermarkt im Sommer, hat er für dich das Flair, den Flair,
+
+23:17.320 --> 23:26.360
+den er so oft verspricht? Ja, der St. Johannermarkt im Sommer, so gegen 10, 11 ist einzigartig. Also,
+
+23:26.360 --> 23:30.720
+ich glaube, das gibt es auch in Wien nicht so wirklich. Okay, Matthias, dann vielen, vielen Dank
+
+23:30.720 --> 23:37.160
+für deine Zeit, vielen Dank für deine Forschung und vielen Dank für deine Erklärung. Ich nehme
+
+23:37.200 --> 23:41.760
+einiges mit. Ich wünsche dir viel Erfolg und hoffe, dass die nächsten Paper auch wieder
+
+23:41.760 --> 23:46.720
+angenommen werden. Du schnell deinen Doktor machst und uns dann doch vielleicht nicht so
+
+23:46.720 --> 23:51.440
+schnell verlässt und einiger Zeit noch erhalten bleibt. Warten wir es ab, bis dahin haben wir noch
+
+23:51.440 --> 23:55.400
+ein bisschen Zeit und ich freue mich auf unsere nächsten Gespräche. Ich auch.
+

@@ -1,0 +1,22 @@
+slug: authentication-ceremonies-thesis-tuwien2018
+order: 23
+title: Usable Authentication Ceremonies in Secure Instant Messaging
+authors:
+- Matthias Fassl
+year: 2018
+badge: Master Thesis · TU Wien
+badge_class: badge-thesis
+pdf: Usable_Authentication_Ceremonies_in_Secure_Instant_Messaging_Thesis_TUWien_2018.pdf
+links:
+- label: Repository
+  url: https://repositum.tuwien.at/handle/20.500.12708/1817
+citation_type: thesis
+extra:
+  institution: TU Wien
+bibtex: |-
+  @mastersthesis{Fassl2018UsableAuthenticationCeremonies,
+    title  = {Usable Authentication Ceremonies in Secure Instant Messaging},
+    author = {Fassl, Matthias},
+    school = {TU Wien},
+    year   = {2018}
+  }

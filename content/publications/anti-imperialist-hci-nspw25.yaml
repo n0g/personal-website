@@ -1,0 +1,30 @@
+slug: anti-imperialist-hci-nspw25
+order: 4
+title: Towards Anti-Imperialist Security, Privacy, and Safety Research in HCI
+authors:
+- Miranda Wei
+- Matthias Fassl
+year: 2025
+badge: NSPW '25
+badge_class: badge-other
+pdf: Towards_Anti_Imperialist_Security_Privacy_and_Safety_Research_in_HCI_NSPW_2025.pdf
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3774761.3774772
+citation_type: conference
+venue_full: New Security Paradigms Workshop (NSPW)
+extra:
+  doi: 10.1145/3774761.3774772
+abstract: |-
+  Usable security and privacy is an interdisciplinary research field at the intersection of computer security, privacy, and HCI founded over 20 years ago. Since then, the field has expanded its domain to claim a wider range of human-centered security and privacy issues. Our field's increasing breadth warrants both celebration of scientific exploration as well as careful consideration of the process itself. The expansionary process of a scientific domain to study a different societies, particularly those that have less global privilege, shares some characteristics with imperialism: the development and maintenance of power of one country over another through various forms of domination. In this work, we take a first step towards anti-imperialist research by identifying how imperialist tendencies manifest in security, privacy, and safety research in HCI and characterizing systemic trends. To aid the development of a critical eye for imperialism in our field, we offer reflection questions for individual researchers.
+bibtex: |-
+  @inproceedings{Wei2025TowardsAntiImperialist,
+    title     = {Towards Anti-Imperialist Security, Privacy, and Safety Research in HCI},
+    author    = {Wei, Miranda and Fassl, Matthias},
+    booktitle = {Proceedings of the 2025 New Security Paradigms Workshop (NSPW '25)},
+    year      = {2025},
+    month     = aug,
+    pages     = {37--49},
+    doi       = {10.1145/3774761.3774772},
+    url       = {https://dl.acm.org/doi/10.1145/3774761.3774772}
+  }

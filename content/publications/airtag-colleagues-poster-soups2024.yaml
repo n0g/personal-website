@@ -1,0 +1,29 @@
+slug: airtag-colleagues-poster-soups2024
+order: 8
+title: Will our Colleagues Detect the AirTag? Let’s Check (Consensually)
+authors:
+- Dañiel Gerhardt
+- Matthias Fassl
+- Katharina Krombholz
+year: 2024
+badge: SOUPS 2024 · Poster
+badge_class: badge-soups
+award:
+- ★ Best Poster Runner-Up
+pdf: Will_our_Colleagues_Detect_the_AirTag_Poster_SOUPS_2024.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2024/presentation/gerhardt-poster
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS) — Poster
+abstract: |-
+  Since their release, AirTags have been misused for stalking and other malicious purposes. Their small size, affordability, availability, and precise tracking functionality facilitate the invasion of peoples' privacy. To combat misuse, Apple implemented multiple anti-stalking features that inform potential victims and help them find and disable the location tracker. One of the primary anti-stalking features is unwanted tracking alerts. These smartphone notifications alert users that they have been followed by an AirTag or other Find-My device for some time. This preliminary work evaluates the reliability of unwanted tracking alerts across platforms. We performed an experiment with N=50 employees at our institution. We found that tracking alerts are very reliable on iOS devices and not as reliable on Android devices, indicating a different implementation of unwanted tracking alerts or hardware limitations.
+bibtex: |-
+  @inproceedings{Gerhardt2024WillOurColleagues,
+    title     = {Will our Colleagues Detect the AirTag? Let's Check (Consensually)},
+    author    = {Gerhardt, Da\~{n}iel and Fassl, Matthias and Krombholz, Katharina},
+    booktitle = {Twentieth Symposium on Usable Privacy and Security (SOUPS 2024)},
+    year      = {2024},
+    note      = {Poster; Best Poster Runner-Up},
+    url       = {https://www.usenix.org/conference/soups2024/presentation/gerhardt-poster}
+  }

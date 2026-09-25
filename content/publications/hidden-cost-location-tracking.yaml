@@ -1,0 +1,24 @@
+slug: hidden-cost-location-tracking
+order: 5
+title: The Hidden Cost of Location Tracking
+authors:
+- Dañiel Gerhardt
+- Matthias Fassl
+year: 2025
+month: 7
+badge: 'USENIX ;login: Online · July 2025'
+badge_class: badge-other
+links:
+- label: Article
+  url: https://www.usenix.org/publications/loginonline/hidden-cost-location-tracking
+citation_type: article
+venue_full: 'USENIX ;login: Online'
+bibtex: |-
+  @misc{Gerhardt2025TheHiddenCost,
+    title        = {The Hidden Cost of Location Tracking},
+    author       = {Gerhardt, Da\~{n}iel and Fassl, Matthias},
+    howpublished = {USENIX ;login: Online},
+    year         = {2025},
+    month        = jul,
+    url          = {https://www.usenix.org/publications/loginonline/hidden-cost-location-tracking}
+  }

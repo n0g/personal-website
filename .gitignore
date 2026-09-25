@@ -2,3 +2,4 @@
 .DS_Store
 .claude/
 latex-sources/
+__pycache__/

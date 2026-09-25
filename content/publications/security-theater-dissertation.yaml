@@ -1,0 +1,24 @@
+slug: security-theater-dissertation
+order: 9
+title: 'Averting Security Theater: Methods to Investigate and Integrate Secure Experience in a User-Centered
+  Security Design Process'
+authors:
+- Matthias Fassl
+year: 2024
+badge: Doctoral Dissertation · Saarland University
+badge_class: badge-thesis
+pdf_external: https://publikationen.sulb.uni-saarland.de/bitstream/20.500.11880/38203/1/Fassl-Dissertation-2024-07-29.pdf
+links:
+- label: Repository
+  url: https://publikationen.sulb.uni-saarland.de/handle/20.500.11880/38203
+citation_type: dissertation
+extra:
+  institution: Saarland University
+bibtex: |-
+  @phdthesis{Fassl2024AvertingSecurityTheater,
+    title  = {Averting Security Theater: Methods to Investigate and Integrate Secure Experience in a User-Centered Security Design Process},
+    author = {Fassl, Matthias},
+    school = {Saarland University},
+    year   = {2024},
+    month  = jul
+  }

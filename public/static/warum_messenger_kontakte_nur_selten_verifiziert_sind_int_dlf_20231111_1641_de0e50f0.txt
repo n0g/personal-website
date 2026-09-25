@@ -1,0 +1,182 @@
+Deutschlandfunk, Computer und Kommunikation.
+Ja, die Diskussion um die Chatkontrolle geht also auf EU-Ebene weiter.
+Doch während sich die Europapolitikerinnen und Politiker darüber streiten,
+wie Kommunikationskanäle überwacht werden sollen,
+damit sie nicht für schwere Straftaten missbraucht werden,
+machen sich Sicherheitsforscherinnen und Forscher weiter Gedanken
+über die wirklich sichere und zuverlässige Nutzung zum Beispiel von Messengern.
+Zwar bieten die meisten dieser Apps von sich aus gute Sicherheitsfunktionen an,
+doch sie müssen auch von den Userinnen und Usern richtig genutzt werden.
+So ist zum Beispiel für eine zuverlässige Ende-zu-Ende-Kommunikation
+die eindeutige Authentifizierung der Kommunikationspartnerinnen und Partner
+eine ganz wichtige Schlüsselfunktion.
+Matthias Fassl vom CISPA Helmholtz Zentrum für Informationssicherheit in Saarbrücken
+hat sich solche Authentifizierungs-Sessions in einem Selbstversuch genauer angesehen.
+Also in Ende-zu-Ende-verschlüsselten Messengern werden Nachrichten so verschlüsselt,
+dass sie nur vom Empfangsgerät wieder gelesen werden kann.
+Wichtig dafür ist allerdings, dass man auch weiß,
+dass dieser Empfangsschlüssel wirklich zu der Person gehört,
+mit der man wirklich reden will.
+Wenn man das nicht sicherstellt, könnte man Opfer eines sogenannten
+in den Mittelangriffs werden, wo dann die Angreifer auch mitlesen können
+oder auch selbst eigene Nachrichten schreiben.
+Was heißt denn sicherstellen?
+Also bei diesen Authentifizierungs-Sessions hat man ja die Möglichkeit zu bestätigen,
+ja, der Empfänger, der vorgibt, der Empfänger zu sein, ist es auch wirklich.
+Wie sieht das konkret aus?
+Also das sieht je nach Messenger ein bisschen anders aus.
+Allerdings läuft das meistens darauf hinaus, dass man dann entweder
+also auf seinem eigenen Handy einen QR-Code bekommt, den man vergleichen kann.
+Das heißt, man scannt mit seinem eigenen Handy den QR-Code der anderen Person
+und kriegt dann eine Bestätigung so, ja, das sind die richtigen Schlüssel.
+Oder man kriegt auch eine Zahlenkombination angezeigt,
+die kann man sich einander vorlesen.
+Wenn die übereinstimmen, passt das auch.
+Und wenn sie nicht übereinstimmen, sollte man tunlichst aufhören,
+diesen Kommunikationsweg zu nutzen.
+Und da die Gefahr sehr groß ist, dass man gerade abgehört wird.
+Um das wirklich bombensicher zu machen,
+worauf muss man dann als Nutzerin oder Nutzer genau achten?
+Also wenn man es wirklich bombensicher machen will, wäre es gut,
+wirklich mit der Person, mit der man sicher kommunizieren will,
+nur über verifizierte Kanäle zu kommunizieren,
+um solange diese Authentifizierungszeremonie noch nicht passiert ist,
+warten, bis man sich wirklich trifft, also persönlich, nicht übers Telefon
+und wirklich persönlich vergleichen und erst dann diesen Kanal nutzen.
+Und es kann auch vorkommen, dass sich diese Schlüssel ändern,
+oft auch durch sehr naheliegende Gründe,
+wie ich habe ein neues Smartphone bekommen oder ich habe die App neu installiert.
+Das ist dann ganz normal, dass eine Warnmeldung kommt,
+dass sich dieser Schlüssel verändert hat.
+Und dann sollte man diese Authentifizierungszeremonie einfach nochmal durchführen.
+So wie Sie das erklären, ehrlich gesagt, ist es dann für mich auch verständlich,
+warum viele Leute das nicht machen, weil man muss jetzt zum Beispiel
+erstmal die Gelegenheit haben, wieder auf den Kommunikationspartner zu treffen.
+Wenn das zum Beispiel eine Freundin oder ein Freund in den USA ist, ist das schwierig.
+Ist das die naheliegendste Erklärung oder was haben Sie jetzt
+in Ihrem Selbstversuch herausgefunden,
+warum eben halt diese Authentifizierungs-Sessions eben halt so mangelhaft
+von den Nutzerinnen und Nutzern genutzt werden?
+Also in unserem Selbstversuch haben wir festgestellt,
+im Alltag gibt es einfach, wie Sie schon erwähnt haben, Organisationsschwierigkeiten.
+Das heißt, man muss warten, bis man sich trifft.
+Vielleicht will man nicht für ein Treffen ausmachen.
+Und falls dieses Treffen auch wirklich stattfindet,
+hat man meistens ja auch bessere Dinge zu tun,
+als jetzt am Handy irgendwelche Schlüssel zu vergleichen.
+Das heißt, was sehr oft passiert ist, dass man einfach darauf vergisst,
+weil man sich halt in einem sozialen Gespräch austauschen will.
+Und dann gibt es oft wichtigere Dinge.
+Ein anderer Aspekt ist, wenn die andere Person das Konzept noch nicht kennt,
+gibt es vielleicht Erklärungsbedarf.
+Das heißt, man muss erklären, was ist das, wofür ist das
+und auch herzeigen können, wie man das macht.
+Das hört sich ja mehr nach sozialen oder persönlichen Faktoren an
+und weniger nach zum Beispiel Schwierigkeiten,
+die einfach die Anwendung solcher Authentifizierungs-Sessions
+in der Praxis durch technische Gegebenheiten auslösen.
+Also in der Forschung war uns auch vorher schon klar,
+dass es mit diesen Authentifizierungszeremonien Probleme gibt.
+Vorherige Forschungsprojekte waren primär im Labor
+und da ging es sehr um diese technischen Maßnahmen.
+Und dann haben die Forscher festgestellt,
+die Probleme liegen daran, dass Leute dieses Konzept nicht kennen.
+Also sie wissen nicht, was eine Authentifizierungszeremonie ist.
+Sie wissen auch nicht, was so ein Vorteil das für sie bringt
+und wie sie schon korrekt sagen.
+Es liegt dann auch oft an User Interface,
+wie der Messenger gestaltet ist
+und Leute scheitern auch daran, sie dann korrekt durchzuführen.
+Also unsere Erkenntnisse waren primär soziale und organisatorische Natur.
+Das ist auch vollkommen legitim.
+Aber das sind Dinge, die wir technisch unterstützen können.
+Also wir könnten dann zum Beispiel Mechanismen in diese Messenger einbauen,
+die bei der Organisation helfen
+oder vielleicht einen Hinweis darauf liefern,
+in einem Gespräch mit einer wichtigen Person,
+dass es vielleicht eine gute Idee wäre, zu authentifizieren
+und auch, wenn man sich trifft,
+im richtigen Kontext auch eine Erinnerung schicken,
+so hey, du wolltest das eigentlich machen,
+jetzt wäre eine gute Gelegenheit dafür.
+Im richtigen Kontext heißt ja dann,
+dass der Messenger auch wissen muss,
+wann die Bedingungen aus dem Kontext erfüllt sind.
+Das ist korrekt.
+Und wir sind natürlich ein Institut für Informationssicherheit
+und uns schwebt vor, dass es natürlich passieren kann,
+ohne die Privatsphäre oder irgendwelche Geo-Standorte einen Preis zu geben.
+Also wir nennen das dann Zero-Knowledge-Proves,
+wo man kryptographisch vergleichen kann,
+ob man sich zum Beispiel am richtigen Ort befindet
+oder am selben Ort,
+aber ohne zu verraten, wo man sich aufhält.
+Reden wir nochmal über die Bedeutung dieser Authentifizierungszeremonien.
+So ein bisschen hört sich das ja an nach einem Sicherheitsniveau,
+was man dadurch schaffen kann,
+das vielleicht viele Privatleute gar nicht für nötig erachten.
+Da ist was dran.
+Also für die meisten Privatleute ist mir jetzt auch ganz wichtig zu sagen,
+ist der Messenger wie WhatsApp oder Signal auch die sicherste Art
+zu kommunizieren, die sie vermutlich auf ihrem Handy haben,
+also das ist definitiv sicherer als E-Mail oder SMS,
+auch wenn man nicht authentifiziert.
+Allerdings besteht natürlich die Gefahr,
+also für besonders exponierte Personen zum Beispiel
+oder wenn es einem besonders wichtig ist,
+dass es dann zu einem Manualmittelangriff kommen könnte
+und in solchen Fällen hilft es,
+diese Authentifizierungszeremonie durchzuführen
+und kann dieses Risiko abwehren.
+Kann es auch davor schützen,
+dass man, was mittlerweile ja sehr stark auch schon auf der SMS
+und auf der E-Mail-Schiene passiert,
+dass man gegen betrügerische Kommunikation gewappnet ist?
+Die betrügerische Kommunikation passiert auch über WhatsApp.
+Die ist dann üblicherweise halt nicht authentifiziert,
+weil man diese Person ja auch nicht getroffen hat.
+Das heißt, eine Authentifizierungszeremonie,
+wo man Leute trifft und diese Schlüssel vergleicht,
+hilft mir festzustellen,
+dass die Nachricht wirklich von diesem Handy,
+von dieser Person kommt.
+Diese Person kann einen natürlich auch
+in einen Betrugsfall verwickeln.
+Aber es hilft natürlich,
+Nachrichten, die von nicht verifizierten Sendern kommen,
+hier skeptisch zu betrachten.
+Reden wir noch ein bisschen über die Methode,
+mit denen Sie diese Untersuchung gemacht haben,
+der Selbstversuch.
+Da würde man ja normalerweise erwarten,
+dass man meinetwegen 100 oder 1000 Nutzerinnen und Nutzer beobachtet
+und dann feststellt, was sie tun
+und wo sie Probleme sehen,
+welche Schwierigkeiten sie sehen, wo die Lücken sind.
+Jetzt haben Sie einen Versuch gemacht,
+wo Sie selbst als Sicherheitsexperte tätig werden
+und sich selbst beurteilen.
+Ist diese Methode nicht an sich problematisch?
+Also diese Methode wird auch sehr skeptisch gesehen.
+Ich habe das auch im wissenschaftlichen Review-Prozess mitbekommen.
+Da gab es sehr viele Diskussionen dazu.
+Ich hatte mehrere Gründe für diese Methodenwahlen.
+Die eine ist natürlich, wenn ich mich selbst untersuche,
+kann ich an einen viel längeren Zeitraum
+in viel detaillierteren Ausmaß begutachten.
+Das heißt, man kriegt ein viel tieferes
+Informationsverständnis daraus.
+Und die andere ist natürlich,
+wir sehen, dass Leute, die noch keine Berührungspunkte mit hatten,
+eben an anderen Dingen scheitern.
+Also wenn sie Zerwonie noch nicht kennen
+und nicht wissen, was so ein Vorteil das bringt
+oder wie jetzt dieser Messenger korrekt zu bedienen ist.
+Und aus Sicherheitsforscherperspektive
+treffen diese Fälle zumindest nicht auf mich zu.
+Das heißt, im Selbstversuch konnte ich mich
+auf die sozialen Probleme,
+die wirklich im Alltag entstehen, konzentrieren.
+Das war Matthias Fassl vom CISPA Helmholtz Zentrum
+für Informationssicherheit
+über die sichere Authentifizierung von Kommunikationspartnern.

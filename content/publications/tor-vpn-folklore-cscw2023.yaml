@@ -1,0 +1,39 @@
+slug: tor-vpn-folklore-cscw2023
+order: 10
+title: 'Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon'
+authors:
+- Matthias Fassl
+- Alexander Ponticello
+- Adrian Dabrowski
+- Katharina Krombholz
+year: 2023
+badge: ACM CSCW 2023
+badge_class: badge-cscw
+award:
+- ★ Honorable Mention
+- ★ Methods Recognition
+pdf: Investigating_Security_Folklore_A_Case_Study_on_the_Tor_over_VPN_Phenomenon_CSCW_2023.pdf
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3610193
+citation_type: journal
+venue_full: Proceedings of the ACM on Human-Computer Interaction (PACM HCI), CSCW
+extra:
+  doi: 10.1145/3610193
+abstract: |-
+  Users face security folklore in their daily lives in the form of security advice, myths, and word-of-mouth stories. Using a VPN to access the Tor network, i.e., Tor over VPN, is an interesting example of security folklore because of its inconclusive security benefits and its occurrence in pop-culture media. Following the Theory of Reasoned Action, we investigated the phenomenon with three studies: (1) we quantified the behavior on real-world Tor traffic and measured a prevalence of 6.23%; (2) we surveyed users' intentions and beliefs, discovering that they try to protect themselves from the Tor network or increase their general security; and (3) we analyzed online information sources, suggesting that perceived norms and ease-of-use play a significant role while behavioral beliefs about the purpose and effect are less crucial in spreading security folklore. We discuss how to communicate security advice effectively and combat security misinformation and misconceptions.
+bibtex: |-
+  @article{Fassl2023InvestigatingSecurityFolklore,
+    title     = {Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon},
+    author    = {Fassl, Matthias and Ponticello, Alexander and Dabrowski, Adrian and Krombholz, Katharina},
+    journal   = {Proceedings of the ACM on Human-Computer Interaction},
+    volume    = {7},
+    number    = {CSCW2},
+    articleno = {344},
+    pages     = {1--26},
+    year      = {2023},
+    month     = sep,
+    issn      = {2573-0142},
+    doi       = {10.1145/3610193},
+    url       = {https://dl.acm.org/doi/10.1145/3610193}
+  }

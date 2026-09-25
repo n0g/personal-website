@@ -1,0 +1,47 @@
+- group: Radio
+  outlet: Deutschlandfunk
+  title: Warum Messenger-Kontakte nur selten verifiziert werden
+  title_url: https://www.deutschlandfunk.de/warum-messenger-kontakte-nur-selten-verifiziert-sind-int-matthias-fassl-dlf-de0e50f0-100.html
+  date: Nov 2023
+  lang: de
+  translation_page: authentication-ceremonies.html
+  subtitle: Why messenger contacts are rarely verified
+- group: Radio
+  outlet: Deutschlandfunk
+  title: Is Tor still secure? Timing attacks on the anonymization network
+  title_url: https://www.deutschlandfunk.de/computer-und-kommunikation-12-10-2024-komplette-sendung-dlf-40969f4c-100.html
+  date: Oct 2024
+  lang: de
+  translation_page: tor-timing-attacks.html
+  subtitle: Expert commentary on the Boys Town case and the limits of Tor's anonymity guarantees
+- group: Podcast
+  outlet: CISPA TL;DR
+  title: Authentication Ceremonies with Matthias Fassl
+  title_url: https://cispa.de/en/news-and-events/insights/podcast/podcast/2021/fassl
+  date: Oct 2021
+  translation_page: cispa-podcast.html
+- group: News
+  outlet: CISPA
+  title: 'The example of Tor and VPN: cybersecurity between fact and folklore'
+  title_url: https://cispa.de/en/fassl-torovervpn
+  date: Jan 2024
+- group: News
+  outlet: CISPA
+  title: On the difficulties of performing authentication ceremonies
+  title_url: https://cispa.de/en/fassl_authenticationceremonies
+  date: Oct 2023
+- group: News
+  outlet: CISPA
+  title: 'Anti-stalkerware: Wishes and Reality'
+  title_url: https://cispa.de/en/anti-stalkerware
+  date: Oct 2022
+- group: News
+  outlet: CISPA
+  title: No added cybersecurity through double VPN services
+  title_url: https://cispa.de/en/no-added-cybersecurity-vpn
+  date: Jul 2021
+- group: News
+  outlet: CISPA
+  title: It's all an act — why cookie banners should be abolished
+  title_url: https://cispa.de/en/cookie-banners
+  date: May 2021

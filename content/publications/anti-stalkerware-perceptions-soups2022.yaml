@@ -1,0 +1,32 @@
+slug: anti-stalkerware-perceptions-soups2022
+order: 20
+title: Comparing User Perceptions of Anti-Stalkerware Apps with the Technical Reality
+authors:
+- Matthias Fassl
+- Simon Anell
+- Sabine Houy
+- Martina Lindorfer
+- Katharina Krombholz
+year: 2022
+badge: SOUPS 2022
+badge_class: badge-soups
+pdf: Comparing_User_Perceptions_of_Anti_Stalkerware_Apps_SOUPS_2022.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2022/presentation/fassl
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS)
+abstract: |-
+  Every year an increasing number of users face stalkerware on their phones. Many of them are victims of intimate partner surveillance (IPS) who are unsure how to identify or remove stalkerware from their phones. An intuitive approach would be to choose anti-stalkerware from the app store. However, a mismatch between user expectations and the technical capabilities can produce an illusion of security and risk compensation behavior (i.e., the Peltzmann effect). We compare users' perceptions of anti-stalkerware with the technical reality. First, we applied thematic analysis to app reviews to analyze user perceptions. Then, we performed a cognitive walkthrough of two prominent anti-stalkerware apps available on the Google Play Store and reverse-engineered them to understand their detection features. Our results suggest that users base their trust on the look and feel of the app, the number and type of alerts, and the apps' affordances. We also found that app capabilities do not correspond to the users' perceptions and expectations, impacting their practical effectiveness. We discuss different stakeholders' options to remedy these challenges and better align user perceptions with the technical reality.
+bibtex: |-
+  @inproceedings{Fassl2022ComparingUserPerceptions,
+    title     = {Comparing User Perceptions of Anti-Stalkerware Apps with the Technical Reality},
+    author    = {Fassl, Matthias and Anell, Simon and Houy, Sabine and Lindorfer, Martina and Krombholz, Katharina},
+    booktitle = {Eighteenth Symposium on Usable Privacy and Security (SOUPS 2022)},
+    year      = {2022},
+    address   = {Boston, MA, USA},
+    month     = aug,
+    url       = {https://www.usenix.org/conference/soups2022/presentation/fassl}
+  }
+talks:
+- embed_url: https://www.youtube.com/embed/NLxB-dW9WE8

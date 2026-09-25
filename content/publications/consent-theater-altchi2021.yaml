@@ -1,0 +1,35 @@
+slug: consent-theater-altchi2021
+order: 17
+title: Stop the Consent Theater
+authors:
+- Matthias Fassl
+- Lea Gröber
+- Katharina Krombholz
+year: 2021
+badge: alt.CHI 2021
+badge_class: badge-chi
+pdf: Stop_the_Consent_Theater_altCHI_2021.pdf
+links:
+- label: ACM
+  url: https://dl.acm.org/doi/10.1145/3411763.3451230
+citation_type: conference
+venue_full: ACM CHI Conference on Human Factors in Computing Systems — alt.chi
+extra:
+  doi: 10.1145/3411763.3451230
+abstract: |-
+  The current web pesters visitors with consent notices that claim to "value" their privacy, thereby habituating them to accept all data practices. Users' lacking comprehension of these practices voids any claim of informed consent. Market forces specifically designed these consent notices in their favor to increase users' consent rates. Some sites even ignore users' decisions entirely, which results in a mere theatrical performance of consent procedures designed to appear as if it fulfills legal requirements. Improving users' online privacy cannot rely on individuals' consent alone. We have to look for complementary approaches as well. Current online data practices are driven by powerful market forces whose interests oppose users' privacy expectations – making turnkey solutions difficult. Nevertheless, we provide a bird's-eye view on privacy-improving approaches beyond individuals' consent.
+bibtex: |-
+  @inproceedings{Fassl2021StopTheConsent,
+    title     = {Stop the Consent Theater},
+    author    = {Fassl, Matthias and Gr{\"o}ber, Lea Theresa and Krombholz, Katharina},
+    booktitle = {Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems},
+    series    = {CHI '21},
+    year      = {2021},
+    month     = may,
+    pages     = {1--7},
+    publisher = {ACM},
+    doi       = {10.1145/3411763.3451230},
+    url       = {https://dl.acm.org/doi/10.1145/3411763.3451230}
+  }
+talks:
+- embed_url: https://www.youtube.com/embed/iojVPlzINPU

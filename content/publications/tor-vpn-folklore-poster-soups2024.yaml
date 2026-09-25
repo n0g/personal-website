@@ -1,0 +1,26 @@
+slug: tor-vpn-folklore-poster-soups2024
+order: 7
+title: 'Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon'
+authors:
+- Matthias Fassl
+- Alexander Ponticello
+- Adrian Dabrowski
+- Katharina Krombholz
+year: 2024
+badge: SOUPS 2024 · Poster
+badge_class: badge-soups
+pdf: Investigating_Security_Folklore_Poster_SOUPS_2024.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2024/presentation/fassl-poster
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS) — Poster
+bibtex: |-
+  @inproceedings{Fassl2024InvestigatingSecurityFolklore,
+    title     = {Investigating Security Folklore: A Case Study on the Tor over VPN Phenomenon},
+    author    = {Fassl, Matthias and Ponticello, Alexander and Dabrowski, Adrian and Krombholz, Katharina},
+    booktitle = {Twentieth Symposium on Usable Privacy and Security (SOUPS 2024)},
+    year      = {2024},
+    note      = {Poster; based on the CSCW 2023 paper},
+    url       = {https://www.usenix.org/conference/soups2024/presentation/fassl-poster}
+  }

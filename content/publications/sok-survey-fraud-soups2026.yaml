@@ -1,0 +1,31 @@
+slug: sok-survey-fraud-soups2026
+order: 0
+title: 'SoK: Mapping Threats to Defenses in Online Survey Fraud'
+authors:
+- Shiza Ali
+- Wellington Esposito Barbosa
+- Matthias Fassl
+- Aditi Ganapathi
+- Jaron Mink
+- Adam J. Aviv
+year: 2026
+badge: SOUPS 2026
+badge_class: badge-soups
+pdf: SoK_Survey_Fraud_SOUPS_2026.pdf
+links:
+- label: USENIX
+  url: https://www.usenix.org/conference/soups2026/presentation/ali
+citation_type: conference
+venue_full: Symposium on Usable Privacy and Security (SOUPS)
+abstract: |-
+  Online surveys and recruitment mechanisms, including crowdsourcing platforms such as Prolific and MTurk, as well as social media-based recruitment, have become core infrastructure for human-subjects research. At the same time, their accessibility has made studies increasingly vulnerable to large-scale fraud. Prior work on survey fraud is extensive yet fragmented: different communities use inconsistent definitions, conflate inattentive responding with intentional or automated attacks, and deploy mitigation techniques without explicit threat models. This paper presents a Systematization of Knowledge (SoK) on online survey fraud. Based on a structured review of 124 papers across multiple disciplines that explicitly conceptualize, evaluate, or advance fraud-related mechanisms, we synthesize how fraud is conceptualized, where it arises across the survey lifecycle, and how detection and mitigation strategies are proposed and reported in this literature. Our analysis reveals three recurring gaps: (1) a lack of consistent and explicit definitions that distinguish inattentive responding from adversarial human and automated fraud; (2) systematic misalignment between fraud threats and reported defenses, particularly when recruitment-stage attacks are addressed only post hoc; and (3) inconsistent reporting practices that limit interpretability and reproducibility.
+bibtex: |-
+  @inproceedings{Ali2026SoKMappingThreats,
+    title     = {SoK: Mapping Threats to Defenses in Online Survey Fraud},
+    author    = {Ali, Shiza and Barbosa, Wellington Esposito and Fassl, Matthias and Ganapathi, Aditi and Mink, Jaron and Aviv, Adam J.},
+    booktitle = {USENIX Symposium on Usable Privacy and Security (SOUPS)},
+    year      = {2026},
+    address   = {Hannover, Germany},
+    month     = aug,
+    url       = {https://www.usenix.org/conference/soups2026/presentation/ali}
+  }
