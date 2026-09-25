@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /tools/
-
-Sitemap: https://n0g.at/sitemap.xml
