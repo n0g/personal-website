@@ -19,6 +19,8 @@
 </head>
 <body class="index-page">
 
+<a class="skip-link" href="#main-content">Skip to content</a>
+
 <nav>
   <div class="inner">
     <a class="logo" href="#about">Matthias Fassl</a>
@@ -32,7 +34,7 @@
   </div>
 </nav>
 
-<main>
+<main id="main-content">
 <!-- ── ABOUT ─────────────────────────────────────────────── -->
 <section id="about">
   <div class="hero">
@@ -41,6 +43,23 @@
     </div>
     <div class="hero-text">
       <h1>Matthias Fassl</h1>
+
+      <p class="identity-line">
+
+        <button class="pronounce-btn" type="button" id="pronounce-btn" aria-label="Play pronunciation of Matthias Fassl" title="Play pronunciation">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 6v4h2.5L8 12.5v-9L4.5 6H2Z" fill="currentColor"/>
+            <path d="M10.3 5.3c.9.8.9 4.6 0 5.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M12.2 3.5c1.9 1.9 1.9 7.1 0 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".55"/>
+          </svg>
+        </button>
+        <audio id="pronounce-audio" src="static/name-pronunciation.mp3" preload="none"></audio>
+
+[maˈtiːas ˈfasl̩]
+<span class="dot">·</span>
+he/him
+      </p>
+
       <p class="role" id="role-line"><span class="cursor"></span></p>
 
       <p>
@@ -621,6 +640,11 @@
         '<span class="cursor"></span>';
     }
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.innerHTML = plain + '<strong>' + bold + '</strong>';
+      return;
+    }
+
     render('');
     const iv = setInterval(() => {
       i++;
@@ -634,6 +658,17 @@
       }
     }, 40);
   })();
+
+  (function() {
+    const btn = document.getElementById('pronounce-btn');
+    const audio = document.getElementById('pronounce-audio');
+    if (!btn || !audio) return;
+    btn.addEventListener('click', function () {
+      audio.currentTime = 0;
+      audio.play();
+    });
+  })();
+
 </script>
 </body>
 </html>
