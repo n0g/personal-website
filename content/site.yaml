@@ -2,24 +2,21 @@ name: Matthias Fassl
 pronouns: he/him
 pronunciation: '[maˈtiːas ˈfasl̩]'
 pronunciation_audio: static/name-pronunciation.mp3
-role_plain: Postdoctoral Researcher · 
-role_bold: George Washington University
+role_plain: Collaborateur Scientifique · 
+role_bold: EPFL
 hero_photo: static/matthias-in-dc-2026.jpg
 meta_description: Matthias Fassl is an interdisciplinary HCI researcher working on security, privacy,
   and safety — including technology-mediated stalking, intimate-image-based abuse, and usable authentication.
-  Postdoctoral Researcher at George Washington University, incoming Collaborateur Scientifique at EPFL.
-og_description: HCI researcher working on security, privacy, and safety. Postdoc at GWU, incoming Collaborateur
-  Scientifique at EPFL.
+  Collaborateur Scientifique at EPFL.
+og_description: HCI researcher working on security, privacy, and safety. Collaborateur Scientifique at EPFL.
 bio_paragraphs:
 - |-
-  I am an interdisciplinary HCI researcher working on security, privacy, and safety. My current work focuses on <strong>technology-mediated stalking</strong> and <strong>intimate-image-based abuse</strong> in end-to-end-encrypted messengers, as part of <a href="https://gwusec.seas.gwu.edu/" style="color:var(--accent);">Adam Aviv's group</a> at GWU.
-- |-
-  🎉 Incoming <strong>Collaborateur Scientifique</strong> at EPFL.
+  I am an interdisciplinary HCI researcher working on security, privacy, and safety. My current work focuses on <strong>technology-mediated stalking</strong> and <strong>intimate-image-based abuse</strong> in end-to-end-encrypted messengers.
 - |-
   I hold a Dr.-Ing. from Saarland University and bring a background in computer engineering, cultural&nbsp;&amp;&nbsp;social anthropology, privacy advocacy, and EU cybercrime policy.
 links:
 - label: ✉ Email
-  url: mailto:matthias.fassl@gwu.edu
+  url: mailto:matthias.fassl@epfl.ch
 - label: Google Scholar
   url: https://scholar.google.com/citations?user=hdEhk-AAAAAJ
 - label: DBLP
@@ -37,7 +34,7 @@ links:
 contact:
   address_lines:
   - <strong>Matthias Fassl</strong>
-  - Postdoctoral Researcher, George Washington University
-  - School of Engineering and Applied Science
-  - Room 4390, 800 22nd Street NW, Washington, DC 20052
-  email: matthias.fassl@gwu.edu
+  - Collaborateur Scientifique, EPFL
+  - Room BC 154 (Bâtiment BC)
+  - Station 14, CH-1015 Lausanne, Switzerland
+  email: matthias.fassl@epfl.ch
