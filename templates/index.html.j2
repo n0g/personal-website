@@ -9,7 +9,13 @@
   <meta property="og:type" content="profile">
   <meta property="og:title" content="{{ site.name }}">
   <meta property="og:description" content="{{ site.og_description }}">
-  <meta property="og:image" content="{{ site.hero_photo }}">
+  <meta property="og:url" content="{{ site_url }}/">
+  <meta property="og:image" content="{{ site_url }}/{{ site.hero_photo }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="{{ site_url }}/">
+  <script type="application/ld+json">
+{{ jsonld | safe }}
+  </script>
   <meta property="profile:first_name" content="{{ site.name.split(' ')[0] }}">
   <meta property="profile:last_name" content="{{ site.name.split(' ')[-1] }}">
 {% set asset_prefix = "" %}
@@ -66,7 +72,7 @@
 {% endfor %}
       <div class="links">
 {% for link in site.links %}
-        <a href="{{ link.url }}"{% if not link.url.startswith("mailto:") %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>
+        <a href="{{ link.url }}"{% if not link.url.startswith("mailto:") %} target="_blank" rel="{% if 'mastodon' in link.url %}me {% endif %}noopener noreferrer"{% endif %}>{{ link.label }}</a>
 {% endfor %}
       </div>
     </div>

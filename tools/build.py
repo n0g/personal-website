@@ -8,6 +8,7 @@ output from a removed publication. public/ is what actually gets deployed
 under content/, templates/, or tools/ is ever served.
 """
 import itertools
+import json
 import re
 import shutil
 from pathlib import Path
@@ -70,6 +71,71 @@ def group_preserving_order(items, key):
     return [(k, buckets[k]) for k in order]
 
 
+def jsonld(data):
+    """Serialize for embedding in <script type="application/ld+json">."""
+    return json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/")
+
+
+PERSON_ID = f"{SITE_URL}/#person"
+SAME_AS_HOSTS = ("scholar.google.com", "dblp.org", "linkedin.com", "mastodon.social", "orcid.org")
+
+
+def person_jsonld(site):
+    same_as = [l["url"] for l in site["links"] if any(h in l["url"] for h in SAME_AS_HOSTS)]
+    return {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": PERSON_ID,
+        "name": site["name"],
+        "url": SITE_URL + "/",
+        "image": f"{SITE_URL}/{site['hero_photo']}",
+        "description": site["meta_description"],
+        "jobTitle": site["role_plain"].replace("·", "").strip(),
+        "worksFor": {"@type": "CollegeOrUniversity", "name": "EPFL", "url": "https://www.epfl.ch"},
+        "affiliation": {"@type": "CollegeOrUniversity", "name": "EPFL", "url": "https://www.epfl.ch"},
+        "alumniOf": [
+            {"@type": "CollegeOrUniversity", "name": "Saarland University", "url": "https://www.uni-saarland.de"},
+            {"@type": "CollegeOrUniversity", "name": "TU Wien", "url": "https://www.tuwien.at"},
+        ],
+        "knowsAbout": ["Human-computer interaction", "Usable security", "Privacy", "Technology-mediated stalking",
+                       "Usable authentication"],
+        "identifier": {"@type": "PropertyValue", "propertyID": "ORCID", "value": site["orcid"].rsplit("/", 1)[-1]},
+        "sameAs": same_as,
+        "mainEntityOfPage": SITE_URL + "/",
+    }
+
+
+def article_jsonld(pub, site):
+    url = f"{SITE_URL}/publications/{pub['slug']}.html"
+    data = {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "@id": url + "#article",
+        "headline": pub["title"],
+        "name": pub["title"],
+        "url": url,
+        "datePublished": citation_date(pub).replace("/", "-"),
+        "author": [
+            {"@type": "Person", "@id": PERSON_ID, "name": a, "url": SITE_URL + "/"} if a == site["name"]
+            else {"@type": "Person", "name": a}
+            for a in pub["authors"]
+        ],
+    }
+    if pub.get("abstract"):
+        data["abstract"] = pub["abstract"]
+    if pub.get("venue_full"):
+        data["isPartOf"] = {"@type": "Periodical" if pub.get("citation_type") == "journal" else "Event",
+                            "name": pub["venue_full"]}
+    doi = (pub.get("extra") or {}).get("doi")
+    if doi:
+        data["sameAs"] = f"https://doi.org/{doi}"
+        data["identifier"] = {"@type": "PropertyValue", "propertyID": "DOI", "value": doi}
+    pdf = pdf_url(pub, SITE_URL)
+    if pdf:
+        data["encoding"] = {"@type": "MediaObject", "contentUrl": pdf, "encodingFormat": "application/pdf"}
+    return data
+
+
 def main():
     # ---------- load content ----------
     site = load_yaml(CONTENT / "site.yaml")
@@ -118,13 +184,15 @@ def main():
             publications_by_year=publications_by_year,
             awards=awards,
             press_by_group=press_by_group,
+            site_url=SITE_URL,
+            jsonld=jsonld(person_jsonld(site)),
         ),
         encoding="utf-8",
     )
 
     pub_tpl = env.get_template("publication.html.j2")
     for pub in publications:
-        out = pub_tpl.render(pub=pub, site=site, site_url=SITE_URL)
+        out = pub_tpl.render(pub=pub, site=site, site_url=SITE_URL, jsonld=jsonld(article_jsonld(pub, site)))
         (PUBLIC / "publications" / f"{pub['slug']}.html").write_text(out, encoding="utf-8")
         if pub.get("pdf"):
             src = CONTENT / "publications" / "pdfs" / pub["pdf"]

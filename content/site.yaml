@@ -1,5 +1,6 @@
 name: Matthias Fassl
 pronouns: he/him
+orcid: https://orcid.org/0000-0002-2894-3751
 pronunciation: '[maˈtiːas ˈfasl̩]'
 pronunciation_audio: static/name-pronunciation.mp3
 role_plain: Collaborateur Scientifique · 
@@ -19,6 +20,8 @@ links:
   url: mailto:matthias.fassl@epfl.ch
 - label: Google Scholar
   url: https://scholar.google.com/citations?user=hdEhk-AAAAAJ
+- label: ORCID
+  url: https://orcid.org/0000-0002-2894-3751
 - label: DBLP
   url: https://dblp.org/pid/234/2638.html
 - label: LinkedIn
