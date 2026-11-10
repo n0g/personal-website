@@ -291,8 +291,8 @@ h2 {
 /* ── RESEARCH ───────────────────────────────────────── */
 .research-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 .research-card {
   background: var(--bg-alt);

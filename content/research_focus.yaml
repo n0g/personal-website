@@ -1,9 +1,14 @@
-- title: Online Safety &amp; Stalking
-  description: How technology enables intimate partner surveillance and stalking — from stalkerware detection
-    to AirTag-facilitated tracking — and how we can better protect at-risk people.
-- title: Intimate-Image-Based Abuse
-  description: Understanding and countering the non-consensual sharing of intimate images within end-to-end-encrypted
-    messaging platforms, where moderation is architecturally constrained.
-- title: Authentication &amp; Security UX
-  description: Why security features like authentication ceremonies and consent mechanisms fail users
-    in practice — and how to design them to be genuinely usable rather than theatrical.
+- title: Tech Policy &amp; Design
+  description: >-
+    Laws increasingly regulate our online identity, safety, and data, but companies often design around
+    their spirit. I use design methods to make people more aware of their rights and give them more agency online.
+- title: Surveillance &amp; Care
+  description: >-
+    People care for each other through computers: ordering food, checking someone got home safely,
+    switching on a light to say <em>“I’m thinking of you.”</em> But tools like Find My become surveillance when
+    relationships change. I want to design care technologies that minimise that.
+- title: Security Snake Oil
+  description: >-
+    Marketing for resistance technologies often promises more than the tools deliver, and it reshapes
+    what people think good security looks like. I investigate these claims to correct misperceptions and
+    see for whom resistance actually works.
